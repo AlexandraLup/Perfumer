@@ -3,13 +3,6 @@ body{
 	border: auto;
 	padding: auto;
 	margin: auto;
-}
-
-header{
-	background-color: black;
-	position: sticky;
-	width: 100%;
-	top:0 ;
 
 }
 
@@ -23,25 +16,50 @@ header{
 	
 }
 
+.h2{
+	color: white;
+	text-align: left;
+	padding-top: 1%;
+	font-family: "@Yu Gothic UI Semibold";
+	font-size: 80%;
+
+}
+
+.h3{
+	color: white;
+	text-align: left;
+	padding-top: 1%;
+	font-family: "@Yu Gothic UI";
+	font-size: 70%;
+
+}
+
+header{
+	background-color: black;
+	width: 100%;
+	position: sticky;
+	top:0;
+}
+
 nav{
+	background-color: black;
 	padding-bottom: 0.5%;
-	margin: 0;
 }
 
 
 nav ul {
 
-  list-style-type: none;
-  margin-top: 0.5%;
-  margin-bottom: 0.5%;
-  padding: 0 ;
-  background-color: black;
-  overflow: hidden;
-  text-align: center;  
+	list-style-type: none;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	padding: 0 ;
+	background-color: black;
+	overflow: hidden;
+	text-align: center;  
 }
 
 nav ul li {
-  display: inline;
+	display: inline;
 }
 
 nav ul li a {
@@ -63,4 +81,41 @@ nav ul li a:hover {
 	font-family: "Bookman Old Style";
 	font-size: 80%;
 }
+
+.footer {
+	position: absolute;
+	width: 100%;
+	padding: 0;
+	background-color: white;
+}
+
+.row {
+	display: flex;
+}
+
+.column {
+	float: left;
+	height: 200px;
+	background-color: black;
+	margin : 1px;
+}
+
+.column2{
+	float: left;
+	padding: 4%;
+	height: 200px;
+	background-color: black;
+	
+
+}
+.left{
+	width: 25%;
+}
+.right{
+	width: 75%;
+}
+
+
+
+
 
