@@ -3,6 +3,7 @@ body{
 	border: auto;
 	padding: auto;
 	margin: auto;
+	background-color: black;
 
 }
 
@@ -31,20 +32,35 @@ body{
 	padding-top: 1%;
 	font-family: "@Yu Gothic UI";
 	font-size: 70%;
-
 }
+
+.nou:hover {
+	color: #cc5c5c
+}
+
 
 header{
 	background-color: black;
 	width: 100%;
-	position: sticky;
-	top:0;
+	
 }
+	
 
 nav{
 	background-color: black;
 	padding-bottom: 0.5%;
+	position: sticky;
+	top:0;
+
+
 }
+
+section{
+
+	background-color: white;
+	margin-top: 0;
+}
+
 
 
 nav ul {
@@ -70,7 +86,7 @@ nav ul li a {
 }
 nav ul li a:hover {
 	
-	color: #cc5c5c
+	color: #cc5c5c;
 }
 
 .FemeiBarbati{
@@ -82,10 +98,10 @@ nav ul li a:hover {
 	font-size: 80%;
 }
 
-.footer {
+footer {
 	position: absolute;
 	width: 100%;
-	padding: 0;
+	padding-top:0;
 	background-color: white;
 }
 
@@ -97,7 +113,8 @@ nav ul li a:hover {
 	float: left;
 	height: 200px;
 	background-color: black;
-	margin : 1px;
+	margin-left: 1px;
+
 }
 
 .column2{
@@ -105,7 +122,6 @@ nav ul li a:hover {
 	padding: 4%;
 	height: 200px;
 	background-color: black;
-	
 
 }
 .left{
