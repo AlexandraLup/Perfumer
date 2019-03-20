@@ -3,12 +3,14 @@
 
 
 <head>
-	
-	<title>Parfumer</title>
+
+	<title>Perfumer</title>
 	<link rel="stylesheet" href="styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 
 </head>
 
@@ -16,30 +18,38 @@
 <body>
 
 	<header>
-		<h1 class="h1">Perfumer</h1>
-		
+		<div id="Div" >
+			<div id="Div1">
+				<form id="search-button" >
+				  	<input type="search" placeholder="Caută..">
+				</form>
+			</div>
+			
+			<div id="Div2">
+				<div>
+					<h1 class="h1"><a href="index.html">Perfumer</a></h1>
+				</div>
+			</div>
+			
+		</div>
+
 	</header>
 
 	<nav>
-			<ul>
-				<li class="FemeiBarbati nou"><a href="#">PARFUMURI FEMEI</a></li>
-				<li class="FemeiBarbati"><a href="#">PARFUMURI BĂRBAȚI</a></li>
-				<li class="FemeiBarbati"><a href="#">NOUTĂȚI</a></li>
-			</ul>
-			<ul>
-				<li class="ContCos"><a href="#">CONT <i class="fa fa-user-circle" ></i></a></li>
-				<li class="ContCos"><a href="#">COȘ <i class="fa fa-shopping-cart"></i></a></li>
-			</ul>
-
-			
-		</nav>
-
+		<ul>
+			<li class="FemeiBarbati"><a href="#">PARFUMURI FEMEI</a></li>
+			<li class="FemeiBarbati"><a href="#">PARFUMURI BĂRBAȚI</a></li>
+			<li class="FemeiBarbati"><a href="#">NOUTĂȚI</a></li>
+		</ul>
 	
+		<ul>
+			<li class="ContCos"><a href="login.html">CONT <i class="fa fa-user-circle" ></i></a></li>
+			<li class="ContCos"><a href="#">COȘ <i class="fa fa-shopping-cart"></i></a></li>
+		</ul>
+	</nav>
 
-	
 
 	<section>
-		
 		<h3>Sticky Navigation Bar Example</h3>
 	<p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
 	<p><strong>Note:</strong> Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix.</p>
@@ -66,13 +76,26 @@
 	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 	<h3>Sticky Navigation Bar Example</h3>
 	<h3>Sticky Navigation Bar Example</h3>
-	<h3>Sticky Navigation Bar Example</h3>
-
-
-
+	Sticky Navigation Bar Example
+		
 	</section>
 
-	<footer class="footer">
+	
+
+
+	<footer>
+		<div class="row">
+			<div class="coloanaNewsletter">
+				<p><i class="fas fa-box"></i> 30 DE ZILE DE RAMBURSARE A COMENZII</p>
+			</div>
+			<div class="coloanaNewsletter">
+				<p><i class="fas fa-truck"></i>  LA CUMPĂRĂTURILE DE PESTE 250 RON, TRANSPORTUL ESTE GRATUIT</p>
+			</div>
+			<div class="coloanaNewsletter">
+				<p><i class="fas fa-medal"></i>  DOAR PRODUSE AUTENTICE</p>
+			</div>
+		</div>
+
 		<div class= "row">
 			<div class="column left"  >
 				<div class="column2">
@@ -82,10 +105,18 @@
 					<p class="h3">	<i class="fa fa-envelope"> </i>   INFO@PERFUMER.RO</p>
 				</div>
 			</div>
-			<div class="column right"  >
+			<div class="column right" >
+				<div class="newsletter">
+						<h1>Abonare Newsletter</h1>				
+						<form>
+							<input type="email" placeholder="Enter Email...">
+							<button type="submit" class="button_1">Subscribe</button>
+						</form>						
+				</div>
+
 				<div class="row">
 					<div class="column2">
-						<p class="h2">INFORMAȚII GENERALE
+						<p class="h2">INFORMAȚII GENERALE</p>
 						<hr>
 						<p class="h3 nou"><a style="text-decoration: none" href="#">Despre noi </a>
 						<p class="h3 nou"><a style="text-decoration: none" href="#">Termeni & condiții</a>
@@ -94,7 +125,7 @@
 					</div>
 
 					<div class="column2">
-						<p class="h2">CONT CLIENT
+						<p class="h2">CONT CLIENT</p>
 						<hr>
 						<p class="h3 nou"><a style="text-decoration: none" href="#">Autentificare</a>
 					    <p class="h3 nou"><a style="text-decoration: none" href="#">Vizualizare coș</a>
@@ -102,24 +133,19 @@
 					</div>
 
 					<div class="column2">
-						<p class="h2">ASISTENȚĂ CLIENȚI
+						<p class="h2">ASISTENȚĂ CLIENȚI</p>
 						<hr>
 						<p class="h3 nou"><a style="text-decoration: none" href="#">Modalități de plată</a>
 						<p class="h3 nou "><a style="text-decoration: none" href="#">Metode de livrare</a>
 						<p class="h3 nou"><a style="text-decoration: none" href="#">Întrebări frecvente</a>
-
 					</div>
-
 				</div>
 			</div>
-
-			
 		</div>
 
-
-
-
 	</footer>
+
+
 
 </body>
 
