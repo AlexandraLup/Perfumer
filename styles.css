@@ -1,20 +1,24 @@
+*{
+	text-decoration: none;
+}
 body{
 	width: auto;
 	border: auto;
 	padding: auto;
 	margin: auto;
-	background-color: black;
-
+    background: black;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .h1 {
 
 	color: white;
 	text-align: center;
-	padding-top: 1%;
+	padding-left: 30%;
 	font-family: "Bookman Old Style";
 	font-size: 170%;
-	
+
+
 }
 
 .h2{
@@ -32,36 +36,58 @@ body{
 	padding-top: 1%;
 	font-family: "@Yu Gothic UI";
 	font-size: 70%;
-}
 
+}
 .nou:hover {
 	color: #cc5c5c
 }
 
-
 header{
 	background-color: black;
 	width: 100%;
-	
+
 }
-	
+
+/*---search---*/
+#Div{
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#Div1{
+	width: 15%;
+}
+
+#Div2{
+	width: 85%;
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 27%;
+}
+
+#search-button{
+	padding-top: 10px;
+}
+#search-button input{
+	float:center;
+	text-align: center;
+	border-radius: 10px;
+			-webkit-transition: width 0.4s ease-in-out;
+		transition: width 0.4s ease-in-out;
+		width: 140px;
+}
+#search-button input:focus{
+	width:170px;
+}
 
 nav{
 	background-color: black;
-	padding-bottom: 0.5%;
+	padding-bottom: 0.2%;
 	position: sticky;
 	top:0;
 
-
 }
-
-section{
-
-	background-color: white;
-	margin-top: 0;
-}
-
-
 
 nav ul {
 
@@ -71,7 +97,7 @@ nav ul {
 	padding: 0 ;
 	background-color: black;
 	overflow: hidden;
-	text-align: center;  
+	text-align: center;
 }
 
 nav ul li {
@@ -85,8 +111,8 @@ nav ul li a {
 	padding: 1% 1%;
 }
 nav ul li a:hover {
-	
-	color: #cc5c5c;
+
+	color: #cc5c5c
 }
 
 .FemeiBarbati{
@@ -97,6 +123,15 @@ nav ul li a:hover {
 	font-family: "Bookman Old Style";
 	font-size: 80%;
 }
+
+section{
+	background: white;
+	margin-bottom:7px;
+	
+	
+}
+
+
 
 footer {
 	position: absolute;
@@ -109,29 +144,154 @@ footer {
 	display: flex;
 }
 
+.coloanaNewsletter{
+	justify-content: space-around;
+	width: 33.3%;
+	text-align: center;
+}
+
 .column {
 	float: left;
-	height: 200px;
+	height: 300px;
 	background-color: black;
-	margin-left: 1px;
-
+	margin : 1px;
 }
 
-.column2{
-	float: left;
-	padding: 4%;
-	height: 200px;
-	background-color: black;
-
-}
 .left{
 	width: 25%;
 }
+
 .right{
 	width: 75%;
 }
 
+.column2{
+	float:center;
+	padding: 4%;
+	height: 200px;
+	background-color: black;
+}
+
+/* Newsletter */
+.newsletter{
+  
+  color:#fff;
+  background:#000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  flex-wrap: wrap;
+}
+
+.newsletter h1{
+	font-size: 20px; 
+}
+
+.newsletter form {
+  margin-top:0;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
 
 
 
+/*
+#search-button input{
+	width: 3%;
+	  border-radius:100px;
+	  margin:0;
+		background-image: url('search1.png');
+		background-position: 3px 3px;
+  background-repeat: no-repeat;
+	-webkit-transition: width 0.4s ease-out;
+transition: width 0.4s ease-out;
 
+}
+#search-button input:focus{
+	width:15%;
+}
+*/
+/*----main----*/
+.bestseller{
+	float: left;
+width: 50%;
+border:0;
+margin: 0;
+}
+#info{
+	background: white;
+}
+
+.coloana1 p{
+	padding:0;
+	margin:2%;
+}
+
+
+.main{
+	background: white
+}
+
+
+
+/*---login page --*/
+.column-left{
+	width: 50%;
+}
+.column-left h1{
+	font-size=100px;
+	margin:10px;
+	text-align: center;
+}
+.column-right{
+	width: 50%;
+}
+.column-right h1{
+	font-size=100px;
+	margin:10px;
+	text-align: center;
+}
+#login{
+border: 3px solid #f1f1f1;
+text-align: center;
+padding:16px;
+font-size: 20px;
+}
+#login input[type=text], input[type=password]{
+	width: 100%;
+ padding: 0;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+
+}
+#login button{
+	background-color: black;
+	text-align: center;
+  color: white;
+  padding: 0;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+span.psw {
+  text-align: center;
+  padding-top: 16px;
+}
+#login input[type=checked]{
+
+	text-align: left;
+}
+#login label{
+	width:10%;
+}
