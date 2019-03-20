@@ -175,17 +175,17 @@ footer {
 
 /* Newsletter */
 .newsletter{
-  
+
   color:#fff;
   background:#000;
   display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .newsletter h1{
-	font-size: 20px; 
+	font-size: 20px;
 }
 
 .newsletter form {
@@ -242,28 +242,73 @@ margin: 0;
 
 
 /*---login page --*/
+.row1{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	border:none;
+}
+.title{
+	float:center;
+}
+.title h2{
+	text-align:center;
+	float:center;
+	padding:5%;
+	text-transform: uppercase;
+}
 .column-left{
 	width: 50%;
+	border-right : 3px solid #f1f1f1;
+	padding:3%;
+	margin:0;
 }
-.column-left h1{
+.column-left h4{
 	font-size=100px;
 	margin:10px;
 	text-align: center;
 }
 .column-right{
 	width: 50%;
+	padding: 3%;
+	margin:0;
 }
-.column-right h1{
+.column-right h4{
 	font-size=100px;
 	margin:10px;
 	text-align: center;
 }
-#login{
-border: 3px solid #f1f1f1;
-text-align: center;
-padding:16px;
-font-size: 20px;
+#login label{
+	float:left;
+	font-size: 15px;
+	padding: 0;
+	margin:0;
 }
+#login{
+text-align: center;
+padding:0;
+margin:0;
+border:0;
+font-size: 17px;
+}
+.box{
+	float:center;
+	text-align:center;
+	border:0;
+	margin:0;
+	padding:0;
+}
+.box p{
+	font-size: 13px;
+	margin:0;
+	padding:0;
+	border:0;
+}
+.box1 {
+	float:center;
+	padding:3%;
+}
+
 #login input[type=text], input[type=password]{
 	width: 100%;
  padding: 0;
@@ -288,6 +333,7 @@ button:hover {
 span.psw {
   text-align: center;
   padding-top: 16px;
+	font-size: 15px;
 }
 #login input[type=checked]{
 
