@@ -284,7 +284,7 @@ section{
 }
 
 #bestSellerW{
-	background-image: url("bestsellerW.jpg");
+	background-image: url("images/bestsellerW.jpg");
 	background-size: 100% 320px;
 	width: 48%;
 	height: 320px;
@@ -294,7 +294,7 @@ section{
 }
 
 #bestSellerM{
-	background-image: url("bestsellerM.jpg");
+	background-image: url("images/bestsellerM.jpg");
 	background-size: 100% 320px;
 	width: 49%;
 	height: 320px;
