@@ -127,8 +127,9 @@ nav ul li a:hover {
 section{
 	background: white;
 	margin-bottom:7px;
-	
-	
+	padding-left: 4%;
+	padding-right: 3%;
+
 }
 
 
