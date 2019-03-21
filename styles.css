@@ -774,7 +774,6 @@ font-size: 0.75rem;
 	padding:0;
 	margin:0;
 	height:10px;
-	border:none;
 }
 .lista{
    width: 33.3%;
@@ -784,6 +783,9 @@ font-size: 0.75rem;
 	 text-align: center;
 	 text-transform: uppercase;
 	 font-size: 15px;
+}
+.lista:hover{
+	color: #ccc;
 }
 
 /*--personaldata----*/
@@ -821,6 +823,20 @@ font-size: 0.75rem;
 	margin-left: 10px;
 	font-size:13px;
 }
+.personal-data1 .field-title{
+	padding:5px;
+	margin:3px;
+	padding-top: 10px;
+	text-transform: uppercase;
+	font-size:13px;
+
+}
+.personal-data1 p{
+	padding:0;
+	margin:0;
+	margin-left: 10px;
+	font-size:13px;
+}
 .adresa{
 	float:center;
 	margin:0;
@@ -847,4 +863,56 @@ font-size: 0.75rem;
 	padding:0;
 	font-size:13px;
 	text-decoration:underline;
+}
+/*-----orderhistory---*/
+.title1{
+	padding:0;
+	margin-top:5%;
+	width:50%;
+	margin-left:25%;
+}
+.title1 h3{
+	text-align:left;
+	font-weight: bold;
+	font-size:20px;
+	padding:0;
+	margin:0;
+}
+.title1 p{
+	text-align:left;
+	padding:0;
+	margin:0;
+}
+.history{
+	width:50%;
+	margin-left:25%;
+	border:1px solid #ccc;
+}
+.order-info p{
+ padding:1%;
+ margin:0;
+ width:50%;
+}
+.order-info .order-date{
+	font-size:10px;
+}
+.order-info{
+	padding: 0;
+	margin:0;
+	border:none;
+}
+.order-status{
+	text-align: right;
+	padding:15px;
+	margin:0;
+	width:50%;
+	border:none;
+}
+.order{
+	display: flex;
+	border:1px solid #ccc;
+}
+.title2{
+	text-align:left;
+	margin:5%;
 }
