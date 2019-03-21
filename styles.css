@@ -551,13 +551,13 @@ margin: 0;
 	margin:10px;
 	text-align: center;
 }
-#login label{
+.login label{
 	float:left;
 	font-size: 15px;
 	padding: 0;
 	margin:0;
 }
-#login{
+.login{
 text-align: center;
 padding:0;
 margin:0;
@@ -582,7 +582,7 @@ font-size: 17px;
 	padding:3%;
 }
 
-#login input[type=text], input[type=password]{
+.login input[type=text], input[type=password]{
 	width: 100%;
  padding: 0;
  margin: 8px 0;
@@ -590,7 +590,17 @@ font-size: 17px;
  border: 1px solid #ccc;
 
 }
-#login button{
+.box1 button{
+	background-color: black;
+	text-align: center;
+  color: white;
+  padding: 0;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.login button{
 	background-color: black;
 	text-align: center;
   color: white;
@@ -608,20 +618,23 @@ span.psw {
   padding-top: 16px;
 	font-size: 15px;
 }
-#login input[type=checked]{
+.login input[type=checked]{
 
 	text-align: left;
 }
-#login label{
+.login label{
 	width:10%;
 }
 
 /*---shoppingcart---*/
 .title{
 	text-align: center;
+	font-weight: 50%;
+	font-size: 35px;
 }
 strong{
 	font-weight: bold;
+
 }
 .bascket{
 	padding:20px;
@@ -702,6 +715,9 @@ strong{
 	width:50px;
 	border-radius:30px;
 	border-color: none;
+}
+.product-details p{
+	font-size:10px;
 }
 #box2{
 	display: flex;
