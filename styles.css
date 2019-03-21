@@ -3,8 +3,6 @@
 }
 body{
 	width: auto;
-	border: auto;
-	padding: auto;
 	margin: auto;
     background: black;
 	font-family: Arial, Helvetica, sans-serif;
@@ -70,7 +68,7 @@ header{
 	padding-top: 10px;
 }
 #search-button input{
-	float:center;
+	
 	text-align: center;
 	border-radius: 10px;
 			-webkit-transition: width 0.4s ease-in-out;
@@ -124,6 +122,7 @@ nav ul li a:hover {
 	font-size: 80%;
 }
 
+/* SECTION */
 section{
 	background: white;
 	margin-bottom:7px;
@@ -156,7 +155,7 @@ section{
 	border-radius: 6px;
 	margin-bottom: 15px;
 }
-.form-style-10 h1{
+.form-style-10 h2{
 	background: #D2691E;
 	padding: 20px 30px 15px 30px;
 	margin: -30px -30px 30px -30px;
@@ -171,7 +170,7 @@ section{
 	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	border: 1px solid #D2691E;
 }
-.form-style-10 h1 > span{
+.form-style-10 h2 > span{
 	display: block;
 	margin-top: 2px;
 	font: 13px Arial, Helvetica, sans-serif;
@@ -347,14 +346,14 @@ section{
 	margin-right: 0;
 }
 
-#bestSellerText{
+.bestSellerText{
 	color:white;
 	font: normal 42px 'Arial Black';
 	font-weight: 900;
 	text-align: center;
 	margin-top: 33%;
 }
-#bestSellerText2{
+.bestSellerText2{
 	background-color: white;
 	color:black;
 	font: normal 17px 'Arial Black';
@@ -365,6 +364,49 @@ section{
 	padding-top: 5px;
 	padding-bottom:5px;
 }
+
+/* Top Noutati */
+#topNoutati{
+	background-color: white;
+	margin-top: 60px;
+	margin-bottom: 100px;
+}
+
+#topNoutatiFoto{
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#titleTOP{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align:center;
+	font: 30px 'Bookman Old Style';
+}
+
+.fotoNoutati{
+	background-color: blue;
+	width: 20%;
+	height: 30%;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;	
+}
+
+.dimensiuneFoto{
+	width: 100%;
+	height: 100%;
+}
+
+.textTop{
+	width:100%;
+	height: 30%;
+	background-color: white;
+	text-align: center;
+}
+
 
 
 /* Top Branduri */
@@ -380,18 +422,18 @@ section{
 	justify-content: center;
 }
 
-#titleTOP{
+#titleTopBrand{
 	padding-top: 25px;
 	padding-bottom: 25px;
 	text-align:center;
 	font: 30px 'Bookman Old Style';
 }
 
-#foto{
+.foto{
 	text-align:center;
 	display: flex;
 	flex-direction: column-reverse;
-	background-color: #F8F9F9;
+	background-color: white;
 	width: 20%;
 	height: 25%;
 	margin-left: 10px;
@@ -400,6 +442,7 @@ section{
 	padding: 2% 2% 2% 2%;
 
 }
+
 
 
 
@@ -439,7 +482,7 @@ footer {
 }
 
 .column2{
-	float:center;
+	
 	padding: 4%;
 	height: 200px;
 	background-color: black;
@@ -520,12 +563,9 @@ margin: 0;
 	padding: 0;
 	border:none;
 }
-.title{
-	float:center;
-}
+
 .title h2{
 	text-align:center;
-	float:center;
 	padding:5%;
 	text-transform: uppercase;
 }
@@ -536,7 +576,6 @@ margin: 0;
 	margin:0;
 }
 .column-left h4{
-	font-size=100px;
 	margin:10px;
 	text-align: center;
 }
@@ -547,7 +586,6 @@ margin: 0;
 	margin:0;
 }
 .column-right h4{
-	font-size=100px;
 	margin:10px;
 	text-align: center;
 }
@@ -565,7 +603,6 @@ border:0;
 font-size: 17px;
 }
 .box{
-	float:center;
 	text-align:center;
 	border:0;
 	margin:0;
@@ -578,7 +615,6 @@ font-size: 17px;
 	border:0;
 }
 .box1 {
-	float:center;
 	padding:3%;
 }
 
@@ -714,7 +750,7 @@ strong{
 .quantity input{
 	width:50px;
 	border-radius:30px;
-	border-color: none;
+	
 }
 .product-details p{
 	font-size:10px;
@@ -748,7 +784,6 @@ font-size: 0.75rem;
 }
 .summary-checkout button{
 	text-align: center;
-	float: center;
 }
 .summary-subtotal,
 .summary-promo,
