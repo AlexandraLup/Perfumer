@@ -271,9 +271,52 @@ section{
 	text-align: right;
 }
 
+/*Reducere*/
+
+#reducere{
+
+	width: 80%;
+	height: 330px;
+	background: white;
+	margin-bottom: 25px;
+	margin-left: 18%;
+
+	
+}
+
+#reducereLeft{
+	background-image: url("images/Mens.jpg");
+	background-size: 100% 370px;
+	width: 80%;
+	height: 330px;
+	padding: 2px;
+	float: left;
+	margin-right: 4px;
+}
+
+#reducereText{
+	color:white;
+	font: normal 40px 'Arial Black';
+	font-weight: normal;
+	text-align: center;
+	margin-top: 9%;
+	margin-left: 5%;
+}
+#reducereText2{
+	background-color: black;
+	color:white;
+	font: normal 17px 'Arial Black';
+	font-weight: 900;
+	text-align: center;
+	margin-top: 18%;
+	margin-left: 40%;
+	margin-right:30%;
+	padding-top: 5px;
+	padding-bottom:5px;
+}
+
 
 /* BESTSELLER */
-
 #bestSeller{
 
 	width: 100%;
@@ -323,6 +366,8 @@ section{
 	padding-bottom:5px;
 }
 
+
+/* Top Branduri */
 #topBranduri{
 	background-color: white;
 	margin-top: 30px;
