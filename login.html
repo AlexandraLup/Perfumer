@@ -1,9 +1,9 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ro">
 
 
 <head>
-
+ <meta charset="UTF-8">
 	<title>Perfumer</title>
 	<link rel="stylesheet" href="styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +56,7 @@
 
 <section>
 <div class="main">
-  
+
   <div class="title">
     <h2> Autentifică-te sau creează cont </h2>
   </div>
@@ -64,14 +64,14 @@
   <div class="row1">
     <div class="column-left">
       <h4> SUNT DEJA CLIENT </h4>
-      <form id="login">
+      <form class="login">
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter E-mail" name="email" required>
+        <input type="text" placeholder="Enter E-mail" id="email" required>
         <label for="psw"><b>Parolă</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password"  id="psw" required>
         <button type="submit">Login</button>
         <span class="psw"> <a href="#">Ți-ai uitat parola?</a></span>
-        <br></br>
+        <br>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
@@ -86,10 +86,10 @@
         <p> Vezi lista de preferințe</p>
         <p> Primești prin poștă ultimele noutăți despre tendințe și </p>
         <p> promoții</p>
-        <br> 
+        <br>
       </div >
-      <div class="box1" id="login">
-        <button onclick="window.location.href = 'inregistrare.html';"> Înregistrează-te </button> 
+      <div class="box1" >
+        <button onclick="window.location.href = 'inregistrare.html';"> Înregistrează-te </button>
       </div>
     </div>
 
