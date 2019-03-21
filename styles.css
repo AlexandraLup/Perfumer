@@ -156,7 +156,7 @@ section{
 	margin-bottom: 15px;
 }
 .form-style-10 h2{
-	background: #D2691E;
+	background: #751F1F;
 	padding: 20px 30px 15px 30px;
 	margin: -30px -30px 30px -30px;
 	border-radius: 10px 10px 10px 10px;
@@ -168,7 +168,7 @@ section{
 	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	border: 1px solid #D2691E;
+	border: 1px solid #751F1F;
 }
 .form-style-10 h2 > span{
 	display: block;
@@ -181,6 +181,7 @@ section{
 	color: black;
 	margin-bottom: 15px;
 }
+
 
 .form-style-10 label >span{
 	display: block;
@@ -224,7 +225,7 @@ section{
 
 }
 .form-style-10 .section2 span {
-	background: #D2691E;
+	background: #751F1F;
 	padding: 5px 10px 5px 10px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -238,7 +239,7 @@ section{
 }
 .form-style-10 input[type="button"],
 .form-style-10 input[type="submit"]{
-	background: #D2691E;
+	background: #751F1F;
 	padding: 8px 20px 8px 20px;
 	margin-left:40%;
 	border-radius: 5px;
@@ -250,25 +251,17 @@ section{
 	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
 	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-	border: 1px solid #FFA700;
+	border: 1px solid #751F1F;
 	font-size: 15px;
 }
 .form-style-10 input[type="button"]:hover,
 .form-style-10 input[type="submit"]:hover{
-	background: #FFA700;
-	-moz-box-shadow: inset 0px 2px 2px 0px #FFA700;
-	-webkit-box-shadow: inset 0px 2px 2px 0px #FFA700;
-	box-shadow: inset 0px 2px 2px 0px #FFA700;
+	background: #BF3B3B;
+	-moz-box-shadow: inset 0px 2px 2px 0px #BF3B3B;
+	-webkit-box-shadow: inset 0px 2px 2px 0px #BF3B3B;
+	box-shadow: inset 0px 2px 2px 0px #BF3B3B;
 }
-.form-style-10 .privacy-policy{
-	float:right;
 
-	width: 250px;
-	font: 12px Arial, Helvetica, sans-serif;
-	color: #4D4D4D;
-	margin-top: 10px;
-	text-align: right;
-}
 
 /*Reducere*/
 
