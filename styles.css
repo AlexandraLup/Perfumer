@@ -68,7 +68,7 @@ header{
 	padding-top: 10px;
 }
 #search-button input{
-	
+
 	text-align: center;
 	border-radius: 10px;
 			-webkit-transition: width 0.4s ease-in-out;
@@ -385,7 +385,7 @@ section{
 	height: 30%;
 	margin-left: 10px;
 	margin-bottom: 10px;
-	margin-right: 10px;	
+	margin-right: 10px;
 }
 
 .dimensiuneFoto{
@@ -475,7 +475,7 @@ footer {
 }
 
 .column2{
-	
+
 	padding: 4%;
 	height: 200px;
 	background-color: black;
@@ -520,7 +520,6 @@ footer {
   background-repeat: no-repeat;
 	-webkit-transition: width 0.4s ease-out;
 transition: width 0.4s ease-out;
-
 }
 #search-button input:focus{
 	width:15%;
@@ -743,7 +742,7 @@ strong{
 .quantity input{
 	width:50px;
 	border-radius:30px;
-	
+
 }
 .product-details p{
 	font-size:10px;
@@ -802,7 +801,6 @@ font-size: 0.75rem;
 	padding:0;
 	margin:0;
 	height:10px;
-	border:none;
 }
 .lista{
    width: 33.3%;
@@ -812,6 +810,9 @@ font-size: 0.75rem;
 	 text-align: center;
 	 text-transform: uppercase;
 	 font-size: 15px;
+}
+.lista:hover{
+	color: #ccc;
 }
 
 /*--personaldata----*/
@@ -849,6 +850,20 @@ font-size: 0.75rem;
 	margin-left: 10px;
 	font-size:13px;
 }
+.personal-data1 .field-title{
+	padding:5px;
+	margin:3px;
+	padding-top: 10px;
+	text-transform: uppercase;
+	font-size:13px;
+
+}
+.personal-data1 p{
+	padding:0;
+	margin:0;
+	margin-left: 10px;
+	font-size:13px;
+}
 .adresa{
 	float:center;
 	margin:0;
@@ -875,4 +890,79 @@ font-size: 0.75rem;
 	padding:0;
 	font-size:13px;
 	text-decoration:underline;
+}
+/*-----orderhistory---*/
+.title1{
+	padding:0;
+	margin-top:5%;
+	width:50%;
+	margin-left:25%;
+}
+.title1 h3{
+	text-align:left;
+	font-weight: bold;
+	font-size:20px;
+	padding:0;
+	margin:0;
+}
+.title1 p{
+	text-align:left;
+	padding:0;
+	margin:0;
+}
+.history{
+	width:50%;
+	margin-left:25%;
+	border:1px solid #ccc;
+}
+.order-info p{
+ padding:1%;
+ margin:0;
+ width:50%;
+}
+.order-info .order-date{
+	font-size:10px;
+}
+.order-info{
+	padding: 0;
+	margin:0;
+	border:none;
+}
+.order-status{
+	text-align: right;
+	padding:15px;
+	margin:0;
+	width:50%;
+	border:none;
+}
+.order{
+	display: flex;
+	border:1px solid #ccc;
+}
+.title2{
+	text-align:left;
+	margin:5%;
+}
+#wishlist{
+	border:none;
+	padding:0;
+	margin:0;
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+}
+.items{
+	border:1px solid #ccc;
+	padding:1%;
+	width: 25%;
+	margin:3%;
+	text-align: center;
+}
+.items button {
+	background:black;
+	color:white;
+}
+.title2{
+	text-align: center;
+	margin:3%;
 }
