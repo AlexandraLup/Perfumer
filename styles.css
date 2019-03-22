@@ -1036,33 +1036,13 @@ font-size: 0.75rem;
 
 
 /* -------------------------------------------*/
-
-
-
 html,
 body,
 img,
 figure {
   max-width: 100%;
 }
-html,
-body {
-  overflow-x: hidden;
-  color: #000;
-  -ms-overflow-style: scrollbar;
-  -webkit-font-smoothing: antialiased;
-}
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
-}
-a {
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
-}
+
 
 
 .ct-footer {
