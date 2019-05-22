@@ -16,6 +16,5 @@ require(ROOT_DIR .'core'. DIRECTORY_SEPARATOR . 'route.php');
 // Define base URL
 global $config;
 define('BASE_URL', $config['base_url']);
-echo BASE_URL;
 route();
 ?>
