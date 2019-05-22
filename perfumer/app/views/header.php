@@ -20,13 +20,13 @@
 		<div id="Div" >
 			<div id="Div1">
 				<form id="search-button" >
-				  	<input type="search" placeholder="CautÄƒ..">
+				  	<input type="search" placeholder="Caută..">
 				</form>
 			</div>
 
 			<div id="Div2">
 				<div>
-					<h1 class="h1"><a href="index.html">Perfumer</a></h1>
+					<h1 class="h1"><a href="index.php">Perfumer</a></h1>
 				</div>
 			</div>
 
@@ -37,13 +37,13 @@
 	<nav>
 		<ul>
 			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI FEMEI</a></li>
-			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI BARBATI</a></li>
-			<li class="FemeiBarbati"><a href="/parfumuriFemei">NOUTATI</a></li>
+			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI BĂRBAȚI</a></li>
+			<li class="FemeiBarbati"><a href="/parfumuriFemei">NOUTĂȚI</a></li>
 		</ul>
 
 		<ul>
-			<li class="ContCos"><a href="login.html">CONT <i class="fa fa-user-circle" ></i></a></li>
-			<li class="ContCos"><a href="shoppingcart.html">COS <i class="fa fa-shopping-cart"></i></a></li>
+			<li class="ContCos"><a href="Login">CONT <i class="fa fa-user-circle" ></i></a></li>
+			<li class="ContCos"><a href="shoppingcart.html">COȘ <i class="fa fa-shopping-cart"></i></a></li>
 			<li class="ContCos"><a href="myaccount.html">WISHLIST <i class="fa fa-heart"></i></a></li>
 		</ul>
 	</nav>

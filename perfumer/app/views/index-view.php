@@ -9,7 +9,7 @@
 				</div>
 				<a href="#">
 					<div id="reducereText2">
-						DescoperÄƒ oferta
+						Descoperă oferta
 					</div>
 				</a>
 			</div>
@@ -18,7 +18,7 @@
 
 		<div id="topNoutati">
 			<div id="titleTOP">
-				<h2 style="font-family: Bitter "><b>TOP NOUTÄ‚TI</b></h2>
+				<h2 style="font-family: Bitter "><b>TOP NOUTĂȚI</b></h2>
 
 			</div>
 

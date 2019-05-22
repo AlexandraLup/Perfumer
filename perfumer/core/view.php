@@ -2,6 +2,7 @@
 class View {
 	private $pageVars = array();
 	private $template;
+	
 	public function __construct($template)
 	{
 		$this->template = APP_DIR .'views/'. $template .'.php';
