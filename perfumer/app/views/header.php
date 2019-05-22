@@ -37,13 +37,13 @@
 	<nav>
 		<ul>
 			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI FEMEI</a></li>
-			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI BÄ‚RBAÈšI</a></li>
-			<li class="FemeiBarbati"><a href="/parfumuriFemei">NOUTÄ‚ÈšI</a></li>
+			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI BARBATI</a></li>
+			<li class="FemeiBarbati"><a href="/parfumuriFemei">NOUTATI</a></li>
 		</ul>
 
 		<ul>
 			<li class="ContCos"><a href="login.html">CONT <i class="fa fa-user-circle" ></i></a></li>
-			<li class="ContCos"><a href="shoppingcart.html">COÈ˜ <i class="fa fa-shopping-cart"></i></a></li>
+			<li class="ContCos"><a href="shoppingcart.html">COS <i class="fa fa-shopping-cart"></i></a></li>
 			<li class="ContCos"><a href="myaccount.html">WISHLIST <i class="fa fa-heart"></i></a></li>
 		</ul>
 	</nav>
