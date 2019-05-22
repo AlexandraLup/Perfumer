@@ -15,13 +15,13 @@
     </form>
     <ul class="ct-footer-list ">
       <li>
-        <h2 class="ct-footer-list-header">InformaÈ›ii generale</h2>
+        <h2 class="ct-footer-list-header">Informații generale</h2>
         <ul>
           <li>
             <a href="">Despre noi</a>
           </li>
           <li>
-            <a href="">Termeni & condiÈ›ii</a>
+            <a href="">Termeni & condiții</a>
           </li>
           <li>
             <a href="">Regulamente</a>
@@ -35,21 +35,21 @@
             <a href="">Autentificare</a>
           </li>
           <li>
-            <a href="">Vizualizare coÈ™</a>
+            <a href="">Vizualizare coș</a>
           </li>
         </ul>
       </li>
       <li>
-        <h2 class="ct-footer-list-header">AsistenÈ›Äƒ clienÈ›i</h2>
+        <h2 class="ct-footer-list-header">Asistență clienți</h2>
         <ul>
           <li>
-            <a href="">ModaliÄƒÈ›i de platÄƒ</a>
+            <a href="">Modalități de plată</a>
           </li>
           <li>
             <a href="">Metode de livrare</a>
           </li>
           <li>
-            <a href="">Ã®ntrebÄƒri frecvente</a>
+            <a href="">întrebări frecvente</a>
           </li>
         </ul>
       </li>
@@ -57,7 +57,7 @@
         <h2 class="ct-footer-list-header">Contact</h2>
         <ul>
           <li>
-            <a >Bulevardul Carol I, Nr.11, 700506, IaÅŸi</a>
+            <a >Bulevardul Carol I, Nr.11, 700506, Iași</a>
           </li>
           <li>
             <a >0751 159 228</a>
@@ -74,7 +74,7 @@
     <div class="container">
       
       <div class="inner-right">
-        <p>Copyright Â© 2019 <a href="">Privacy Policy</a></p>
+        <p>Copyright © 2019 <a href="">Privacy Policy</a></p>
       </div>
     </div>
   </div>
