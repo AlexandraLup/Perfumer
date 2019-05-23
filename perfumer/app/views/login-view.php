@@ -11,9 +11,9 @@
       <h4> SUNT DEJA CLIENT </h4>
       <form class="login" action="" method="POST">
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter E-mail" id="email" name="email" required>
-        <label for="psw"><b>ParolÃ„Æ’</b></label>
-        <input type="password" placeholder="Enter Password"  id="psw" name="psw" required>
+        <input type="text" placeholder="Introdu adresa de email" id="email" name="email" required>
+        <label for="psw"><b>Parola</b></label>
+        <input type="password" placeholder="Introdu parola"  id="psw" name="psw" required>
         <button type="submit">Login</button>
         <span class="psw"> <a href="#">Ti-ai uitat parola?</a></span>
         <br>
@@ -28,7 +28,7 @@
       <div class="box">
         <h5> Benefiicile clientului </h5>
         <p> Istoricul comenzilor</p>
-        <p> Vezi lista de preferinÃˆâ€ºe</p>
+        <p> Vezi lista de preferinte</p>
         <p> PrimeÃˆâ„¢ti prin poÃˆâ„¢tÃ„Æ’ ultimele noutÃ„Æ’Ãˆâ€ºi despre tendinÃˆâ€ºe Ãˆâ„¢i </p>
         <p> promoÃˆâ€ºii</p>
         <br>
