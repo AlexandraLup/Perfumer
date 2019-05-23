@@ -36,13 +36,13 @@
 
 	<nav>
 		<ul>
-			<li class="FemeiBarbati"><a href="parfumurifemei">PARFUMURI FEMEI</a></li>
-			<li class="FemeiBarbati"><a href="parfumurifemei">PARFUMURI BĂRBAȚI</a></li>
-			<li class="FemeiBarbati"><a href="parfumurifemei">NOUTĂȚI</a></li>
+			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI FEMEI</a></li>
+			<li class="FemeiBarbati"><a href="/parfumuriFemei">PARFUMURI BĂRBAȚI</a></li>
+			<li class="FemeiBarbati"><a href="/parfumuriFemei">NOUTĂȚI</a></li>
 		</ul>
 
 		<ul>
-			<li class="ContCos"><a href="login">CONT <i class="fa fa-user-circle" ></i></a></li>
+			<li class="ContCos"><a href="Login">CONT <i class="fa fa-user-circle" ></i></a></li>
 			<li class="ContCos"><a href="shoppingcart.html">COȘ <i class="fa fa-shopping-cart"></i></a></li>
 			<li class="ContCos"><a href="myaccount.html">WISHLIST <i class="fa fa-heart"></i></a></li>
 		</ul>
