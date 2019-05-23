@@ -12,10 +12,32 @@ class Login extends Controller {
 
 		if(isset($_POST["email"])){
 			$email= $_POST["email"];
-			$info =$model->getEmail($email);
+			$parola=$_POST["psw"];
 			
-			if($info[0] == '0')
-				var_dump($info[0]);
+
+			$info =$model->getEmail($email);
+			if($info[0] == '0'){
+
+				//trebuie sa ma inregistrez mai intai
+				$template->set('login', 'inexistent');
+			}
+			else{
+				//tre' sa fac o sesiune de login
+				$parolaDB= $model->getPassword($email);
+
+				$hash = $parolaDB['parola'];
+				$check= password_verify($parola, $hash);
+				
+				var_dump($check);
+/*
+				if($check==1){
+					//fac sesiunea
+					print_r($check);
+				}
+				else{
+					$template->set('parolaGresita','ok');
+				}	*/			
+			}
 		}
 		$template->render();
 	}
