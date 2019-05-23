@@ -3,8 +3,20 @@ class Admin extends Controller {
 	
 	function index()
 	{   
-		$template = $this->loadView('admin-view');
-		if (isset($_POST)) {
+		$template = $this->loadView('admin-index');
+		$template->render();
+	}
+
+	function rapoarte(){
+   
+		$template = $this->loadView('admin-rapoarte');
+		$template->render();
+	}
+
+	function add(){
+
+		$template = $this->loadView('admin-add');
+		/*if (isset($_POST)) {
 			$barcode = trim($_POST['barcode']);
 			$name    = trim($_POST['name']);
 			$gender    = trim($_POST['gender']);
@@ -22,7 +34,9 @@ class Admin extends Controller {
 			$top   = trim($_POST['top']);
 			$description = trim($_POST['description']);
 		}
+		*/
 		$template->render();
 	}
+
 }
 ?>
