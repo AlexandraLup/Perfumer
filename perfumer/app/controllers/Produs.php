@@ -7,7 +7,6 @@ class Produs extends Controller {
 		$model=new  ProdusModel();
 		$template = $this->loadView('produs-view');
 		$info = $model->getDetails('candy prada');
-		var_dump($info);
 		$template->set('produs', $info) ;
 		$template->render();
 	}
