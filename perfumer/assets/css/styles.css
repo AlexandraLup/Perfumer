@@ -1603,7 +1603,7 @@ margin:0;
 	background-color: #F8F8F8;
 }
 .title-produs{
-	background-color: #D83636;
+	background-color:#751F1F;
 	padding: 15px;
 	margin:0px;
 }
@@ -1638,4 +1638,80 @@ margin:0;
 	border-color:grey;
 	padding:5px;
 	color:white;
+}
+
+
+/*--admin-index ---*/
+form {
+	border: 3px solid #f1f1f1;
+	width: 50%;		
+	margin-left:25%;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.login-container {
+	padding: 16px;
+	width: 100%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.admin-titlu{
+	text-align: center;
+}
+
+
+
+/* --admin navbar--*/
+.navbar {
+  width: 100%;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ccc;
+}
+
+.active {
+  background-color: #751F1F;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
 }
