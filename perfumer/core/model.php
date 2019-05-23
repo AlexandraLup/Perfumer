@@ -43,6 +43,14 @@ class Model {
 		$row = mysqli_fetch_array($result);
 		return $row;
 	}
+
+	public function queryInsert($qry)
+	{
+		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysql_error());
+		
+	}
+
+
 	public function execute($qry)
 	{
 		$exec = mysql_query($qry) or die('MySQL Error: '. mysql_error());
