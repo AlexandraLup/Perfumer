@@ -1,11 +1,10 @@
 <?php
 class LoginModel extends Model {
 	
-	public function getSomething($id)
+	public function getEmail($email)
 	{
-		$id = $this->escapeString($id);
-		$result = $this->query('SELECT nume_utilizator,id FROM utilizatori WHERE id="'. $id .'"');
-		
+		$query= 'select count(email) from utilizatori where email="'. $email .'"';
+		$result= $this->query($query);
 		return $result;
 	}
 }
