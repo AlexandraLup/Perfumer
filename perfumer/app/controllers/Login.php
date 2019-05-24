@@ -8,15 +8,19 @@ class Login extends Controller {
 	{
 		$model = new LoginModel();
 		$template = $this->loadView('login-view');
+		$template2 = $this->loadView('index-view');
+		//$sesiune = $this->loadHelper('session_helper');
 		
 
-		if(isset($_POST["email"])){
+		if(isset($_POST["login"])){
 			$email= $_POST["email"];
 			$parola=$_POST["psw"];
 			
 
 			$info =$model->getEmail($email);
-			if($info[0] == '0'){
+			
+
+			if(!isset($info["email"])){
 
 				//trebuie sa ma inregistrez mai intai
 				$template->set('login', 'inexistent');
@@ -24,21 +28,32 @@ class Login extends Controller {
 			else{
 				//tre' sa fac o sesiune de login
 				$parolaDB= $model->getPassword($email);
-
 				$hash = $parolaDB['parola'];
+			
 				$check= password_verify($parola, $hash);
 				
-				var_dump($check);
-/*
-				if($check==1){
+				if($check==true){
 					//fac sesiunea
-					print_r($check);
+					session_start(); 
+					$_SESSION['email'] = $info['email'];
+
+					$this->redirect('index');
+
+					
+					
 				}
 				else{
 					$template->set('parolaGresita','ok');
-				}	*/			
+				}			
 			}
+
 		}
+
+		if(isset($_POST["logout"])){
+			$template->destroy();
+		}
+
+
 		$template->render();
 	}
 }
