@@ -15,19 +15,22 @@
         <label for="psw"><b>Parolă</b></label>
          <?php 
             if(isset($parolaGresita))
-              echo '<p style="color:red;"> Ați greșit parola! </p>'
+              echo '<p style="color:red;"> Ați greșit parola! </p>';
         ?>
         <input type="password" placeholder="Enter Password"  id="psw" name="psw" required>
-        <button type="submit">Login</button>
+        <button type="submit" value="login" name="login">Login</button>
         <span class="psw"> <a href="#">Ti-ai uitat parola?</a></span>
         <br>
         <?php 
             if(isset($login))
-              echo '<p style="color:red;"> Înregistrează-te mai întâi! </p>'
+              echo '<p style="color:red;"> Înregistrează-te mai întâi! </p>';
         ?>
         <label> 
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
+      
+  
+
       </form>
     </div>
 
