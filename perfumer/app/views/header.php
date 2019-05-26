@@ -1,10 +1,13 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="RO">
 
 <head>
 	 <meta charset="UTF-8">
 	<title>Perfumer</title>
-	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/styles.css"   type="text/css" />
+	<link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/styles.css"   type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,6 +30,23 @@
 			<div id="Div2">
 				<div>
 					<h1 class="h1"><a href="index.php">Perfumer</a></h1>
+				</div>
+			</div>
+
+			<div id="Div3">
+				<div>
+				<?php 
+					if(isset($_SESSION["email"]))
+
+	        			echo '<p style="color: white;"> Bună, ' . $_SESSION['email'] .
+	        		" <form method='post'  >
+	        		<input type='submit' name='logout' value='logout'>  
+	        		</form> </p>
+	        		";
+	        		else
+	        			echo '<p style="color: while;"> oricine </p>';
+        	     ?> 
+
 				</div>
 			</div>
 
