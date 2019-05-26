@@ -8,7 +8,7 @@ class Login extends Controller {
 	{
 		$model = new LoginModel();
 		$template = $this->loadView('login-view');
-		$template2 = $this->loadView('index-view');
+		//$template2 = $this->loadView('index-view');
 		//$sesiune = $this->loadHelper('session_helper');
 		
 
@@ -16,6 +16,11 @@ class Login extends Controller {
 			$email= $_POST["email"];
 			$parola=$_POST["psw"];
 			
+			$data['email']=$email;
+			$data['parola']=$parola;
+			$template->set('verificare',$data);
+
+
 
 			$info =$model->getEmail($email);
 			
@@ -35,9 +40,8 @@ class Login extends Controller {
 				if($check==true){
 					//fac sesiunea
 					session_start(); 
-					$_SESSION['email'] = $info['email'];
-
-					$this->redirect('index');
+					$_SESSION['email'] = $email;
+				    $this->redirect('index');
 
 					
 					
@@ -49,9 +53,7 @@ class Login extends Controller {
 
 		}
 
-		if(isset($_POST["logout"])){
-			$template->destroy();
-		}
+		
 
 
 		$template->render();
