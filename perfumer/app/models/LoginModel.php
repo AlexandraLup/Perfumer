@@ -14,5 +14,13 @@ class LoginModel extends Model {
 		$result= $this->query($query);
 		return $result;
 	}
+
+
+	public function getEmailPass($email)
+	{
+		$query= 'select email, parola from utilizatori where email="'. $email .'"';
+		$result= $this->query($query);
+		return $result;
+	}
 }
 ?>
