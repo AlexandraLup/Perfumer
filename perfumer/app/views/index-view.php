@@ -1,18 +1,14 @@
-<?php include 'header.php' ?>
+<?php include "header.php";
+
+session_start();
+
+?>
 
 <section>
-		  <p style= "color:red;"> hello, 
-		  	<?php 
-				if(!isset($user))
-					echo 'de ce?';
-				else
-        			echo $_SESSION['email'];
-        	?> 
-           </p>
+		  
+          
 
-		<form method="post" action=""> 
-			<input type="submit" value="logout" name="logout"/> <br>
-		</form>
+		
 
 
 		<div id="reducere">
