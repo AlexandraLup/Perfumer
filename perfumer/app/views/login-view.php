@@ -16,6 +16,7 @@
          <?php 
             if(isset($parolaGresita))
               echo '<p style="color:red;"> Ați greșit parola! </p>';
+            
         ?>
         <input type="password" placeholder="Enter Password"  id="psw" name="psw" required>
         <button type="submit" value="login" name="login">Login</button>
@@ -23,7 +24,8 @@
         <br>
         <?php 
             if(isset($login))
-              echo '<p style="color:red;"> Înregistrează-te mai întâi! </p>';
+              {echo '<p style="color:red;"> Înregistrează-te mai întâi! </p>';
+              }
         ?>
         <label> 
           <input type="checkbox" checked="checked" name="remember"> Remember me
