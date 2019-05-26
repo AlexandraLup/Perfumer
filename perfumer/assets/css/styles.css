@@ -62,10 +62,14 @@ header{
 }
 
 #Div2{
-	width: 85%;
+	width: 60%;
 	display: flex;
 	justify-content: flex-start;
 	padding-left: 27%;
+}
+
+#Div3{
+	width: 25%;
 }
 
 #search-button{
