@@ -50,6 +50,37 @@
         </label>
     	</div>
 
+
+    <div class="section2"><span>4</span>Preferințe</div>
+        <div class="inner-wrap">
+        <label> Preferință 1
+          <select id="county" name="preferinta1">
+          <option value="florale">Florale</option>
+          <option value="fructate">Fructate</option>
+          <option value="verzi">Verzi</option>
+          <option value="marine">Marine</option>
+          <option value="citrice">Citrice</option>
+          <option value="orientale-dulci">Orientale-dulci</option>
+          <option value="orientale-lemnoase">Orientale-lemnoase</option>
+          <option value="muschi">Muschi</option>
+            </select>
+        </label>
+
+         <label> Preferință 2
+          <select id="county" name="preferinta2">
+           <option value="florale">Florale</option>
+          <option value="fructate">Fructate</option>
+          <option value="verzi">Verzi</option>
+          <option value="marine">Marine</option>
+          <option value="citrice">Citrice</option>
+          <option value="orientale-dulci">Orientale-dulci</option>
+          <option value="orientale-lemnoase">Orientale-lemnoase</option>
+          <option value="muschi">Muschi</option>
+            </select>
+        </label>
+
+        </div>
+
     <div class="button-section2">
         <input type="submit" name="Sign Up" value="Înregistrare">
 	   
