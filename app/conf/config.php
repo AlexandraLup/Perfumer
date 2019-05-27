@@ -1,5 +1,5 @@
 <?php 
-$config['base_url'] = 'http://localhost/Perfumer/'; 
+$config['base_url'] = 'http://localhost/perfumer/'; 
 $config['default_controller'] = 'index'; // Default controller to load
 $config['error_controller'] = 'Eroare'; // Controller used for errors (e.g. 404, 500 etc)
 $config['db_host'] = 'localhost'; // Database host (e.g. localhost)
