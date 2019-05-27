@@ -13,6 +13,9 @@ class Index extends Controller {
 		}
 
 			$template->render();
+			
+			
+		
 	}
 }
 ?>
