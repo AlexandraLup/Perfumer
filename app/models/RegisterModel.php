@@ -17,5 +17,21 @@ class RegisterModel extends Model {
 
 	}
 
+	public function getId( $email){
+
+		$query= "select id from utilizatori where email='$email'";
+		$result= $this->query($query);
+		return $result;
+	}
+
+	public function addPreferinte ( $idUser, $preferinta)
+	{
+		
+		$query= "insert into preferinte_utilizator (id_utilizator, esenta) values ('$idUser', '$preferinta')";
+
+		$result=$this->queryInsert($query);
+
+	}
+
 }
 ?>
