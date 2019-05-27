@@ -19,6 +19,8 @@ class Register extends Controller {
 			$telefon= $_POST["telefon"];
 			$parola1= $_POST["pass1"];
 			$parola2= $_POST["pass2"];
+			$preferinta1= $_POST["preferinta1"];
+			$preferinta2= $_POST["preferinta2"];
 
 			$info= $model->getEmail($email);
 			if($info[0] == '0')
@@ -27,9 +29,16 @@ class Register extends Controller {
 				if($parola1==$parola2)
 				{
 					$parola1=password_hash($parola2, PASSWORD_DEFAULT);
+
 					$model->createAccount($nume, $prenume,$adresa, $sex, $email, $telefon, $parola1);
 
+					$idPref=$model->getId($email);
+					$idUser=(int)$idPref[0];
+					$model->addPreferinte($idUser,$preferinta1);
+					$model->addPreferinte($idUser,$preferinta2);
+
 					$this->redirect('login');
+					
 				}
 				else
 					$template->set('parolaNeconfirmata', 0);
