@@ -279,22 +279,20 @@ section{
 #reducere{
 
 	width: 80%;
-	height: 330px;
+	height: 370px;
 	background: white;
 	margin-bottom: 25px;
-	margin-left: 18%;
-
-
+	margin-left: 10%;
 }
 
 #reducereLeft{
-	background-image: url("images/Mens.jpg");
-	background-size: 100% 370px;
+	background-color:white;
+	margin-left:7%;
 	width: 80%;
-	height: 330px;
+	height: 310px;
 	padding: 2px;
 	float: left;
-	margin-right: 4px;
+	
 }
 
 #reducereText{
@@ -311,11 +309,11 @@ section{
 	font: normal 17px 'Arial Black';
 	font-weight: 900;
 	text-align: center;
-	margin-top: 18%;
-	margin-left: 40%;
-	margin-right:30%;
 	padding-top: 5px;
 	padding-bottom:5px;
+	margin-right:13%;
+	margin-left:7%;
+	
 }
 
 
