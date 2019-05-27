@@ -1,4 +1,5 @@
-<?php include "header.php";
+<?php 
+include "header.php";
 
 session_start();
 
@@ -10,20 +11,18 @@ session_start();
 
 		
 
-
-		<div id="reducere">
+<div id="reducere">
 			<div id="reducereLeft">
-				<div id="reducereText">
-					10% REDUCERE
-				</div>
-				<a href="#">
-					<div id="reducereText2">
-						Descoperă oferta
-					</div>
-				</a>
+				<a href="#"><img alt="#" class="dimensiuneFoto" src="http://localhost/ceva/assets/images/Mens.jpg" > </a>
+				
+					
+				
 			</div>
+			<a href="#">
+			<div id="reducereText2">
+						Descoperă oferta
+					</div> </a>
 		</div>
-
 
 		<div id="topNoutati">
 			<div id="titleTOP">
@@ -66,18 +65,18 @@ session_start();
 				</div>
 				<a href="#">
 					<div class="bestSellerText2">
-						DescoperÄƒ oferta
+						Descoperă oferta
 					</div>
 				</a>
 
 			</div>
 			<div id="bestSellerM">
 				<div class="bestSellerText">
-					BESTSELLER BÄ‚RBAÈšI
+					BESTSELLER BĂRBAȚI
 				</div>
 				<a href="#">
 					<div class="bestSellerText2">
-						DescoperÄƒ oferta
+						Descoperă oferta
 					</div>
 				</a>
 
