@@ -13,16 +13,14 @@
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter E-mail" id="email" name="email" required>
         <label for="psw"><b>Parolă</b></label>
-         <?php 
-            if(isset($parolaGresita))
-              echo '<p style="color:red;"> Ați greșit parola! </p>';
-            
-        ?>
         <input type="password" placeholder="Enter Password"  id="psw" name="psw" required>
         <button type="submit" value="login" name="login">Login</button>
         <span class="psw"> <a href="#">Ti-ai uitat parola?</a></span>
         <br>
         <?php 
+            if(isset($parolaGresita))
+              echo '<p style="color:red;"> Ați greșit parola! </p>';
+
             if(isset($login))
               {echo '<p style="color:red;"> Înregistrează-te mai întâi! </p>';
               }
