@@ -12,6 +12,24 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.btnn-1 {
+
+border: 1px solid #ccc; 
+padding:16px; 
+margin-bottom:16px;
+height:330px;
+transition: border-width 0.6s linear;
+
+}
+
+.btnn-1:hover { border-width: 10px; }
+
+
+
+
+
+
 .h1 {
 
 	color: white;
