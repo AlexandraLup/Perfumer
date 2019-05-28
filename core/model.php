@@ -44,6 +44,15 @@ class Model {
 		return $row;
 	}
 
+	public function queryAll($qry)
+	{
+		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysql_error());
+		$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+		return $row;
+	}
+
+
+
 	public function queryInsert($qry)
 	{
 		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysql_error());
