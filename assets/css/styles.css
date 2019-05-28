@@ -10,20 +10,29 @@ body{
 	margin: auto;
     background: black;
 	font-family: Arial, Helvetica, sans-serif;
+
 }
 
 
 .btnn-1 {
 
-border: 1px solid #ccc; 
 padding:16px; 
 margin-bottom:16px;
-height:330px;
+height:360px;
+
+/////overflow:hidden;
+
+
+border: solid 5px white ;
 transition: border-width 0.6s linear;
+
 
 }
 
-.btnn-1:hover { border-width: 10px; }
+.btnn-1:hover { 
+border-width: 10px;
+border-color:#fbfbff;
+ }
 
 
 
@@ -468,7 +477,7 @@ section{
 
 .columnPF {
 	float: left;
-	height: 1000px;
+	overflow:hidden;
 	background-color: white;
 
 }
