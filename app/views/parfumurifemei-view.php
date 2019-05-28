@@ -2,7 +2,7 @@
 
 <section>
 
-<div style="background-color: white; height: 1000px">
+<div style="background-color: white;  overflow:hidden;">
   <div class="columnPF parfumuriLeft">
       <div class="filtreParfum"> Filtru </div>
       <div class="filtru"> <a href="crescator.html"> Preț  crescator </a></div>
