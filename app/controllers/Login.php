@@ -8,8 +8,6 @@ class Login extends Controller {
 	{
 		$model = new LoginModel();
 		$template = $this->loadView('login-view');
-		//$template2 = $this->loadView('index-view');
-		//$sesiune = $this->loadHelper('session_helper');
 		
 
 		if(isset($_POST["login"])){
