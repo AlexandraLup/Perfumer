@@ -1,8 +1,6 @@
 <?php 
 include "header.php";
 
-
-
 ?>
 
 
@@ -11,7 +9,7 @@ include "header.php";
 
 <div id="reducere">
 			<div id="reducereLeft">
-				<a href="#"><img alt="#" class="dimensiuneFoto" src="http://localhost/ceva/assets/images/Mens.jpg" > </a>
+				<a href="#"><img alt="#" class="dimensiuneFoto" src="http://localhost/perfumer/assets/images/Mens.jpg" > </a>
 				
 					
 				
