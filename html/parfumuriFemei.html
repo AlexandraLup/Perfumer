@@ -56,6 +56,33 @@
       <div class="filtru"> <a href="#"> Preț descrescator </a></div>
       <div class="filtru"> <a href="#"> Cele mai noi </a></div>
       <div class="filtru"> <a href="#"> Cele mai vândute </a></div>
+	  
+	  
+	   <div class="wrapper">
+		<fieldset class="filter-price">
+	  
+		<div class="price-field">
+		<input type="range" min="0" max="5000" value="0" id="lower">
+		<input type="range" min="0" max="5000" value="5000" id="upper">
+		</div>
+	
+		<div class="price-wrap">
+			
+			<div class="price-container">
+				<div class="price-wrap-1">
+				  <label for="one">$</label>
+				  <input id="one">
+				</div>
+				<div class="price-wrap_line">-</div>
+				<div class="price-wrap-2">
+				  <label for="two">$</label>
+				  <input id="two">
+				</div>
+			</div>
+		</div>
+	
+		  </fieldset>
+		</div>
 
   </div>
 
@@ -265,6 +292,44 @@
 </div>
 </footer>
 
+
+
+<script>
+var lowerSlider = document.querySelector('#lower');
+var  upperSlider = document.querySelector('#upper');
+
+document.querySelector('#two').value=upperSlider.value;
+document.querySelector('#one').value=lowerSlider.value;
+
+var  lowerVal = parseInt(lowerSlider.value);
+var upperVal = parseInt(upperSlider.value);
+
+upperSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+
+    if (upperVal < lowerVal + 4) {
+        lowerSlider.value = upperVal - 4;
+        if (lowerVal == lowerSlider.min) {
+        upperSlider.value = 4;
+        }
+    }
+    document.querySelector('#two').value=this.value
+};
+
+lowerSlider.oninput = function () {
+    lowerVal = parseInt(lowerSlider.value);
+    upperVal = parseInt(upperSlider.value);
+    if (lowerVal > upperVal - 4) {
+        upperSlider.value = lowerVal + 4;
+        if (upperVal == upperSlider.max) {
+            lowerSlider.value = parseInt(upperSlider.max) - 4;
+        }
+    }
+    document.querySelector('#one').value=this.value
+}; 
+
+</script>
 
 </body>
 
