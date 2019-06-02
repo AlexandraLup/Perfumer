@@ -21,8 +21,12 @@ class AdminModel extends Model {
 
     public function deleteProduct($barcode){
 
-        $query = "DELETE from produse where id = '$barcode' " ;
-        $result = $this->execute($query);
+        $query = 'DELETE from compozitii WHERE id_produs="'. $barcode .'"';
+        $query1 = 'DELETE from stocuri WHERE id_produs="'. $barcode .'"';
+        $query2 = 'DELETE from produse WHERE id="'. $barcode .'"';
+        $result = mysqli_query($this->connection,$query);
+        $result = mysqli_query($this->connection,$query1);
+        $result = mysqli_query($this->connection,$query2);
     }
 
 }
