@@ -20,9 +20,9 @@
 		</div>
 		</header>
 		<div class="navbar">
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Rapoarte</a> 
-  <a href="#"><i class="fa fa-fw fa-search"></i> Adauga produs</a> 
-  <a href="#"><i class="fa fa-fw fa-envelope"></i>Sterge produs</a> 
+  <a class="active" href="#"><i class="fas fa-file"></i> Rapoarte</a> 
+  <a href="add"><i class="fas fa-plus"></i> Adaug&#259; produs</a> 
+  <a href="delete"><i class="fas fa-trash-alt"></i> 		&#350;terge produs</a> 
 </div>
 <section>
 
