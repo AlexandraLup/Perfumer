@@ -6,60 +6,61 @@
       <div class="titlu-produs">
        <?php echo (strtoupper($produs["nume"]). ' ' . strtoupper($produs["categorie"])); ?>
       </div>
-    <div class="detalii-produs">
-	  	<table style="width:100%">
+	  	<table class="table-produs" >
         <tr>
           <th>Cantitate</th>
           <th>Disponibilitate</th> 
           <th>Pret</th>
-        </tr>
+				</tr>	   
         <tr>
-          <td> 
-					  <form method="post" action="#">
-					    <select name="variante" id="variante">
-								<option value=""></option>
-                <option value="30 ml">30 ml</option>
-                <option value="50 ml">50 ml</option>
-                <option value="100 ml">100 ml</option>
-						  </select>
-            </form>
+					<td>
+					  <label class="radio_button"> 30 ml
+              <input type="radio" name="quantity", value="30">
+                <span class="checkmark"></span>
+            </label>
           </td>              
-						<?php 
-						   if(isset($_POST["variante"])){
-									$varianta=$_POST["variante"];
-									echo $varianta;
-									switch($variante) {
-                      case '30 ml' : if($produs["stoc_30"]>0) {
-												echo '<td> <style="color:green"> In stoc </td>';
-											}
-											else{
-												echo '<td> <style="color:red"> Stoc insuficient </td>';
-											}
-											echo '<td>' . $produs["pret_30"] . '</td>';  
-											break;
-											case '50 ml' : if($produs["stoc_50"]>0) {
-												echo '<td> <style="color:green"> In stoc </td>';
-											}
-											else{
-												echo '<td> <style="color:red"> Stoc insuficient </td>';
-											}
-											echo '<td>' . $produs["pret_50"] . '</td>';  
-											break;
-											case '30 ml' : if($produs["stoc_100"]>0) {
-												echo '<td> <style="color:green"> In stoc </td>';
-											}
-											else{
-												echo '<td> <style="color:red"> Stoc insuficient </td>';
-											}
-											echo '<td>' . $produs["pret_100"] . '</td>';  
-											break;
-									}
-									
-							 }
-						?>
+					<td> 
+					<?php if(intval($produs["stoc_30"]) == 0) {echo '<p style="color:red">Stoc Insuficient </p>';}
+					  elseif(intval($produs["stoc_30"]) > 0 && intval($produs["stoc_30"]) < 5) {echo '<p style="color:orange">Mai putin de 5 bucati! </p>'; }
+					  else {echo '<p style="color:green">In stoc </p>';} ?>
+          </td> 
+					<td> 
+					  <?php echo $produs["pret_30"] . ' LEI';?>
+          </td> 
+        </tr>
+				<tr>
+				<td>
+					  <label class="radio_button"> 50 ml
+              <input type="radio" name="quantity", value="50">
+                <span class="checkmark"></span>
+            </label>
+					</td>    
+					<td>              
+					<?php if(intval($produs["stoc_50"]) == 0) {echo '<p style="color:red">Stoc Insuficient </p>';}
+					  elseif(intval($produs["stoc_50"]) > 0 && intval($produs["stoc_50"]) < 5) {echo '<p style="color:orange">Mai putin de 5 bucati! </p>'; }
+					  else {echo '<p style="color:green">In stoc </p>';} ?>
+          </td> 
+					<td> 
+					  <?php echo $produs["pret_50"] . ' LEI';?>
+          </td> 
+        </tr>
+				<tr>
+				<td>
+					  <label class="radio_button"> 100 ml
+              <input type="radio" name="quantity", value="100">
+                <span class="checkmark"></span>
+            </label>
+          </td>                    
+					<td> 
+					 <?php if(intval($produs["stoc_100"]) == 0) {echo '<p style="color:red">Stoc Insuficient </p>';}
+					  elseif(intval($produs["stoc_100"]) > 0 && intval($produs["stoc_100"]) < 5) {echo '<p style="color:orange">Mai putin de 5 bucati! </p>'; }
+					  else {echo '<p style="color:green">In stoc </p>';} ?>
+          </td> 
+					<td> 
+					  <?php echo $produs["pret_100"] . ' LEI';?>
+          </td> 
         </tr>
       </table>
-    </div>
 		<div class="buttons">
 		<button><i class="far fa-heart"></i> Adauga in wishlist</button>
 		<button><i class="fa fa-shopping-cart"></i> Adauga in cos</button>
