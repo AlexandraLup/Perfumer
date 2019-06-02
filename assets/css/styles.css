@@ -20,7 +20,7 @@ padding:16px;
 margin-bottom:16px;
 height:330px;
 
-/////overflow:hidden;
+overflow:hidden;
 
 
 border: solid 5px white ;
@@ -1529,49 +1529,83 @@ padding:10px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
+/*
 .detalii-produs{
 	display:flex;
 	flex-direction: column;
 	width: 80%;
 	height: 20%;
 }
-.informatii{
-	display:flex;
-	padding:10px;
-	flex-direction:row;
-	width: 100%;
-	border: 2px solid #DCDCDC;
+*/
+.table-produs{
+	width:80%;
+	background-color:#ccc;
+}
+.table-produs th{
+	padding:0px;
 }
 
-.informatii p{
-	padding:0;
-	margin:0;
-	border:none;
-	margin-left:5px;
-	margin-right:29%;
-}
-.rowprodus{
-	height: 100px;
-	width: 100%;
-	background: #ccc;
-}
-.info-show{
-	display:flex;
-  height:300px; /* weight */
-	flex-direction:row;
-	padding:0;
-	margin:2%;
-}
-.info-show p{
+.table-produs th,td{
 	padding:5px;
-margin:0;
+	padding-left: 0px;
+	text-align:center;
 }
-.info-show .stoc{
-margin-left:30%;
+.radio_button{
+	display: block;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.info-show form{
-	margin-left: 27%;
+
+.radio_button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.radio_button:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.radio_button input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio_button input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio_button .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
 .buttons{
 
 	width: 80%;
@@ -1801,14 +1835,14 @@ margin:0;
 
 }
 
-	*--admin-index ---*/
+	/*--admin-index ---*/
 form {
 	border: 3px solid #f1f1f1;
 	width: 50%;		
 	margin-left:25%;
 }
 
-input[type=text], input[type=password] {
+ input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -1817,7 +1851,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+ button {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -1827,51 +1861,104 @@ button {
   width: 100%;
 }
 
-button:hover {
+ button:hover {
   opacity: 0.8;
 }
 
-.login-container {
+ .login-container {
 	padding: 16px;
 	width: 100%;
 }
 
-span.psw {
+ span.psw {
   float: right;
   padding-top: 16px;
 }
 
-.admin-titlu{
+ .admin-titlu{
 	text-align: center;
 }
 
 
 
-/* --admin navbar--*/
+ /* --admin navbar--*/
 .navbar {
   width: 100%;
   overflow: auto;
 }
 
-.navbar a {
+ .navbar a {
   float: left;
   padding: 12px;
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
-.navbar a:hover {
+ .navbar a:hover {
   background-color: #ccc;
 }
 
-.active {
+ .active {
   background-color: #751F1F;
 }
 
-@media screen and (max-width: 500px) {
+ @media screen and (max-width: 500px) {
   .navbar a {
-    float: none;
+		float: none;
+		width : 100%;
     display: block;
   }
+} 	
 
+/*--admin-add---*/
+.container{
+	padding: 20px 15px 0;
+}
+.form-produs{
+	margin:0px;
+	padding:5px;
+	background-color: #F8F8F8;
+	border-radius : 7px;
+	border: 3px #751F1F;
+
+}
+.title-produs{
+	background-color: #751F1F;
+	padding: 15px;
+	margin:0px;
+	color : white; 
+	border-radius : 7px;
+}
+
+ .form-row {
+		display: flex;
+		flex-direction: row;
+		padding:10px;
+
+ }
+.stocuri {
+	padding:15px;
+	margin-left: 10px;
+}
+.form-group{
+	display:flex;
+	flex-direction: column;
+	padding:15px;
+}
+.form-group label{
+	padding:10px;
+	font-weight: 150px;
+}
+.form-group input{
+	padding:10px;
+	border-radius: 10px;
+}
+.success{
+	background-color: rgb(19, 122, 19);
+	border-radius: 4px;
+	padding:5px;
+	color:white;
+}
+
+/* --admin-delete---*/
