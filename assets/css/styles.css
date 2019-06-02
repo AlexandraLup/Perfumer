@@ -1530,14 +1530,6 @@ padding:10px;
 	text-transform: uppercase;
 }
 
-/*
-.detalii-produs{
-	display:flex;
-	flex-direction: column;
-	width: 80%;
-	height: 20%;
-}
-*/
 .table-produs{
 	width:80%;
 	background-color:#ccc;
