@@ -24,7 +24,7 @@
     <div class="navbar">
   <a \href="rapoarte"><i class="fas fa-file"></i> Rapoarte</a> 
   <a href="add"><i class="fas fa-plus"></i> Adaug&#259; produs</a> 
-  <a class="active" href="#"><i class="fas fa-trash-alt"></i>&#350;terge produs</a> 
+  <a class="active" href="#"><i class="fas fa-trash-alt"></i> &#350;terge produs</a> 
 </div>
 <section>
     <div class="delete-container">
@@ -51,7 +51,7 @@
                             <input type="text"  id="cod" name="cod" placeholder="Cod" required>
                         </div>
                     </div>  
-                   <button type="submit"  name="delete" class="success"><i class="fa fa-check-circle"></i> &#350;terge</button>
+                   <button type="submit" value="delete" name="delete" class="success"><i class="fa fa-check-circle"></i> &#350;terge</button>
                 </form>
             </div>
         </div>
