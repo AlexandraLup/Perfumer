@@ -29,10 +29,10 @@
 <form action="" method="POST">
 
   <div class="login-container">
-    <label for="email"><b>Username</b></label>
+    <label for="email"><b>Nume utilizator</b></label>
     <input type="text" placeholder="Introdu adresa de email" name="uname" required>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="psw"><b>Parolă</b></label>
     <input type="password" placeholder="Introdu parola" name="psw" required>
         
     <button type="submit">Login</button>
