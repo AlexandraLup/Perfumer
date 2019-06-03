@@ -49,19 +49,19 @@ class Admin extends Controller {
 
 		$template = $this->loadView('admin-delete');
 		$model = $this->loadModel('AdminModel');
-		$template->render();
         if(isset($_POST['delete'])){
 			$barcode = $_POST['cod'];
 			$result = $model -> deleteProduct($barcode);
-			if($result == true){
+			if(intval($result) == 1){
 				$template->set('success', true);
 			}
 			else {
 				$template->set('success', false);
 			}
-			  
 
 		}
+
+		$template->render();
 	}
 
 }
