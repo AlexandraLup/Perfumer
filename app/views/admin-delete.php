@@ -29,6 +29,7 @@
 <section>
     <div class="delete-container">
     <?php
+           
            if (isset($success)){
           if($success==true) {
               echo '<div style="background:rgb(19, 122, 19); padding: 10px; border-radius : 7px; margin : 5px;" >  <p style="color: white ">  Produsul a fost sters! </p> </div>';
