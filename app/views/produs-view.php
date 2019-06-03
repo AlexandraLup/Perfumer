@@ -89,6 +89,19 @@
 				<?php echo $produs["descriere"]; ?>
 		</div>
 		</div>
+		<div class = "comentariu" >
+		 <h3> Comentarii clienti </h3>
+    <div id="comments" >
+			 <?php 
+					foreach($comments as $array) {
+								 echo '<p>' . $array['nume_utilizator'] . '</p>';
+								 echo '<p>' . $array['comentariu'] . '</p>';
+					}
+
+			?>
+		</div>
+		<button > Arata mai multe comentarii </button>
+    </div>
   </section>
 
 	<?php include 'footer.php'; ?>
