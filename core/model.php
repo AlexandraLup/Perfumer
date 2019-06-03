@@ -63,7 +63,8 @@ class Model {
 	public function execute($qry)
 	{
 		$exec = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($this->connection));
-		return $exec;
+		$count = mysqli_affected_rows($this->connection);
+		return $count;
 	}
     
 }
