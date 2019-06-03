@@ -19,14 +19,9 @@ body{
 padding:16px; 
 margin-bottom:16px;
 height:330px;
-
 overflow:hidden;
-
-
 border: solid 5px white ;
 transition: border-width 0.6s linear;
-
-
 }
 
 .btnn-1:hover { 
@@ -962,7 +957,7 @@ span.psw {
 /*---shoppingcart---*/
 .title{
 	text-align: center;
-	font-weight: 50%;
+  /*	font-weight: 50%; */
 	font-size: 35px;
 }
 strong{
@@ -1122,7 +1117,7 @@ font-size: 0.75rem;
 
 /*--personaldata----*/
 .personal-data{
-	float:center;
+	/*float:center; */
 	text-align: left;
 	border: 2px solid black;
 	padding:5%;
@@ -1170,14 +1165,14 @@ font-size: 0.75rem;
 	font-size:13px;
 }
 .adresa{
-	float:center;
+	/*float:center; */
 	margin:0;
 	padding:0;
 	border:none;
 	text-align: center;
 }
 .personal-data1{
-	float:center;
+ /*	float:center; */
 	text-align: left;
 	border: 2px solid black;
 	padding:5%;
@@ -1319,7 +1314,7 @@ figure {
   clear: both;
 }
 .ct-footer-pre .form-group input {
-  border: 1px solid #751F1F;
+  border: 1px solid #751F1F; 
   background-color: #333;
   color: #fff;
   height: 50px;
@@ -1940,7 +1935,7 @@ form {
 }
 .form-group label{
 	padding:10px;
-	font-weight: 150px;
+/*	font-weight: 150px; */
 }
 .form-group input{
 	padding:10px;
@@ -1953,4 +1948,9 @@ form {
 	color:white;
 }
 
-/* --admin-delete---*/
+/* --comentarii---*/
+
+.comentariu{
+	background-color: purple;
+	 width: 80%;
+}
