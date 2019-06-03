@@ -6,12 +6,12 @@
 <head>
 	 <meta charset="UTF-8">
 	<title>Perfumer</title>
+	<script src="js/jquery.1.7.2.min.js" type="text/javascript">  </script>
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/styles.css"    type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
 
 </head>
 
@@ -21,9 +21,11 @@
 	<header>
 		<div id="Div" >
 			<div id="Div1">
-				<form id="search-button" >
-					<input type="search" placeholder="Caută..">
+				<form id="search-button" method="post" action="#">
+					<input type="search" name="search" id="search" placeholder="Caută..">
 				</form>
+				<div id="back_result"> 
+                </div>  
 			</div>
 
 			<div id="Div2">
