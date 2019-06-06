@@ -39,14 +39,14 @@ class Model {
 	
 	public function query($qry)
 	{
-		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($connection));
+		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($this->connection));
 		$row = mysqli_fetch_array($result);
 		return $row;
 	}
 
 	public function queryAll($qry)
 	{
-		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($connection));
+		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($this->connection));
 		$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return $row;
 	}
