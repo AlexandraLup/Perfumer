@@ -1594,7 +1594,6 @@ padding:10px;
 }
 
 .buttons{
-
 	width: 80%;
 	height: 20%;
 }
@@ -1602,7 +1601,7 @@ padding:10px;
 	background: black;
 	color:white;
 	height: 50%;
-  width: 40%;
+    width: 40%;
 	margin-top:3%;
 	margin-left: 5%;
 }
@@ -1952,5 +1951,72 @@ form {
 
 .comentariu{
 	background-color: purple;
-	 width: 80%;
+	width: 100%;
+	
+
 }
+
+/*-- pop up produs --*/
+
+.buttonb {
+	background-color: blue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px 28px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+	
+}
+.buttonb:hover {
+	background-color: white;
+	color: blue;
+	border: 2px solid blue;
+}
+
+
+.bg-modal {
+	width: 100%;
+	height: 100%;
+	top : 50%;
+	left : 40%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+   position: absolute;
+}
+
+.modal-contents {
+	height: 200px;
+	width: 400px;
+	background-color: purple;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+	display: none;
+}
+
+input {
+	margin: 15px auto;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+	
+}
+.close:hover {
+	color: #666;
+}
+
