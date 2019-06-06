@@ -3,7 +3,7 @@ class ProdusModel extends Model {
 	
 	public function getDetails($name)
 	{   
-        $query = 'SELECT p.nume, p.gen,p.categorie,p.esenta,p.descriere,p.imagine,s.stoc_30,s.pret_30,s.stoc_50,s.pret_50, s.stoc_100,s.pret_100 , c.note_varf, c.note_inima, c.note_baza FROM `produse` p inner join stocuri s on p.id=s.id_produs  join compozitii c on c.id_produs= p.id WHERE nume="'. $name .'"';
+        $query = 'SELECT p.id,p.nume, p.gen,p.categorie,p.esenta,p.descriere,p.imagine,s.stoc_30,s.pret_30,s.stoc_50,s.pret_50, s.stoc_100,s.pret_100 , c.note_varf, c.note_inima, c.note_baza FROM `produse` p inner join stocuri s on p.id=s.id_produs  join compozitii c on c.id_produs= p.id WHERE nume="'. $name .'"';
 		$result = $this->query($query);
 		return $result;
 	}
@@ -29,11 +29,23 @@ class ProdusModel extends Model {
 		return $result;
 	}
 
-	public function getComments($name){
+	public function getId( $email){
+
+		$query= "select id from utilizatori where email='$email'";
+		$result= $this->query($query);
+		return $result;
+	}
+
+	public function getFirstComments($name){
 		$query = 'SELECT c.nume_utilizator, c.comentariu FROM `produse` p inner join `comentarii` c on c.id_produs = p.id WHERE p.nume="'. $name .'" LIMIT 2' ;
 		$result = $this->queryAll($query);
 		return $result;
 	}
-
+	
+	public function getAllComments($name){
+		$query = 'SELECT c.nume_utilizator, c.comentariu FROM `produse` p inner join `comentarii` c on c.id_produs = p.id WHERE p.nume="'. $name .'"' ;
+		$result = $this->queryAll($query);
+		return $result;
+	}
 }
 ?>
