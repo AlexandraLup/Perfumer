@@ -4,7 +4,9 @@
 	margin:0;
 	border:0;
 }
-
+form {
+	border: none;
+}
 body{
 	width: auto;
 	margin: auto;
@@ -12,7 +14,6 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 
 }
-
 
 .btnn-1 {
 
@@ -1524,9 +1525,14 @@ padding:10px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
-
+#basket{
+	width:100%;
+	border: none;
+	margin-left:5px;
+}
 .table-produs{
-	width:80%;
+	width:90%;
+	padding: 10px;
 	background-color:#ccc;
 }
 .table-produs th{
@@ -1596,14 +1602,21 @@ padding:10px;
 .buttons{
 	width: 80%;
 	height: 20%;
+	margin-left:50px;
 }
-.buttons button{
+.buttons a{
 	background: black;
 	color:white;
 	height: 50%;
     width: 40%;
 	margin-top:3%;
 	margin-left: 5%;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+.buttons a:hover{
+	opacity: 0.9;
 }
 .detalii-produs2{
 
@@ -1956,23 +1969,28 @@ form {
 
 }
 
-/*-- pop up produs --*/
+.comentariu button{
+	background: black;
+	color:white;
+	height: 50%;
+    width: 40%;
+	margin-top:3%;
+	margin-left: 5%;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+
+/*-- pop up produs -- */
 
 .buttonb {
-	background-color: blue;
-	border: 2px solid white;
-	border-radius: 30px;
-	text-decoration: none;
-	padding: 10px 28px;
-	color: white;
-	margin-top: 10px;
+	background: black;
+	color:white;
+	height: 50%;
+    width: 40%;
+	margin-top:3%;
+	margin-left: 5%;
 	display: inline-block;
-	
-}
-.buttonb:hover {
-	background-color: white;
-	color: blue;
-	border: 2px solid blue;
 }
 
 
@@ -1985,17 +2003,17 @@ form {
 	align-items: center;
 	text-align: center;
    position: absolute;
+    display: none;
 }
 
 .modal-contents {
-	height: 200px;
-	width: 400px;
-	background-color: purple;
+	height: 100px;
+	width: 100px;
+	background-color: white;
 	text-align: center;
 	padding: 20px;
 	position: relative;
 	border-radius: 4px;
-	display: none;
 }
 
 input {
@@ -2017,6 +2035,85 @@ input {
 	
 }
 .close:hover {
+	color: #666;
+}
+
+.quantity-alert{
+	width: 200%;
+	height: 100%;
+	top : 50%;
+	left : 40%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+   position: absolute;
+    display: none;
+}
+
+.qclose {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+	
+}
+.qclose:hover {
+	color: #666;
+}
+
+
+.stoc-alert{
+	width: 200%;
+	height: 100%;
+	top : 50%;
+	left : 40%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+   position: absolute;
+    display: none;
+}
+
+.sclose {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+	
+}
+.sclose:hover {
+	color: #666;
+}
+
+.produs-alert{
+	width: 200%;
+	height: 100%;
+	top : 50%;
+	left : 40%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+   position: absolute;
+    display: none;
+}
+
+.pclose {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+	
+}
+.pclose:hover {
 	color: #666;
 }
 
