@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gazdă: 127.0.0.1
--- Timp de generare: iun. 03, 2019 la 09:19 PM
--- Versiune server: 10.1.38-MariaDB
--- Versiune PHP: 7.3.4
+-- Timp de generare: iun. 07, 2019 la 06:08 PM
+-- Versiune server: 10.1.39-MariaDB
+-- Versiune PHP: 7.1.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,8 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `comentarii` (
   `id` int(10) NOT NULL,
   `id_produs` int(10) NOT NULL,
-  `comentariu` text COLLATE utf8_unicode_ci NOT NULL,
-  `nume_utilizator` varchar(60) COLLATE utf8_unicode_ci NOT NULL
+  `comentariu` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `nume_utilizator` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci;
 
 --
@@ -56,7 +56,7 @@ INSERT INTO `comentarii` (`id`, `id_produs`, `comentariu`, `nume_utilizator`) VA
 CREATE TABLE `comenzi` (
   `id` int(10) NOT NULL,
   `id_utilizator` int(10) NOT NULL,
-  `valoare` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `valoare` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci;
 
@@ -69,9 +69,9 @@ CREATE TABLE `comenzi` (
 CREATE TABLE `compozitii` (
   `id` int(10) NOT NULL,
   `id_produs` int(10) NOT NULL,
-  `note_baza` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `note_inima` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `note_varf` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
+  `note_baza` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `note_inima` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `note_varf` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `lista_produse` (
 CREATE TABLE `preferinte_utilizator` (
   `id` int(10) NOT NULL,
   `id_utilizator` int(10) NOT NULL,
-  `esenta` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+  `esenta` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci;
 
 -- --------------------------------------------------------
@@ -130,12 +130,12 @@ CREATE TABLE `preferinte_utilizator` (
 
 CREATE TABLE `produse` (
   `id` int(10) NOT NULL,
-  `nume` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `gen` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `categorie` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `esenta` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `descriere` text COLLATE utf8_unicode_ci NOT NULL,
-  `imagine` varchar(60) COLLATE utf8_unicode_ci NOT NULL
+  `nume` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gen` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `categorie` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `esenta` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `descriere` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `imagine` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci;
 
 --
@@ -144,8 +144,16 @@ CREATE TABLE `produse` (
 
 INSERT INTO `produse` (`id`, `nume`, `gen`, `categorie`, `esenta`, `descriere`, `imagine`) VALUES
 (1, 'Candy Prada', 'femeie', 'apa de toaleta', 'oriental', 'Prada Candy este un parfum floral ce se potriveste tuturor femeilor carora nu le este teama sa-si exprima propriile opinii. Preda-te tentatiei in forma unei puteri roz adusa de parfumul Prada Candy. Iesi din anonimat si straluceste. Incearca sa faci lucrurile pe cont propriu si primeste energia necesara pentru a invinge obstacolele de zi cu zi.\r\n\r\nNotele de varf usor florale fac pe oricine sa se indragosteasca instantaneu de acest parfum. Notele centrale contin esente senzuale de mosc alb, ce-ti confera incredere si determinare sa devi o femeie increzatoare si stralucitoare. Incantatoarele acorduri seducatoare de caramel iti incanta simturile in profunzime si scoate la suprafata adevarata personalitate!\r\n\r\nUna dintre cele mai importante case de moda, Prada a inceput sa comercializeze parfumuri acum mult timp. Indragosteste-te de calitatea si caracterul acestor parfumuri pline de flori, fructe si condimente atent selectionate. Este apreciat in special de catre cei ce iubesc stilul si luxul conferit de aceasta marca prestigioasa, prezentate in sticluta cu forme extrem de moderne. Prada Candy este cu siguranta pe placul tau. Indrazneste sa-ti exprimi opinia. Doar femeile increzatoare in fortele lor proprii, care stiu exact ceea ce vor, pot obtine orice isi doresc!', 'assets/images/prada.png'),
-(2, 'Hugo Boss Boss Bottl', 'barbat', 'apa de toaleta', 'lemnoasa, picanta', 'Hugo Boss Boss Bottled este alegerea ideala pentru barbatul secolului 21. Incearca si tu acest parfum elegant si atemporal, preferat de milioane de barbati din intreaga lume!\r\n\r\nun parfum proaspat, picant-lemnos\r\npentru barbatul modern si increzator\r\npentru fiecare zi.\r\nEsentele fructelor de prune si mere si prospetimea lamailor din notele de varf subliniaza perfect personalitatea masculina. Notele calde de cuisoare si scortisoara confera sex-appeal, mai ales in compania acordurilor de mahon si de garoafe. Lemnul de cedru si de santal, impreuna cu tonurile de vanilie si de vetiver si cu ineditul accent de lemn de maslin formeaza baza puternica a compozitiei.', '/assets/images/bossbottled.png'),
-(4, 'candy prada', 'femeie', 'apa de toaleta', 'oriental', 'dff', 'as');
+(2, 'Giorgio Armani-Sky di Gioia', 'femeie', 'parfum', 'fructate', 'Parfumul Armani Sky di Gioia este expresia optimismului și a sentimentului de totală fericire. Învăluie-te în această aromă și vei avea o dispoziție excelentă toată ziua!', 'assets/images/armani-sky.jpg'),
+(3, 'Dolce & Gabbana-The One', 'femeie', 'parfum', 'florale', 'Dolce & Gabbana The One este un parfum oriental proaspat pentru fiecare femeie care doreste o schimbare. Lasa-ti simturile rasfatate de esente unice de fructe din întreaga lume. Devii irezistibila si seducatoare.', 'assets/images/dolce3.png'),
+(4, 'Dior-Blooming Bouquet', 'femeie', 'apa de toaleta', 'florale', 'Parfumul feminin de lux Miss Dior Blooming Bouquet celebrează frumuseţea şi discreţia mugurului care se deschide. Parfumul este inspirat de gândul că florile sunt pentru femei creaţii dumnezeieşti. Înveliţi-vă în subtilitatea delicată, dezvăluindu-i astfel frumuseţea pură. Cu acest parfum vă veţi simţi neobişnuit de senzuală şi de atrăgătoare! ', 'assets/images/Miss-Dior.png'),
+(5, 'Gucci-Guilty', 'femeie', 'apa de toaleta', 'orientale-dulci', 'Gucci Guilty este destinat femeii intense, îndrăznețe și independente, care gustă viața din toți porii și respectă doar propriile reguli.', 'assets/images/gucci-guilty.jpg'),
+(6, 'Carolina Herrera-212 VIP', 'femeie', 'parfum', 'orientale-dulci', 'parfum aromatic', 'assets/images/CH-vip.jpg'),
+(7, 'Bvlgari-Goldea The Roman Night', 'barbati', 'parfum', 'florale', 'Bvlgari Parfumuri | Bvlgari (fondata în 1884, Roma, Italia), este un brand de lux, cu un stil italian puternic. Marca Bvlgari se inspira din frumusetea atemporala a artei grecesti si romane, fondatorul Sotirio Bvlgari descendent din Epir,  s-a lansat ca producator de bijuterii  din argint ,lucru ce se reflecta in designul sticlelor. Primul magazin Bvlgari se deschide in  Roma si in curand devine foarte popular.', 'assets/images/bvlgari-goldea.jpg'),
+(8, 'Giorgio Armani-Armani Si Intense', 'femeie', 'apa de parfum', 'fructate', 'Apa de parfum SI Intense este destinată femeilor încrezătoare şi curajoase. O compoziţie aromatică, pentru cele care nu se tem de riscuri. O combinaţie sofisticată şi originală, de tonuri selecţionate, pentru a vă face mai frumoasă. Cedaţi dorinţei de a avea un parfum cu ingrediente bogate şi originale.', 'assets/images/armani-intense.jpg'),
+(9, 'Chanel-Coco Mademoiselle', 'femeie', 'parfum', 'florale', 'Parfumul dulce de trandafiri şi de vanilie, în combinaţie cu tonurile proaspete de portocală, de iasomie îmbătătoare şi de paciuli, vă oferă o experienţă irepetabilă pentru simţurile dumneavoastră şi ale celor din jur. Senzualitatea şi încrederea: acestea sunt esenţele principale ale excepţionalului parfum Chanel Coco Mademoiselle.', 'assets/images/Chanel-parfum.jpg'),
+(10, 'Valentino-Valentina', 'femeie', 'parfum', 'fructate', 'Lansat in 2011, parfumul Valentina a fost inspirat de Roma si aromele italienesti. Creatorii sai sunt Alberto Morillas si Olivier Cresp. Compozitia parfumului este floral - fructata, cu accente puternice orientale. Valentina este plin de contradictii, delicat si puternic si in acelasi timp, elegant, senzual, rebel si vesel.', 'assets/images/valentino-va.png'),
+(11, 'Dior-J\'adore', 'femeie', 'apa de parfum', 'florale', 'Parfumul pentru femei Christian Dior Jadore este o expresie a feminitatii absolute, fiind foarte popular printre femeile moderne. Parfumul floral fructat imbina mandarine proaspete cu iasomie, orhidee si trandafiri. Florile de ylang-ylang impreuna cu trandafirii de Damasc si esentele delicate de iasomie, dau eleganta si unicitate.', 'assets/images/dior-jadore.jpg');
 
 -- --------------------------------------------------------
 
@@ -170,7 +178,16 @@ CREATE TABLE `stocuri` (
 
 INSERT INTO `stocuri` (`id`, `id_produs`, `stoc_30`, `pret_30`, `stoc_50`, `pret_50`, `stoc_100`, `pret_100`) VALUES
 (1, 1, 100, 219, 5, 289, 10, 395),
-(2, 2, 100, 106, 120, 142, 300, 202);
+(2, 2, 100, 106, 120, 142, 300, 202),
+(3, 3, 70, 240, 20, 289, 10, 350),
+(4, 4, 80, 298, 50, 350, 30, 400),
+(5, 5, 90, 199, 12, 250, 30, 320),
+(6, 6, 100, 219, 40, 289, 10, 390),
+(7, 7, 100, 255, 5, 300, 10, 320),
+(8, 8, 140, 250, 65, 290, 10, 340),
+(9, 9, 100, 245, 51, 289, 10, 330),
+(10, 10, 100, 219, 65, 270, 10, 320),
+(11, 11, 100, 220, 57, 270, 10, 330);
 
 -- --------------------------------------------------------
 
@@ -180,12 +197,12 @@ INSERT INTO `stocuri` (`id`, `id_produs`, `stoc_30`, `pret_30`, `stoc_50`, `pret
 
 CREATE TABLE `utilizatori` (
   `id` int(10) NOT NULL,
-  `nume` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `prenume` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `sex` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `adresa` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `parola` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `nume` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `prenume` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `sex` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `adresa` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `parola` varchar(90) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `telefon` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_romanian_ci;
 
@@ -328,13 +345,13 @@ ALTER TABLE `preferinte_utilizator`
 -- AUTO_INCREMENT pentru tabele `produse`
 --
 ALTER TABLE `produse`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pentru tabele `stocuri`
 --
 ALTER TABLE `stocuri`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pentru tabele `utilizatori`
