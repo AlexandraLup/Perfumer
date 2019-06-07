@@ -39,14 +39,14 @@ class Model {
 	
 	public function query($qry)
 	{
-		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysql_error());
+		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($this->connection));
 		$row = mysqli_fetch_array($result);
 		return $row;
 	}
 
 	public function queryAll($qry)
 	{
-		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysql_error());
+		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($this->connection));
 		$row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return $row;
 	}
@@ -55,15 +55,16 @@ class Model {
 
 	public function queryInsert($qry)
 	{
-		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysql_error());
+		$result = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($this->connection));
 		
 	}
 
 
 	public function execute($qry)
 	{
-		$exec = mysql_query($qry) or die('MySQL Error: '. mysql_error());
-		return $exec;
+		$exec = mysqli_query($this->connection,$qry) or die('MySQL Error: '. mysqli_error($this->connection));
+		$count = mysqli_affected_rows($this->connection);
+		return $count;
 	}
     
 }

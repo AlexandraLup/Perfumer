@@ -22,16 +22,22 @@
 		</div>
     </header>
     <div class="navbar">
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Rapoarte</a> 
-  <a href="#"><i class="fa fa-fw fa-search"></i> Adauga produs</a> 
-  <a href="#"><i class="fa fa-fw fa-envelope"></i>Sterge produs</a> 
+  <a  href="rapoarte"><i class="fas fa-file"></i> Rapoarte</a> 
+  <a class="active" href="#"><i class="fas fa-plus"></i> Adaug&#259; produs</a> 
+  <a href="delete"><i class="fas fa-trash-alt"></i>	&#350;terge produs</a> 
 </div>
 <section>
     <div class="container">
+        <?php
+           if (isset($success)){
+          if($success==true) {
+              echo '<div style="background:rgb(19, 122, 19); padding: 10px; border-radius : 7px; margin : 5px;" >  <p style="color: white ">  Produsul a fost adaugat! </p> </div>';
+          }}
+         ?>
         <!-- Create Form -->
         <div class="produs-container">
             <div class="title-produs">
-                <strong><i class="fa fa-plus"></i> Add New Product</strong>
+                <strong><i class="fa fa-plus"></i> Adaug&#259; un nou produs</strong>
             </div>
             <div class="form-produs">
                 <form action="" method="post">
@@ -55,33 +61,33 @@
                     </div> 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="qty1" >Cantitate</label>
+                            <label for="qty1" >Stoc 30</label>
                             <input type="number"  name="qty1" id="qty1" placeholder="Cantitate" required>
                         </div>
                         <div class="form-group">
-                            <label for="price1" >Pret</label>
+                            <label for="price1" >Pre&#355;</label>
                             <input type="number" id="price1" name="price1" placeholder="Pret" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                     <div class="form-group">
-                            <label for="qty2" >Cantitate</label>
+                            <label for="qty2" >Stoc 50</label>
                             <input type="number"  name="qty2" id="qty2" placeholder="Cantitate" required>
                         </div>
                         <div class="form-group">
-                            <label for="price2" >Pret</label>
+                            <label for="price2" >Pre&#355;</label>
                             <input type="number" id="price2" name="price2" placeholder="Pret" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="qty3" >Cantitate</label>
+                            <label for="qty3" >Stoc 100</label>
                             <input type="number"  name="qty3" id="qty3" placeholder="Cantitate" required>
                         </div>
                         <div class="form-group">
-                            <label for="price3" >Pret</label>
+                            <label for="price3" >Pre&#355;</label>
                             <input type="number" id="price3" name="price3" placeholder="Pret" required>
                         </div>
                     </div>
@@ -92,7 +98,7 @@
                             <input type="text" name="image" id="image" placeholder="URL imagine">
                         </div>
                         <div class="form-group">
-                            <label for="essence" >Esenta</label>
+                            <label for="essence" >Esen&#355;&#259;</label>
                             <input type="text" name="essence" id="essence" placeholder="Esenta">
                         </div>
                         <div class="form-group">
@@ -103,15 +109,15 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="base" >Note baza</label>
+                            <label for="base" >Note baz&#259;</label>
                             <input type="text" name="base" id="base" placeholder="Note baza">
                         </div>
                         <div class="form-group">
-                            <label for="heart" >Note inima</label>
+                            <label for="heart" >Note inim&#259;</label>
                             <input type="text" name="heart" id="heart" placeholder="Note inima">
                         </div>
                         <div class="form-group">
-                            <label for="top" >Note varf</label>
+                            <label for="top" >Note v&#226;rf</label>
                             <input type="text" name="top" id="top" placeholder="Note varf">
                         </div>
                     </div>
@@ -119,7 +125,7 @@
                         <label for="descriere" >Descriere</label>
                         <textarea name="description" id="" rows="10" class="form-control" placeholder="Descriere"></textarea>
                     </div>
-                    <button type="submit" class="success"><i class="fa fa-check-circle"></i> Salveaza</button>
+                    <button type="submit" value="submit" name="submit" class="success"><i class="fa fa-check-circle"></i> Salveaz&#259;</button>
                 </form>
             </div>
         </div>

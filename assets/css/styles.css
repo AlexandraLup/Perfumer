@@ -19,14 +19,9 @@ body{
 padding:16px; 
 margin-bottom:16px;
 height:330px;
-
-/////overflow:hidden;
-
-
+overflow:hidden;
 border: solid 5px white ;
 transition: border-width 0.6s linear;
-
-
 }
 
 .btnn-1:hover { 
@@ -962,7 +957,7 @@ span.psw {
 /*---shoppingcart---*/
 .title{
 	text-align: center;
-	font-weight: 50%;
+  /*	font-weight: 50%; */
 	font-size: 35px;
 }
 strong{
@@ -1122,7 +1117,7 @@ font-size: 0.75rem;
 
 /*--personaldata----*/
 .personal-data{
-	float:center;
+	/*float:center; */
 	text-align: left;
 	border: 2px solid black;
 	padding:5%;
@@ -1170,14 +1165,14 @@ font-size: 0.75rem;
 	font-size:13px;
 }
 .adresa{
-	float:center;
+	/*float:center; */
 	margin:0;
 	padding:0;
 	border:none;
 	text-align: center;
 }
 .personal-data1{
-	float:center;
+ /*	float:center; */
 	text-align: left;
 	border: 2px solid black;
 	padding:5%;
@@ -1319,7 +1314,7 @@ figure {
   clear: both;
 }
 .ct-footer-pre .form-group input {
-  border: 1px solid #751F1F;
+  border: 1px solid #751F1F; 
   background-color: #333;
   color: #fff;
   height: 50px;
@@ -1529,51 +1524,76 @@ padding:10px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.detalii-produs{
-	display:flex;
-	flex-direction: column;
-	width: 80%;
-	height: 20%;
+
+.table-produs{
+	width:80%;
+	background-color:#ccc;
 }
-.informatii{
-	display:flex;
-	padding:10px;
-	flex-direction:row;
-	width: 100%;
-	border: 2px solid #DCDCDC;
+.table-produs th{
+	padding:0px;
 }
 
-.informatii p{
-	padding:0;
-	margin:0;
-	border:none;
-	margin-left:5px;
-	margin-right:29%;
-}
-.rowprodus{
-	height: 100px;
-	width: 100%;
-	background: #ccc;
-}
-.info-show{
-	display:flex;
-  height:300px; /* weight */
-	flex-direction:row;
-	padding:0;
-	margin:2%;
-}
-.info-show p{
+.table-produs th,td{
 	padding:5px;
-margin:0;
+	padding-left: 0px;
+	text-align:center;
 }
-.info-show .stoc{
-margin-left:30%;
+.radio_button{
+	display: block;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.info-show form{
-	margin-left: 27%;
-}
-.buttons{
 
+.radio_button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.radio_button:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the radio button is checked, add a blue background */
+.radio_button input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio_button input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio_button .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
+.buttons{
 	width: 80%;
 	height: 20%;
 }
@@ -1581,7 +1601,7 @@ margin-left:30%;
 	background: black;
 	color:white;
 	height: 50%;
-  width: 40%;
+    width: 40%;
 	margin-top:3%;
 	margin-left: 5%;
 }
@@ -1801,14 +1821,14 @@ margin:0;
 
 }
 
-	*--admin-index ---*/
+	/*--admin-index ---*/
 form {
 	border: 3px solid #f1f1f1;
 	width: 50%;		
 	margin-left:25%;
 }
 
-input[type=text], input[type=password] {
+ input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -1817,7 +1837,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+ button {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -1827,51 +1847,176 @@ button {
   width: 100%;
 }
 
-button:hover {
+ button:hover {
   opacity: 0.8;
 }
 
-.login-container {
+ .login-container {
 	padding: 16px;
 	width: 100%;
 }
 
-span.psw {
+ span.psw {
   float: right;
   padding-top: 16px;
 }
 
-.admin-titlu{
+ .admin-titlu{
 	text-align: center;
 }
 
 
 
-/* --admin navbar--*/
+ /* --admin navbar--*/
 .navbar {
   width: 100%;
   overflow: auto;
 }
 
-.navbar a {
+ .navbar a {
   float: left;
   padding: 12px;
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
-.navbar a:hover {
+ .navbar a:hover {
   background-color: #ccc;
 }
 
-.active {
+ .active {
   background-color: #751F1F;
 }
 
-@media screen and (max-width: 500px) {
+ @media screen and (max-width: 500px) {
   .navbar a {
-    float: none;
+		float: none;
+		width : 100%;
     display: block;
   }
+} 	
+
+/*--admin-add---*/
+.container{
+	padding: 20px 15px 0;
+}
+.form-produs{
+	margin:0px;
+	padding:5px;
+	background-color: #F8F8F8;
+	border-radius : 7px;
+	border: 3px #751F1F;
+
+}
+.title-produs{
+	background-color: #751F1F;
+	padding: 15px;
+	margin:0px;
+	color : white; 
+	border-radius : 7px;
+}
+
+ .form-row {
+		display: flex;
+		flex-direction: row;
+		padding:10px;
+
+ }
+.stocuri {
+	padding:15px;
+	margin-left: 10px;
+}
+.form-group{
+	display:flex;
+	flex-direction: column;
+	padding:15px;
+}
+.form-group label{
+	padding:10px;
+/*	font-weight: 150px; */
+}
+.form-group input{
+	padding:10px;
+	border-radius: 10px;
+}
+.success{
+	background-color: rgb(19, 122, 19);
+	border-radius: 4px;
+	padding:5px;
+	color:white;
+}
+
+/* --comentarii---*/
+
+.comentariu{
+	background-color: purple;
+	width: 100%;
+	
+
+}
+
+/*-- pop up produs --*/
+
+.buttonb {
+	background-color: blue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 10px 28px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+	
+}
+.buttonb:hover {
+	background-color: white;
+	color: blue;
+	border: 2px solid blue;
+}
+
+
+.bg-modal {
+	width: 100%;
+	height: 100%;
+	top : 50%;
+	left : 40%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+   position: absolute;
+}
+
+.modal-contents {
+	height: 200px;
+	width: 400px;
+	background-color: purple;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+	display: none;
+}
+
+input {
+	margin: 15px auto;
+	display: block;
+	width: 50%;
+	padding: 8px;
+	border: 1px solid gray;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+	
+}
+.close:hover {
+	color: #666;
+}
 

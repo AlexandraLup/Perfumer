@@ -14,9 +14,10 @@ class Admin extends Controller {
 	}
 
 	function add(){
-
+ 
 		$template = $this->loadView('admin-add');
-		/*if (isset($_POST)) {
+		$model = $this->loadModel('AdminModel');
+		if (isset($_POST['submit'])) {
 			$barcode = trim($_POST['barcode']);
 			$name    = trim($_POST['name']);
 			$gender    = trim($_POST['gender']);
@@ -27,14 +28,39 @@ class Admin extends Controller {
 			$qty3     = (int) $_POST['qty3'];
             $price3   = (float) $_POST['price3'];
 			$image   = trim($_POST['image']);
-			$essense   = trim($_POST['essence']);
+			$essence   = trim($_POST['essence']);
 			$category  = trim($_POST['category']);
 			$base  = trim($_POST['base']);
 			$heart   = trim($_POST['heart']);
 			$top   = trim($_POST['top']);
 			$description = trim($_POST['description']);
+			 
+			$model->addProduct($barcode, $name,$gender, $category,$essence,$description,$image);
+			$model ->addComposition($barcode,$base, $top, $heart);
+			$model -> addStock($barcode, $qty1, $price1, $qty2, $price2, $qty3, $price3);
+			$template -> set('success', true);
+
 		}
-		*/
+		
+		$template->render();
+	}
+
+	function delete(){
+
+		$template = $this->loadView('admin-delete');
+		$model = $this->loadModel('AdminModel');
+        if(isset($_POST['delete'])){
+			$barcode = $_POST['cod'];
+			$result = $model -> deleteProduct($barcode);
+			if(intval($result) == 1){
+				$template->set('success', true);
+			}
+			else {
+				$template->set('success', false);
+			}
+
+		}
+
 		$template->render();
 	}
 

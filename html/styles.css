@@ -1414,7 +1414,7 @@ figure {
 @media (max-width: 1199px) {
   .ct-footer-list > li {
     display: inline-block;
-    float: left;
+ 
   }
 }
 @media (min-width:992px) {
@@ -1538,7 +1538,6 @@ padding:10px;
 }
 .info-show{
 	display:flex;
-	weight:300px;
 	flex-direction:row;
 	padding:0;
 	margin:2%;
@@ -1620,7 +1619,7 @@ margin-right: 30%;
 }
 .info-show{
 	display:flex;
-	weight:300px;
+
 	flex-direction:row;
 	padding:0;
 	margin:2%;
@@ -1874,3 +1873,4 @@ margin:0;
 		text-align: center;
 	}
 }
+
