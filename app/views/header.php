@@ -59,7 +59,7 @@
 		<ul>
 			<li class="FemeiBarbati"><a href='parfumurifemei'>PARFUMURI FEMEI</a></li>
 			<li class="FemeiBarbati"><a href='parfumuribarbati'>PARFUMURI BĂRBAȚI</a></li>
-			<li class="FemeiBarbati"><a href="parfumurifemei">NOUTĂȚI</a></li>
+			<li class="FemeiBarbati"><a href='noutati'>NOUTĂȚI</a></li>
 		</ul>
 
 		<ul>
