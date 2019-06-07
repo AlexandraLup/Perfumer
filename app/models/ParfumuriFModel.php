@@ -3,7 +3,7 @@ class ParfumuriFModel extends Model {
 	
 	public function getDetails()
 	{   
-        $query = "select imagine, nume, pret from produse where gen='femeie'";
+        $query = "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id where p.gen='femeie'";
 
   	$result= $this->queryAll($query);
 	return $result;
