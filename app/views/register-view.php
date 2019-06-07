@@ -51,17 +51,35 @@
     	</div>
 		
 	<div class="section2"><span>4</span>Preferințe</div>
+         
         <div class="inner-wrap">
-        <label>Parolă <input type="password" name="pass1" required></label>
-        <label>Confirmă Parola
-             <?php
-                if(isset($parolaNeconfirmata))
-                    echo '<p style="color:red;"> Parola gresita! </p>'
-
-            ?>
-            <input type="password" name="pass2" required>
+        <label> Preferință 1
+          <select id="county" name="preferinta1">
+          <option value="florale">Florale</option>
+          <option value="fructate">Fructate</option>
+          <option value="verzi">Verzi</option>
+          <option value="marine">Marine</option>
+          <option value="citrice">Citrice</option>
+          <option value="orientale-dulci">Orientale-dulci</option>
+          <option value="orientale-lemnoase">Orientale-lemnoase</option>
+          <option value="muschi">Muschi</option>
+            </select>
         </label>
-    	</div>
+
+         <label> Preferință 2
+          <select id="county" name="preferinta2">
+           <option value="florale">Florale</option>
+          <option value="fructate">Fructate</option>
+          <option value="verzi">Verzi</option>
+          <option value="marine">Marine</option>
+          <option value="citrice">Citrice</option>
+          <option value="orientale-dulci">Orientale-dulci</option>
+          <option value="orientale-lemnoase">Orientale-lemnoase</option>
+          <option value="muschi">Muschi</option>
+            </select>
+        </label>
+
+        </div>
 
     <div class="button-section2">
         <input type="submit" name="Sign Up" value="Înregistrare">
