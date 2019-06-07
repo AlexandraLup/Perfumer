@@ -59,7 +59,7 @@
         <div class="btnn-1">
           <img src="'. $produs[$i]['imagine'] .'" alt="" class="img-responsive" >
           <p align="center"><strong><a href="#">'. $produs[$i]['nume'] .'</a></strong></p>
-          <h4 style="text-align:center;" class="text-danger" >'. $produs[$i]['pret'] .' RON'.'</h4>
+          <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produs[$i]['pret_30'] .' RON</strong>'.'</h4>
            </div>
         </div>
 
