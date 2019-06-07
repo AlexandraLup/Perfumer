@@ -19,8 +19,7 @@ class ParfumuriBModel extends Model {
 		";
 	}
 
-	echo $query;
-
+	
   		$result= $this->query($query);
 	return $result;
 	}
