@@ -10,6 +10,8 @@ class Produs extends Controller {
 		$result = $model -> getFirstComments('candy prada');
 		$template->set('produs', $info) ;
 		$template->set('comments',$result);
+
+        
 		if(isset($_POST['wishlist'])){
 			if(isset($_SESSION['email'])){
 				$result = $model -> getId($_SESSION['email']);
@@ -20,22 +22,26 @@ class Produs extends Controller {
 				echo 'Nu esti logat';
 			}
 		}
+		
 		if(isset($_POST['basket'])){
-			if(isset($_SESSION['email'])){
-				$result = $model -> getId($_SESSION['email']);
-				$id = $result['id'];
-				if(isset($_POST['quantity'])){
-					$price = $_POST['quantity'];
-					$result = $model ->addToBasket($info['id'],$id,$price);
-				}
-				else{
-					echo 'Nu ai selectat cantitatea';
-				}
-			}
-			else{
-				echo 'Nu esti logat';
-			}
+		if(isset($_SESSION['email'])){
+			$result = $model -> getId($_SESSION['email']);
+			$id = $result['id'];	
+		    if(isset($_POST['quantity'])){
+		    	$stoc = 'stoc_' . $_POST['quantity'];
+			   if($info[$stoc] > 0) {
+				   $price = 'pret_' . $_POST['quantity'];
+				   $result = $model ->addToBasket($info['id'],$id,$info[$price]);
+				   $template -> set('success', true);
+			   }
+			   else{
+				$template->set('stoc',false);
+			   }
+		}else{
+			$template->set('cantitate',false);
 		}
+	}
+}  	
 		$template->render();
 
 	}
