@@ -17,16 +17,17 @@ class ParfumuriFemei extends Controller {
 		
 
 		if(isset($_POST["filtru"])){
-			$selectRadio= $_POST["radio"];
-			if($selectRadio =='asc'){
+			if(isset($_POST["radio"])){
+				if(($selectRadio= $_POST["radio"]) =='asc'){
 
-				$info3=$model->getDetailsAsc();
-				$template->set('produsAsc', $info3);
-			}
-			else
-			{
-				$info3=$model->getDetailsDesc();
-				$template->set('produsDesc', $info3);
+					$info3=$model->getDetailsAsc();
+					$template->set('produsAsc', $info3);
+				}
+				else 
+				{
+					$info3=$model->getDetailsDesc();
+					$template->set('produsDesc', $info3);
+				}
 			}
 			
 		}
