@@ -5,36 +5,25 @@
 <div style="background-color: white;  overflow:hidden;">
   <div class="columnPF parfumuriLeft">
       <div class="filtreParfum"> Filtru </div>
-         <div class="filtru"> <a href="#"> Preț crescator </a></div>
-      <div class="filtru"> <a href="#"> Preț descrescator </a></div>
+
+        <form action="" method="POST">
+          <label class="container">Pret crescator
+          <input type="radio"  name="radio" value="asc">
+          <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Pret descrescator
+          <input type="radio" name="radio" value="desc">
+          <span class="checkmark"></span>
+          </label>
+
+          <button style="color: white; "class="containerButon" type="submit" value="filtreaza" name="filtru">Filtreaza</button>
+        </form>
+      
       <div class="filtru"> <a href="#"> Cele mai noi </a></div>
       <div class="filtru"> <a href="#"> Cele mai vândute </a></div>
 
-         <div class="wrapper">
-    <fieldset class="filter-price">
-    
-    <div class="price-field">
-    <input type="range" min="0" max="5000" value="0" id="lower">
-    <input type="range" min="0" max="5000" value="5000" id="upper">
-    </div>
-  
-    <div class="price-wrap">
-      
-      <div class="price-container">
-        <div class="price-wrap-1">
-          <label for="one">$</label>
-          <input id="one">
-        </div>
-        <div class="price-wrap_line">-</div>
-        <div class="price-wrap-2">
-          <label for="two">$</label>
-          <input id="two">
-        </div>
-      </div>
-    </div>
-  
-      </fieldset>
-    </div>
+
   </div>
 
 
@@ -47,40 +36,68 @@
             
 
     <?php  
+    if(isset($produsAsc))
+    {
+        $output = '';
+        if($total_row > 0)
+        { 
+          for ($i=0; $i<$total_row;$i++) 
+          {
+            $output .= '
+            <div class="fotoNoutati">
+            <div class="col-sm-4 col-lg-3 col-md-3">
+              <div class="btnn-1">
+                <img src="'. $produsAsc[$i]['imagine'] .'" alt="" class="img-responsive" >
+                <p align="center"><strong><a href="#">'. $produsAsc[$i]['nume'] .'</a></strong></p>
+                <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsAsc[$i]['pret_30'] .' RON</strong>'.'</h4>
+                 </div>
+              </div>
+            </div> ';
+          }
+        }
+        else { $output = '<h3>No Data Found</h3>';}
 
-  $output = '';
-  if($total_row > 0)
-  { 
-    for ($i=0; $i<$total_row;$i++) 
-    { 
-      $output .= '
-      <div class="fotoNoutati">
-      <div class="col-sm-4 col-lg-3 col-md-3">
-        <div class="btnn-1">
-          <img src="'. $produs[$i]['imagine'] .'" alt="" class="img-responsive" >
-          <p align="center"><strong><a href="#">'. $produs[$i]['nume'] .'</a></strong></p>
-          <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produs[$i]['pret_30'] .' RON</strong>'.'</h4>
-           </div>
-        </div>
+    }else if(isset($produsDesc)){
+        $output = '';
+        if($total_row > 0){ 
+          for ($i=0; $i<$total_row;$i++) { 
+            $output .= '
+            <div class="fotoNoutati">
+            <div class="col-sm-4 col-lg-3 col-md-3">
+              <div class="btnn-1">
+                <img src="'. $produsDesc[$i]['imagine'] .'" alt="" class="img-responsive" >
+                <p align="center"><strong><a href="#">'. $produsDesc[$i]['nume'] .'</a></strong></p>
+                <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsDesc[$i]['pret_30'] .' RON</strong>'.'</h4>
+                 </div>
+              </div>
+            </div>';
+          }
+        }
+        else { $output = '<h3>No Data Found</h3>';}
 
-      </div>
-      ';
-    }
-  }
-  else
-  {
-    $output = '<h3>No Data Found</h3>';
-  }
+    } else{
+        $output = '';
+        if($total_row > 0) {
+         for ($i=0; $i<$total_row;$i++) { 
+            $output .= '
+            <div class="fotoNoutati">
+            <div class="col-sm-4 col-lg-3 col-md-3">
+              <div class="btnn-1">
+                <img src="'. $produs[$i]['imagine'] .'" alt="" class="img-responsive" >
+                <p align="center"><strong><a href="#">'. $produs[$i]['nume'] .'</a></strong></p>
+                <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produs[$i]['pret_30'] .' RON</strong>'.'</h4>
+                 </div>
+              </div>
+            </div>';
+          }
+        }
+        else{ $output = '<h3>No Data Found</h3>'; }
+      }
+
   echo $output;
-  
     ?>
 
-            </div>
-          
-            
-
-       
- 
+        </div>
   </div>
 </div>
 
