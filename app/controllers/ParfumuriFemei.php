@@ -15,6 +15,23 @@ class ParfumuriFemei extends Controller {
 		$template->set('total_row',$count);
 		$template->set('produs', $info);
 		
+
+		if(isset($_POST["filtru"])){
+			$selectRadio= $_POST["radio"];
+			if($selectRadio =='asc'){
+
+				$info3=$model->getDetailsAsc();
+				$template->set('produsAsc', $info3);
+			}
+			else
+			{
+				$info3=$model->getDetailsDesc();
+				$template->set('produsDesc', $info3);
+			}
+			
+		}
+		
+		
 		$template->render();
 	}
 }
