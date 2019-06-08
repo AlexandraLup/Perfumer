@@ -25,9 +25,7 @@
               {echo '<p style="color:red;"> Înregistrează-te mai întâi! </p>';
               }
         ?>
-        <label> 
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
+       
       
   
 
