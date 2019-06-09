@@ -21,6 +21,28 @@ class ParfumuriFModel extends Model {
 		return $result;
 	}
 
+	public function getDetailsNoi(){
+		$query= "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id  order by p.id desc  ";
+		$result= $this->queryAll($query);
+		return $result;
+	}
+
+	public function getDetailsVandut(){
+		$query= "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id where p.id in (
+			select p1.id from produse p1 join lista_produse l on p1.id=l.id_produs  group by p1.id  )";
+		$result= $this->queryAll($query);
+		return $result;
+	}
+
+	public function getRowVandut(){
+		// s au vandut mai mult de 2 ... momentan
+		$query= "select count(p.id) from produse p join stocuri s on s.id_produs=p.id where p.id in (
+			select p1.id from produse p1 join lista_produse l on p1.id=l.id_produs group by p1.id having count(p1.id)>=2  )";
+		$result= $this->query($query);
+		
+		return $result;
+	}
+
 
 	
 
@@ -37,7 +59,8 @@ class ParfumuriFModel extends Model {
 	
 
   		$result= $this->query($query);
-	return $result;
+
+		return $result;
 	}
 
 	
