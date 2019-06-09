@@ -18,24 +18,22 @@
         <h2 class="ct-footer-list-header">Informații generale</h2>
         <ul>
           <li>
-            <a href="">Despre noi</a>
+            <a href='desprenoi'>Despre noi</a>
           </li>
           <li>
-            <a href="">Termeni & condiții</a>
+            <a href='termeniconditii'>Termeni & condiții</a>
           </li>
-          <li>
-            <a href="">Regulamente</a>
-          </li>
+         
         </ul>
       </li>
       <li>
         <h2 class="ct-footer-list-header">Cont Client</h2>
         <ul>
           <li>
-            <a href="">Autentificare</a>
+            <a href='register'>Autentificare</a>
           </li>
           <li>
-            <a href="">Vizualizare coș</a>
+            <a href='shoppingCart'>Vizualizare coș</a>
           </li>
         </ul>
       </li>
@@ -43,13 +41,13 @@
         <h2 class="ct-footer-list-header">Asistență clienți</h2>
         <ul>
           <li>
-            <a href="">Modalități de plată</a>
+            <a href='reclamatii'>Reclamații și plângeri</a>
           </li>
           <li>
             <a href="">Metode de livrare</a>
           </li>
           <li>
-            <a href="">întrebări frecvente</a>
+            <a href='intrebarifrecvente'>Întrebări frecvente</a>
           </li>
         </ul>
       </li>
