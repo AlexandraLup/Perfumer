@@ -8,10 +8,10 @@ class RegisterModel extends Model {
 		return $result;
 	}
 
-	public function createAccount($nume, $prenume,$adresa, $sex, $email, $telefon, $parola1)
+	public function createAccount($nume, $prenume,$adresa, $sex,$judet,$oras,$cod, $email, $telefon, $parola1)
 	{
 
-		$query="insert into utilizatori (nume, prenume, sex, adresa, email,parola, telefon) values ('$nume', '$prenume','$sex','$adresa', '$email', '$parola1', '$telefon') ";
+		$query="insert into utilizatori (nume, prenume, sex, adresa,oras,judet,cod_postal, email,parola, telefon) values ('$nume', '$prenume','$sex','$adresa','$oras','judet','cod', '$email', '$parola1', '$telefon') ";
 
 		$result=$this->queryInsert($query);
 
