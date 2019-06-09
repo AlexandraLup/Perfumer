@@ -15,6 +15,9 @@ class Register extends Controller {
 			$prenume = $_POST["prenume"];
 			$adresa = $_POST["adresa"];
 			$sex = $_POST["sex"];
+			$judet = $_POST["county"];
+			$oras= $_POST ["oras"];
+			$cod= $_POST ["cod"];
 			$email= $_POST["email"];
 			$telefon= $_POST["telefon"];
 			$parola1= $_POST["pass1"];
@@ -30,7 +33,7 @@ class Register extends Controller {
 				{
 					$parola1=password_hash($parola2, PASSWORD_DEFAULT);
 
-					$model->createAccount($nume, $prenume,$adresa, $sex, $email, $telefon, $parola1);
+					$model->createAccount($nume, $prenume,$adresa, $sex, $judet,$oras,$cod, $email, $telefon, $parola1);
 
 					$idPref=$model->getId($email);
 					$idUser=(int)$idPref[0];
