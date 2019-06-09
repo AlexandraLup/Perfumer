@@ -18,10 +18,23 @@
         </label>
 
         <button style="color: white; "class="containerParfButon" type="submit" value="filtreaza" name="filtru">Filtreaza</button>
+        </form><br>
+
+        <form action="" method="POST">
+          <label class="containerParf">Cele mai noi
+        <input type="radio"  name="radio" value="celeMaiNoi">
+        <span class="checkmarkParf"></span>
+        </label>
+
+        <label class="containerParf">Cele mai vandute
+        <input type="radio" name="radio" value="celeMaiVandute">
+        <span class="checkmarkParf"></span>
+        </label>
+
+        <button style="color: white; "class="containerParfButon" type="submit" value="filtreaza" name="filtru2">Filtreaza</button>
         </form>
       
-      <div class="filtru"> <a href="#"> Cele mai noi </a></div>
-      <div class="filtru"> <a href="#"> Cele mai vândute </a></div>
+      
 
 
   </div>
@@ -30,7 +43,7 @@
 
   <div class="columnPF parfumuriRight"> 
     <div class="titluPF"> Parfumuri femei</div>
-    <div>  <h2> Bara pagini </h2></div>
+    
         <div id="topNoutatiFoto">
 
             
@@ -75,7 +88,47 @@
         }
         else { $output = '<h3>No Data Found</h3>';}
 
-    } else{
+    }else if(isset($produseNoi)){
+        $output = '';
+        if($total_row > 0){ 
+          for ($i=0; $i<$total_row;$i++) { 
+            $output .= '
+            <div class="fotoNoutati">
+            <div class="col-sm-4 col-lg-3 col-md-3">
+              <div class="btnn-1">
+                <img src="'. $produseNoi[$i]['imagine'] .'" alt="" class="img-responsive" >
+                <p align="center"><strong><a href="#">'. $produseNoi[$i]['nume'] .'</a></strong></p>
+                <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produseNoi[$i]['pret_30'] .' RON</strong>'.'</h4>
+                 </div>
+              </div>
+            </div>';
+          }
+        }
+        else { $output = '<h3>No Data Found</h3>';}
+
+    } else if(isset($produsVandut)){
+
+        $output = '';
+        print_r($total_rowVandut);
+        if($total_rowVandut > 0){ 
+          for ($i=0; $i<$total_rowVandut;$i++) { 
+
+            $output .= '
+            <div class="fotoNoutati">
+            <div class="col-sm-4 col-lg-3 col-md-3">
+              <div class="btnn-1">
+                <img src="'. $produsVandut[$i]['imagine'] .'" alt="" class="img-responsive" >
+                <p align="center"><strong><a href="#">'. $produsVandut[$i]['nume'] .'</a></strong></p>
+                <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsVandut[$i]['pret_30'] .' RON</strong>'.'</h4>
+                 </div>
+              </div>
+            </div>';
+          }
+        }
+        else { $output = '<h3>No Data Found</h3>';}
+
+    }else{
+      
         $output = '';
         if($total_row > 0) {
          for ($i=0; $i<$total_row;$i++) { 
