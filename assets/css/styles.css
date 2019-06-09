@@ -32,10 +32,8 @@ border-color:#fbfbff;
 
 
 
-/*----filter ---*/
-
 /*filter3*/
-.container {
+.containerParf {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -50,7 +48,7 @@ border-color:#fbfbff;
 }
 
 /* Hide the browser's default radio button */
-.container input {
+.containerParf input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -58,7 +56,7 @@ border-color:#fbfbff;
 }
 
 /* Create a custom radio button */
-.checkmark {
+.checkmarkParf {
   position: absolute;
   top: 8px;
   left: 10px;
@@ -69,29 +67,29 @@ border-color:#fbfbff;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.containerParf:hover input ~ .checkmarkParf {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.containerParf input:checked ~ .checkmarkParf {
   background-color: #751F1F;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
+.checkmarkParf:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.containerParf input:checked ~ .checkmarkParf:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.container .checkmark:after {
+.containerParf .checkmarkParf:after {
  	top:4px;
  	left:4px;
 	width: 7px;
@@ -100,7 +98,7 @@ border-color:#fbfbff;
 	background: white;
 }
 
-.containerButon{
+.containerParfButon{
   display: block;
   position: relative;
   margin-left: 38px;
@@ -120,7 +118,7 @@ border-color:#fbfbff;
   border-radius: 10%;
 }
 
-
+/*--filter--*/
 
 
 
