@@ -23,42 +23,32 @@ include "header.php";
 </div>
 
 <div id="wishlist">
-	<div class="items">
-		<img alt="#" class="item-photo" src="images/Miss-Dior.png" style="width:250px; height:250px;">
-		<div class="text-item">
-			Dior <b>Miss Dior Blooming Bouquet</b>
-		</div>
-		<div class="adauga">
-			<button>Adaugă în coș</button>
-		</div>
-	</div>
-	<div class="items">
-		<img alt="#" class="item-photo" src="images/Chanel-parfum.jpg" style="width:250px; height:250px;">
-		<div class="text-item">
-			Chanel <b>Coco Mademoiselle</b>
-		</div>
-		<div class="adauga">
-			<button>Adaugă în coș</button>
-		</div>
-	</div>
-	<div class="items">
-		<img alt="#" class="item-photo" src="images/dolce3.png" style="width:250px; height:250px;" >
-		<div class="text-item">
-			Dolce & Gabbana  <b>The One</b>
-		</div>
-		<div class="adauga">
-			<button>Adaugă în coș</button>
-		</div>
-	</div>
-	<div class="items">
-		<img alt="#" class="item-photo" src="images/invictus.png" style="width:250px; height:250px;">
-		<div class="text-item">
-			Paco Rabanne <b>Invictus</b>
-		</div>
-		<div class="adauga">
-			<button>Adaugă în coș</button>
-		</div>
-	</div>
+	
+	<?php
+		$output = '';
+        if($rowWish > 0) {
+         for ($i=0; $i<$rowWish;$i++) { 
+            $output .= '
+            <div class="fotoNoutati">
+            <div class="col-sm-4 col-lg-3 col-md-3">
+              <div class="btnn-1">
+                <img src="'. $produsWish[$i]['imagine'] .'" alt="" class="img-responsive" >
+                <p align="center"><strong><a href="#">'. $produsWish[$i]['nume'] .'</a></strong></p>
+                <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsWish[$i]['pret_30'] .' RON</strong>'.'</h4>
+                 </div>
+              </div>
+            </div>';
+          }
+        }
+        else{ $output = '<h3>Nu aveti nimic in wishlist</h3>'; }
+
+
+        echo $output;
+
+	?>
+	
+
+
 </div>
 
 </section>
