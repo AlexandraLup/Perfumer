@@ -18,10 +18,8 @@ class Login extends Controller {
 			$data['parola']=$parola;
 			$template->set('verificare',$data);
 
-
-
 			$info =$model->getEmail($email);
-			
+			$infoId = $model->getId($email);
 
 			if(!isset($info["email"])){
 
@@ -37,12 +35,10 @@ class Login extends Controller {
 				
 				if($check==true){
 					//fac sesiunea
-					session_start(); 
+					 
 					$_SESSION['email'] = $email;
-				    $this->redirect('index');
-
-					
-					
+					$_SESSION['id']=$infoId["id"];
+				    $this->redirect('index');	
 				}
 				else{
 					$template->set('parolaGresita','ok');
