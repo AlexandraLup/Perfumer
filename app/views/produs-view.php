@@ -183,23 +183,23 @@
 			        <label for="name" >Nume</label>
                     <input type="text" id="name" name="name" placeholder="Nume">
 			        <label for="comm" >Comentariu</label>
-                    <textarea name="comm" id="" rows="10" class="form-control" placeholder="Descriere"></textarea>
+					<textarea name="comm" id="" rows="10" class="form-control" placeholder="Comentariu"></textarea>
+					<button type="submit" value="addcomm" name="addcomm">Adaug&#259; comentariu</button>
 		    </form>
 		</div>
 		<div id = "comentariu" >
-		 <h4> Comentarii clien&#355;i </h4>
+		 <h4> <strong>Comentarii clien&#355;i </strong> </h4>
     <div id="comments" >
 			 <?php 
 					foreach($comments as $array) {
-								 echo '<p>' . $array['nume_utilizator'] . '</p>';
+								 echo '<h6><strong>' . $array['nume_utilizator'] . '</strong></h6>';
 								 echo '<p>' . $array['comentariu'] . '</p>';
+								 echo '<br> <br>';
 					}
 
 			?>
 		</div>
-				<form method="post" action="#">
-			 <button class="commbtn" type="submit" name="comments"> Vezi comentarii </button>
-				</form>
+				
 	</div>
 	<div class="bg-modal">
 				<div class="modal-contents">
@@ -207,7 +207,7 @@
 					<div class="close">+</div>
 			
 					<form action="">
-						<a href="login" class="button">Intr&#259; &#238;n cont </a>
+						<a href="login" id="button-model">Intr&#259; &#238;n cont </a>
 					</form>
 			
 				</div>
@@ -218,7 +218,7 @@
 			
 					<div class="qclose">+</div>
 			
-				 Trebuie s&#259; alegi o cantitate!
+				<strong> Trebuie s&#259; alegi o cantitate! </strong>
 			
 				</div>
 			</div>
@@ -228,7 +228,7 @@
 			
 					<div class="sclose">+</div>
 			
-				Cantitatea dorit&#259; nu este 	&#238;n stoc!
+				<strong>Cantitatea dorit&#259; nu este 	&#238;n stoc! </strong>
 			
 				</div>
 			</div>
@@ -237,7 +237,7 @@
 				<div class="modal-contents">
 			
 					<div class="pclose">+</div>
-			
+			            <strong > Produsul a fost ad&#259;ugat &#238;n co&#351;! </strong>
 					<form action="">
 						<a href="shoppingcart" class="button"> Vezi co&#351; </a>
 					</form>
