@@ -7,7 +7,7 @@ class Produs extends Controller {
 		$model=new  ProdusModel();
 		$template = $this->loadView('produs-view');
 		$info = $model->getDetails('candy prada');
-		$result = $model -> getFirstComments('candy prada');
+		$result = $model -> getAllComments('candy prada');
 		$template->set('produs', $info) ;
 		$template->set('comments',$result);
 
@@ -42,8 +42,17 @@ class Produs extends Controller {
 		}
 	}
 }  	
-		$template->render();
+    if(isset($_POST['addcomm'])){
 
+		$name = $_POST['name'];
+		$comentariu = $_POST['comm'];
+		$idProdus= $info['id'];
+		$return = $model -> addComentariu($idProdus,$name,$comentariu);
+		$this->redirect('produs');
+		unset($_POST);
 	}
+		
+	 $template->render();
+}
 }
 ?>
