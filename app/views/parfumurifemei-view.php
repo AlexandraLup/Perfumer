@@ -7,17 +7,17 @@
       <div class="filtreParfum"> Filtru </div>
 
         <form action="" method="POST">
-          <label class="container">Pret crescator
-          <input type="radio"  name="radio" value="asc">
-          <span class="checkmark"></span>
-          </label>
+          <label class="containerParf">Pret crescator
+        <input type="radio"  name="radio">
+        <span class="checkmarkParf"></span>
+        </label>
 
-          <label class="container">Pret descrescator
-          <input type="radio" name="radio" value="desc">
-          <span class="checkmark"></span>
-          </label>
+        <label class="containerParf">Pret descrescator
+        <input type="radio" name="radio">
+        <span class="checkmarkParf"></span>
+        </label>
 
-          <button style="color: white; "class="containerButon" type="submit" value="filtreaza" name="filtru">Filtreaza</button>
+        <button style="color: white; "class="containerParfButon" type="submit" value="filtreaza" name="filtreaza">Filtreaza</button>
         </form>
       
       <div class="filtru"> <a href="#"> Cele mai noi </a></div>
