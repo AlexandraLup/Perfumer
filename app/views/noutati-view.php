@@ -40,8 +40,8 @@
 
 
   <div class="columnPF parfumuriRight"> 
-    <div class="titluPF"> Parfumuri femei</div>
-    <div>  <h2> Bara pagini </h2></div>
+    <div class="titluPF"> Noutati</div>
+   
         <div id="topNoutatiFoto">
 
             
