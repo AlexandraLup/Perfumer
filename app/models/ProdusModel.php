@@ -36,16 +36,20 @@ class ProdusModel extends Model {
 		return $result;
 	}
 
-	public function getFirstComments($name){
-		$query = 'SELECT c.nume_utilizator, c.comentariu FROM `produse` p inner join `comentarii` c on c.id_produs = p.id WHERE p.nume="'. $name .'" LIMIT 2' ;
-		$result = $this->queryAll($query);
-		return $result;
-	}
 	
 	public function getAllComments($name){
 		$query = 'SELECT c.nume_utilizator, c.comentariu FROM `produse` p inner join `comentarii` c on c.id_produs = p.id WHERE p.nume="'. $name .'"' ;
 		$result = $this->queryAll($query);
 		return $result;
+	}
+
+
+	public function addComentariu($idProdus, $name, $comentariu){
+			
+		$query= "INSERT INTO comentarii(id_produs,nume_utilizator,comentariu) values ('$idProdus', '$name','$comentariu')";
+		$result= $this->queryInsert($query);
+		return $result;
+
 	}
 }
 ?>
