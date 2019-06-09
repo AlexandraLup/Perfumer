@@ -15,6 +15,13 @@ class LoginModel extends Model {
 		return $result;
 	}
 
+	public function getId($email)
+	{
+		$query= 'select id from utilizatori where email="'. $email .'"';
+		$result= $this->query($query);
+		return $result;
+	}
+
 
 	public function getEmailPass($email)
 	{
