@@ -12,13 +12,62 @@
     <div class="inner-wrap">
         <label>Nume <input type="text" name="nume" required></label>
         <label>Prenume <input type="text" name="prenume" required></label>
-        <label>Adresă <textarea name="adresa" required></textarea></label>
-        <label> Sex
+         <label> Sex
           <select id="county" name="sex">
           <option value="feminin">Femeie</option>
           <option value="masculin">Bărbat</option>
           </select>
         </label>
+        <label>Adresă <textarea name="adresa" required></textarea></label>
+        <label>Oraș <input type="text" name="oras" required></label>
+        <label> Județ
+          <select id="county" name="county">
+          <option value="ab">Alba</option>
+          <option value="ar">Arad</option>
+          <option value="ag">Arges</option>
+          <option value="bc">Bacau</option>
+          <option value="bh">Bihor</option>
+          <option value="bn">Bistrita-Nasaud</option>
+          <option value="bt">Botosani</option>
+          <option value="bv">Brasov</option>
+          <option value="br">Braila</option>
+          <option value="b">Bucuresti</option>
+          <option value="bz">Buzău</option>
+          <option value="cs">Caraș-Severin</option>
+          <option value="cl">Călărași</option>
+          <option value="cj">Cluj</option>
+          <option value="ct">Constanța</option>
+          <option value="cv">Covasna</option>
+          <option value="db">Dâmbovița</option>
+          <option value="dj">Dolj</option>
+          <option value="gl">Galați</option>
+          <option value="gr">Giurgiu</option>
+          <option value="gj">Gorj</option>
+          <option value="hr">Harghita</option>
+          <option value="hd">Hunedoara</option>
+          <option value="il">Ialomița</option>
+          <option value="is">Iași</option>
+          <option value="if">Ilfov</option>
+          <option value="mm">Maramureș</option>
+          <option value="mh">Mehedinți</option>
+          <option value="ms">Mureș</option>
+          <option value="nt">Neamt</option>
+          <option value="ot">Olt</option>
+          <option value="ph">Prahova</option>
+          <option value="sm">Satu Mare</option>
+          <option value="sj">Sălaj</option>
+          <option value="sb">Sibiu</option>
+          <option value="sv">Suceava</option>
+          <option value="tr">Teleorman</option>
+          <option value="tm">Timiș</option>
+          <option value="tl">Tulcea</option>
+          <option value="vs">Vaslui</option>
+          <option value="vl">Vâlcea</option>
+          <option value="vn">Vrancea</option>
+          </select>
+        </label>
+        <label>Cod postal <input type="text" name="cod" required></label>
+       
     </div>
 
     <div class="section2"><span>2</span>Email & Telefon</div>
