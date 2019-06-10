@@ -66,6 +66,8 @@ class Model {
 		$count = mysqli_affected_rows($this->connection);
 		return $count;
 	}
+
+	
     
 }
 ?>
