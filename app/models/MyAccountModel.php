@@ -19,7 +19,7 @@ class MyAccountModel extends Model{
 
     public function getPersonalData($idUser){
             
-        $query= "select nume,prenume,sex,adresa,email,telefon from utilizatori where id='$idUser'";
+        $query= "select nume,prenume,sex,adresa,email,telefon,oras,judet,cod_postal from utilizatori where id='$idUser'";
         $result= $this->query($query);
         return $result;
      }
@@ -41,6 +41,13 @@ class MyAccountModel extends Model{
         $query = "select count(p.id) from produse p join stocuri s on s.id_produs=p.id join wishlist w on w.id_produs=p.id where w.id_utilizator='$id'";
 
     $result= $this->query($query);
+    return $result;
+  }
+
+  public function update($id, $address, $cod , $town, $county, $phone){
+
+    $query ="UPDATE `utilizatori` SET `adresa`= '$address',`oras`='$town',`judet`='$county',`cod_postal`='$cod',`telefon`='$phone' WHERE id='$id'";
+    $result = $this->execute($query);
     return $result;
   }
 
