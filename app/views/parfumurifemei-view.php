@@ -109,7 +109,6 @@
     } else if(isset($produsVandut)){
 
         $output = '';
-        print_r($total_rowVandut);
         if($total_rowVandut > 0){ 
           for ($i=0; $i<$total_rowVandut;$i++) { 
 
