@@ -40,7 +40,7 @@
                 <strong><i class="fa fa-plus"></i> Adaug&#259; un nou produs</strong>
             </div>
             <div class="form-produs">
-                <form action="" method="post">
+                <form class="admin-form" action="" method="post">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="barcode">Cod produs</label>
