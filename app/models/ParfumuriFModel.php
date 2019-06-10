@@ -22,13 +22,13 @@ class ParfumuriFModel extends Model {
 	}
 
 	public function getDetailsNoi(){
-		$query= "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id  order by p.id desc  ";
+		$query= "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id where p.gen='femeie' order by p.id desc  ";
 		$result= $this->queryAll($query);
 		return $result;
 	}
 
 	public function getDetailsVandut(){
-		$query= "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id where p.id in (
+		$query= "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id where p.gen='femeie' and p.id in (
 			select p1.id from produse p1 join lista_produse l on p1.id=l.id_produs  group by p1.id  )";
 		$result= $this->queryAll($query);
 		return $result;
@@ -36,7 +36,7 @@ class ParfumuriFModel extends Model {
 
 	public function getRowVandut(){
 		// s au vandut mai mult de 2 ... momentan
-		$query= "select count(p.id) from produse p join stocuri s on s.id_produs=p.id where p.id in (
+		$query= "select count(p.id) from produse p join stocuri s on s.id_produs=p.id where p.gen='femeie' and p.id in (
 			select p1.id from produse p1 join lista_produse l on p1.id=l.id_produs group by p1.id having count(p1.id)>=2  )";
 		$result= $this->query($query);
 		
@@ -49,17 +49,7 @@ class ParfumuriFModel extends Model {
 	public function getRowCount()
 	{   
         $query = "select count(nume) from produse where gen='femeie'";
-        if(isset($_POST["lowerSlider"], $_POST["upperSlider"]) && !empty($_POST["lowerSlider"]) && !empty($_POST["upperSlider"]))
-	{
-		$query .= "
-		 AND pret BETWEEN '".$_POST["lowerSlider"]."' AND '".$_POST["lowerSlider"]."'
-		";
-	}
-
-	
-
   		$result= $this->query($query);
-
 		return $result;
 	}
 
