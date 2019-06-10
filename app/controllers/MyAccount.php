@@ -1,12 +1,11 @@
 <?php
-include APP_DIR . 'models/MyAccountModel.php';
+
 class MyAccount extends Controller {
 	
 	function index()
 	{
-	   	$model= new MyAccountModel();
 		$template = $this->loadView('myAccount-view');
-
+		$model=$this->loadModel('MyAccountModel');
 		if(isset($_SESSION["id"])){
 			$info = $model->getDetailsWish($_SESSION["id"]);
 			$info2= $model->getRowWish($_SESSION["id"]);
@@ -27,10 +26,37 @@ class MyAccount extends Controller {
 		
 		$template = $this->loadView('personaldata-view');
 		$model=$this->loadModel('MyAccountModel');
-		$array=$model->getId($_SESSION['email']);
-		$userID = $array['id'];
+		$userID = $_SESSION['id'];
 		$userDetails = $model->getPersonalData($userID);
 	    $template->set('details',$userDetails);
+		$template->render();
+	}
+
+	function edit(){
+		
+		$template = $this->loadView('personaldataedit-view');
+		$model=$this->loadModel('MyAccountModel');
+		$userID = $_SESSION['id'];
+		if(isset($_POST['submit'])){
+			$address = $_POST['adresa'];
+			$postal = $_POST['cod'];
+			$town = $_POST['oras'];
+			$county = $_POST['judet'];
+			$phone = $_POST['telefon'];
+			$result= $model->update($userID, $address, $postal , $town, $county, $phone);
+			$this->redirect('MyAccount/settings');
+		unset($_POST);
+		}
+	   
+		$template->render();
+	}
+
+	function comenzi(){
+		
+		$template = $this->loadView('comenzi-view');
+		$model=$this->loadModel('MyAccountModel');
+		$userID = $_SESSION['id'];
+		
 		$template->render();
 	}
 }
