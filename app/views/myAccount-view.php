@@ -9,13 +9,13 @@ include "header.php";
 <section>
 <div class="menu">
     <div class="lista">
-    <a href="myaccount.html"><i class="far fa-heart"></i> Produse favorite</a>
+    <a href="#"><i class="far fa-heart"></i> Produse favorite</a>
     </div>
     <div class="lista">
-    <a href="personaldata.html"><i class="far fa-clipboard"></i> Date personale</a>
+    <a href="MyAccount/settings"><i class="far fa-clipboard"></i> Date personale</a>
     </div>
     <div class="lista">
-    <a href="orderhistory.html"><i class="fas fa-warehouse"></i> Istoricul comenzilor</a>
+    <a href="MyAccount/comenzi"><i class="fas fa-warehouse"></i> Istoricul comenzilor</a>
     </div>
 </div>
 <div class="title2">
