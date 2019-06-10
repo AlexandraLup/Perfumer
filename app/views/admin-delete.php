@@ -45,7 +45,7 @@
                 <strong><i class="fas fa-trash-alt"></i> 	&#350;terge produs </strong>
             </div>
             <div class="form-produs">
-                <form action="" method="post">
+                <form class="admin-form" action="" method="post">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="cod">Cod produs</label>

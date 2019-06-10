@@ -23,8 +23,10 @@
     </header>
 
     <section>
-        
-    <h2 class="admin-titlu">AUTENTIFICA-TE</h2>
+ <div class="admin-login"> 
+ <div  class="title-produs" style="text-align:center;">
+                <strong> AUTENTIFICA-TE</strong>
+            </div>
 
 <form action="" method="POST">
 
@@ -35,10 +37,10 @@
     <label for="psw"><b>Parolă</b></label>
     <input type="password" placeholder="Introdu parola" name="psw" required>
         
-    <button type="submit">Login</button>
+    <button type="submit" class="success">Login</button>
   </div>
 </form>
-
+</div>
 </section>
 
 

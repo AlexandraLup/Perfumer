@@ -64,8 +64,67 @@
 
 		<ul>
 			
-			<li class="ContCos"><a href="Login">CONT <i class="fa fa-user-circle" ></i></a></li>
-			<li class="ContCos"><a href="ShoppingCart">COȘ <i class="fa fa-shopping-cart"></i></a></li>
-			<li class="ContCos"><a href="MyAccount">WISHLIST <i class="fa fa-heart"></i></a></li>
+			<li class="ContCos"><a id="contBtn" >CONT <i class="fa fa-user-circle" ></i></a></li>
+			<li class="ContCos"><a id="cosBtn" >COȘ <i class="fa fa-shopping-cart"></i></a></li>
+			<li class="ContCos"><a id="wishlistBtn">WISHLIST <i class="fa fa-heart"></i></a></li>
 		</ul>
 	</nav>
+	
+	<div class="bg-modal">
+				<div class="modal-contents">
+			
+					<div class="close">+</div>
+			
+					<form action="">
+						<a href="login" id="button-model">Intr&#259; &#238;n cont </a>
+					</form>
+			
+				</div>
+			</div>
+
+
+
+			<?php 
+        if(!isset($_SESSION["email"])){
+						echo "
+						<script type=\"text/javascript\">
+						
+						 document.getElementById('cosBtn').addEventListener(\"click\", function() {
+							document.querySelector('.bg-modal').style.display = \"block\";
+							});
+							document.querySelector('.close').addEventListener(\"click\", function() {
+							document.querySelector('.bg-modal').style.display = \"none\";
+							});	
+							document.getElementById('wishlistBtn').addEventListener(\"click\", function() {
+								document.querySelector('.bg-modal').style.display = \"block\";
+								});
+								document.querySelector('.close').addEventListener(\"click\", function() {
+								document.querySelector('.bg-modal').style.display = \"none\";
+								});	
+								document.getElementById('contBtn').addEventListener(\"click\", function() {
+									location.replace('http://localhost/perfumer/login');
+									});
+				 </script>
+						   
+						";
+				   }
+
+			else{
+				echo "
+				<script type=\"text/javascript\">
+				document.getElementById('cosBtn').addEventListener(\"click\", function() {
+	                  location.replace('http://localhost/perfumer/ShoppingCart');
+				  });	
+				  
+				  document.getElementById('wishlistBtn').addEventListener(\"click\", function() {
+					location.replace('http://localhost/perfumer/MyAccount');
+					});
+					document.getElementById('contBtn').addEventListener(\"click\", function() {
+						location.replace('http://localhost/perfumer/MyAccount');
+						});
+				</script>
+				";
+			}
+
+
+		?>
