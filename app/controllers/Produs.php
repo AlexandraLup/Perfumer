@@ -17,6 +17,7 @@ class Produs extends Controller {
 				$result = $model -> getId($_SESSION['email']);
 				$id = $result['id'];
 				$result = $model ->addToWishlist($id,$info['id']);
+				
 			}
 			else {
 				echo 'Nu esti logat';
@@ -33,6 +34,7 @@ class Produs extends Controller {
 				   $price = 'pret_' . $_POST['quantity'];
 				   $result = $model ->addToBasket($info['id'],$id,$info[$price]);
 				   $template -> set('success', true);
+
 			   }
 			   else{
 				$template->set('stoc',false);
