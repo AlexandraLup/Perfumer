@@ -7,9 +7,77 @@ class Admin extends Controller {
 		$template->render();
 	}
 
-	function rapoarte(){
+	function rapoarteStocuri(){
    
-		$template = $this->loadView('admin-rapoarte');
+  		$model = $this->loadModel('AdminModel');
+		$template = $this->loadView('admin-rapoarteStocuri');
+		if(isset($_POST['afiseaza']))
+		{
+			$_SESSION['cat']=$_POST['categorie'];
+			$raport = $model->getRaport($_POST['categorie']);
+			$totalRaport= $model->getTotalRaport($_POST['categorie']);
+			$template->set('CategorieSet', $raport);
+			$template->set('totalRaport', $totalRaport);
+		}
+
+		if(isset($_POST['csv'])){
+		$categ=$_SESSION['cat'];
+		$detalii= $model->getRaport($categ);
+      	$fichier = 'file.csv';
+ 		header( "Content-Type: text/csv;charset=utf-8" );
+ 		header( "Content-Disposition: attachment;filename=\"$fichier\"" );
+ 		header("Pragma: no-cache");
+ 		header("Expires: 0");     
+      	$fp= fopen('php://output', 'w');      
+     	$header = array('Id','Nume','Esenta','Stoc30','Stoc50','Stoc100') ; 
+      	fputcsv($fp, $header);
+
+      foreach($detalii as $line)
+      { fputcsv($fp, $line);}    
+           
+          
+      fclose($fp); 
+       exit();
+		}
+
+
+		$template->render();
+	}
+
+	function rapoarteVanzari(){
+   
+		$model = $this->loadModel('AdminModel');
+		$template = $this->loadView('admin-rapoarteVanzari');
+		if(isset($_POST['afiseaza']))
+		{
+			$_SESSION['cat']=$_POST['categorie'];
+			$raport = $model->getRaport($_POST['categorie']);
+			$totalRaport= $model->getTotalRaport($_POST['categorie']);
+			$template->set('CategorieSet', $raport);
+			$template->set('totalRaport', $totalRaport);
+		}
+
+		if(isset($_POST['csv'])){
+		$categ=$_SESSION['cat'];
+		$detalii= $model->getRaport($categ);
+      	$fichier = 'file.csv';
+ 		header( "Content-Type: text/csv;charset=utf-8" );
+ 		header( "Content-Disposition: attachment;filename=\"$fichier\"" );
+ 		header("Pragma: no-cache");
+ 		header("Expires: 0");     
+      	$fp= fopen('php://output', 'w');      
+     	$header = array('Id','Nume','Esenta','Stoc30','Stoc50','Stoc100') ; 
+      	fputcsv($fp, $header);
+
+      foreach($detalii as $line)
+      { fputcsv($fp, $line);}    
+           
+          
+      fclose($fp); 
+       exit();
+		}
+
+
 		$template->render();
 	}
 
