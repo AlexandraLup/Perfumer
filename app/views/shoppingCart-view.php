@@ -1,123 +1,85 @@
 <?php 
 include "header.php";
-
+$valoare = 0;
+  
+foreach($basket as $product){
+ $valoare = $valoare + intval($product['subtotal']);
+}
 ?>
 
     
 <section >
-<h2 class="title"> COȘ DE CUMPĂRĂTURI </h2>
 
+<div class="cos-cumparaturi">
 
-<table >
+<h2 class="title-cos"> COȘ DE CUMPĂRĂTURI </h2>
+<br>
+
+<div class="cos-details" > 
+<table class="cos" >
 
 <tr>
-<th> Produs </th>
-<th> Subtotal </th>
-<th> Cantitate </th>
+<th class="nume-produs"> Produs </th>
+<th class="marime-produs" > Mărime </th>
+<th class="subtotal-produs"> Subtotal </th>
+<th class="cantitate"> Cantitate </th>
+<th> </th>
 </tr>
-        
-<tr> 
-  <td> 
-      <div class="produs-cos" >
-       <p> egfdfgdf </p>
-       <img src="<?php echo BASE_URL .'assets/images/prada.png' ?>" style="width:120px;height:140px;" >
-      </div>
-      </div>
-   
- </td>
 
- <td >
-   2334
-</td>
- 
-<td> 
-  
-</td>
-<tr>
+  <?php 
+     
+     foreach($basket as $product){
+        echo '<tr>' ; 
+        echo '<td>' ; 
+        echo '<div class="produs-cos" >';
+        echo '<p><b>' . strtoupper($product['nume']) . ' ' . strtoupper($product['categorie']) .'</b> </p>';
+        echo ' <img src=" ' .  BASE_URL .  $product['imagine'] . '" style="width:120px;height:140px;" >';
+        echo '</div>';
+        echo '</td>' ; 
+        echo '<td>' ; 
+        echo $product['ml'] . ' ML' ; 
+        echo '</td>' ; 
+        echo '<td>' ; 
+        echo $product['subtotal'] . ' LEI' ; 
+        echo '</td>' ; 
+        echo '<td>' ; 
+        echo '<form method="post" action="#">';
+        echo ' <input  type="number" min="1" max="20" value="' . $product['cantitate'] . ' "> ';
+        echo '</form>';
+        echo '</td>' ; 
+        echo '<td>';
+        echo '<div class="delete-button">+</div>';
+        echo '</td>';
+        echo '</tr>';
+     }
 
+  ?>
 
+</table >
+<div class="summary-div">
+   <h4><strong>Rezumat comanda<strong></h4>
+      <table class="summary" >
+        <tr>
+          <th> Valoare <th>
+          <td> <?php echo $valoare . ' LEI'; ?> </td>
+      </tr>
+
+      <tr>
+          <th> Livrare(Fan Courier) <th>
+          <td> 15 LEI </td>
+      </tr>
+
+      <tr>
+          <th>Total <th>
+          <td> <?php echo( $valoare + 16) ; ?> </td>
+      </tr>
+     
 </table>
-<!--
-<div id="box2">
-<div class="bascket">
-  <div class="bascket-tags">
-    <ul style="list-style-type:none;">
-      <li >Produs</li>
-      <li>Preț</li>
-      <li>Cantitate</li>
-      <li >Subtotal</li>
-      </ul>
+    <a class="button-model" href="proceseazacomanda" > Continua </a>
+    </div>
+    </div>
     </div>
 
-
-  <div class="bascket-products">
-    <div class="item">
-      <div class="product-image">
-        <img src="./images/gguilty.png" style="width:120px;height:140px;" alt="Placeholder image 2" class="product-frame">
-        </div>
-        <div class="product-details">
-          <p><strong>GUCCI GUILTY APA DE TOALETA 75 ML</strong></p>
-          </div>
-    </div>
-  <div class="price">270</div>
-  <div class="quantity">
-    <input type="number" value="1" min="1" class="quantity-field">
-
-  </div>
-  <div class="subtotal">270</div>
-  <div class="remove">
-         <button>Remove</button>
-       </div>
-
-	</div>
-    <div class="bascket-products">
-      <div class="item">
-        <div class="product-image">
-          <img src="./images/gguilty.png" style="width:120px;height:140px;" alt="Placeholder image 2" class="product-frame">
-          </div>
-          <div class="product-details">
-            <p><strong>GUCCI GUILTY APA DE TOALETA 75 ML</strong></p>
-            </div>
-      </div>
-    <div class="price">270</div>
-    <div class="quantity">
-      <input type="number" value="1" min="1" class="quantity-field">
-
-    </div>
-
-    <div class="subtotal">270</div>
-    <div class="remove">
-           <button>Remove</button>
-         </div>
-      </div>
-  </div>
-  <aside>
-        <div class="summary">
-          <h4>Sumar comandă</h4>
-          <div class="summary-subtotal">
-            <div class="subtotal-title">Subtotal</div>
-            <div class="subtotal-value final-value" id="basket-subtotal">270 LEI</div>
-              </div>
-            <div class="summary-promo hide">
-              <div class="promo-title">Reducere</div>
-              <div class="promo-value final-value" >34 LEI</div>
-            </div>
-            <div class="box3">
-           <div class="livrare">Livrare</div>
-           <div class="livrate-value final-value"> Gratuită</div>
-           </div>
-          <div class="summary-total">
-            <div class="total-title">Total</div>
-            <div class="total-value final-value" id="basket-total">270 LEI</div>
-          </div>
-          <form action="finalizareComanda.html">
-          <div class="summary-checkout">
-           	<button class="checkout-cta">Procesează comanda</button>
-          </div>
-          </form>
-        </div>
-      </aside>
-</div>   -->
 </section>
 
 <?php  include 'footer.php'   ?>
