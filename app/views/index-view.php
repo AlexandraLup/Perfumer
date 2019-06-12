@@ -27,30 +27,26 @@ include "header.php";
 			</div>
 
 			<div id="topNoutatiFoto">
-				<div class="fotoNoutati">
-					<a href="#"><img alt="#" class="dimensiuneFoto" src="<?php echo BASE_URL; ?>assets/images/Miss-Dior.png" > </a>
-					<div class="textTop">
-						Dior <b>Miss Dior Blooming Bouquet</b>
-					</div>
-				</div>
-				<div class="fotoNoutati">
-					<a href="#"><img alt="#" class="dimensiuneFoto" src="<?php echo BASE_URL; ?>assets/images/Chanel-parfum.jpg"> </a>
-					<div class="textTop">
-						Chanel <b>Coco Mademoiselle</b>
-					</div>
-				</div>
-				<div class="fotoNoutati">
-					<a href="#"><img alt="#" class="dimensiuneFoto" src="<?php echo BASE_URL; ?>assets/images/dolce3.png"> </a>
-					<div class="textTop">
-						Dolce & Gabbana  <b>The One</b>
-					</div>
-				</div>
-				<div class="fotoNoutati">
-					<a href="#"><img alt="#" class="dimensiuneFoto" src="<?php echo BASE_URL; ?>assets/images/invictus.png" > </a>
-					<div class="textTop">
-						Paco Rabanne <b>Invictus</b>
-					</div>
-				</div>
+<?php  
+     $output = '';
+        if($total_row > 0) {
+         for ($i=0; $i<$total_row;$i++) { 
+            $output .= '
+            <div class="fotoNoutatiN">
+            <div class="col-sm-4 col-lg-3 col-md-3">
+              <div class="btnn-1N">
+                <img src="'. $produs[$i]['imagine'] .'" alt="" class="img-responsive" >
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produs[$i]['nume']. ' " >'. $produs[$i]['nume'] .'</a></strong></p>
+                <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produs[$i]['pret_30'] .' RON</strong>'.'</h4>
+                 </div>
+              </div>
+            </div>';
+          }
+        }
+        else{ $output = '<h3>No Data Found</h3>'; }
+
+  	echo $output;
+ ?>
 			</div>
 		</div>
 
