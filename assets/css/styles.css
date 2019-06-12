@@ -2134,7 +2134,7 @@ input {
 
 
 .cos tr{
-	border: 1px solid black;
+	border-bottom:1px black solid;
 }
 
 .cos .nume-produs{
@@ -2159,7 +2159,7 @@ input {
 }
 
 .cod td{
-	border: 1px solid orange;	
+	border-bottom:1px black solid;
 }
 
 .produs-cos{
