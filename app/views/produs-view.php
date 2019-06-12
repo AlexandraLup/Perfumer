@@ -1,4 +1,4 @@
-<?php      include 'header.php';     ?>
+<?php include 'header.php'; ?>
 <section>
 <div class=produs>
     <img src="<?php echo BASE_URL . $produs["imagine"]?>" style="width:23%; height:23%;">
