@@ -45,7 +45,7 @@ class MyAccount extends Controller {
 			$phone = $_POST['telefon'];
 			$result= $model->update($userID, $address, $postal , $town, $county, $phone);
 			$this->redirect('MyAccount/settings');
-		unset($_POST);
+		    unset($_POST);
 		}
 	   
 		$template->render();
@@ -56,6 +56,8 @@ class MyAccount extends Controller {
 		$template = $this->loadView('comenzi-view');
 		$model=$this->loadModel('MyAccountModel');
 		$userID = $_SESSION['id'];
+		$result = $model->getOrders($userID);
+		$template->set('details', $result);
 		
 		$template->render();
 	}
