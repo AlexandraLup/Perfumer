@@ -88,7 +88,7 @@
 	<div class="bg-modal">
 				<div class="modal-contents">
 			
-					<div class="close">+</div>
+					<div class="close">+</div> 
 			
 					<form action="">
 						<a href="login" id="button-model">Intr&#259; &#238;n cont </a>

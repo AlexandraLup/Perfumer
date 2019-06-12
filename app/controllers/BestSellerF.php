@@ -7,18 +7,13 @@ class BestSellerF extends Controller {
 		$model = new BestSellerFModel();
 		$template = $this->loadView('BestSellerF-view');
 		
-		if(isset($_SESSION["id"])){
-			$info = $model->getDetailsBestS();
-			$info2= $model->getRowBestS();
-			$count= (int)$info2[0];
-		
-			$template->set('produsWish', $info);
-			$template->set('rowWish', $count);
+		$info = $model->getDetailsBestS();
+		$info2= $model->getRowBestS();
+		$count= (int)$info2[0];
+	
+		$template->set('produsWish', $info);
+		$template->set('rowWish', $count);
 
-		}else{
-			$count= 0;
-			$template->set('rowWish', $count);
-		}
 
 		$template->render();
 	}

@@ -34,7 +34,7 @@ include "header.php";
             </div>';
           }
         }
-        else{ $output = '<h3>Pagina in lucru</h3>'; }
+        else{ $output = '<h3>Cele mai vandute produse</h3>'; }
 
 
         echo $output;

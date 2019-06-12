@@ -41,10 +41,10 @@ if(isset($afiseazaPreferinte)){
 
 <div id="reducere">
 			<div id="reducereLeft">
-				<a href="#"><img alt="#" class="dimensiuneFoto" src="http://localhost/perfumer/assets/images/Mens.jpg" > </a>
+				<a href="http://localhost/perfumer/produs/search/Dior-Sauvage"><img alt="#" class="dimensiuneFoto" src="http://localhost/perfumer/assets/images/Mens.jpg" > </a>
 			</div>
 
-			<a href="#">
+			<a href="http://localhost/perfumer/produs/search/Dior-Sauvage">
 			<div id="reducereText2"> Descoperă oferta </div> </a>
 </div>
 
