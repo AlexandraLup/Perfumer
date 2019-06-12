@@ -26,7 +26,7 @@ class ProceseazaComanda extends Controller {
                 $stoc= 'stoc_' . $product['ml'];
                 $subtotal =$product['subtotal'];
                 $idProdus = $product['id_produs'];
-                $model->addProduct($random,$idProdus,$subtotal, $cantitate);
+                $model->addProduct($random,$idProdus,$subtotal, $cantitate,$product['ml']);
                 //$model->updateStock($idProdus,$product['ml'], $cantitate);
             }
           $model->deleteBasket($userID);
