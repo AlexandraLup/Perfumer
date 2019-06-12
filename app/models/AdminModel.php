@@ -41,6 +41,22 @@ class AdminModel extends Model {
         return $result ;
     }
 
+     public function getRaportVanzari($categorie){
+
+        $query = "select p.id, p.nume, lp.cantitate from produse p join stocuri s on p.id=s.id_produs join lista_produse lp on lp.id_produs=p.id where p.categorie='$categorie' group by lp.id_produs ";
+        
+        $result = $this->queryAll($query);
+        
+        return $result ;
+    }
+
+       public function getTotalRaportVanzari($categorie){
+        $query = "select count(distinct lp.id_produs) from produse p join stocuri s on p.id=s.id_produs join lista_produse lp on lp.id_produs=p.id where p.categorie='$categorie' ";
+        
+        $result = $this->query($query);
+        return $result ;
+    }
+
 }
 
 
