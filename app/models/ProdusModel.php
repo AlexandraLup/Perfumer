@@ -15,8 +15,8 @@ class ProdusModel extends Model {
 		return $result;
 	}
 
-	public function addToBasket($idProdus,$idUser, $subtotal){
-		$query = "INSERT INTO cos_cumparaturi(id_utilizator, id_produs,subtotal,cantitate) values ('$idUser' , '$idProdus', '$subtotal', '1')";
+	public function addToBasket($idProdus,$idUser, $subtotal, $ml){
+		$query = "INSERT INTO cos_cumparaturi(id_utilizator, id_produs,subtotal,cantitate,ml) values ('$idUser' , '$idProdus', '$subtotal', '1' , '$ml')";
 		$result= $this->queryInsert($query);
 		return $result;
 	}
@@ -36,20 +36,37 @@ class ProdusModel extends Model {
 		return $result;
 	}
 
-	
+	public function getProductCount($id){
+		$query="SELECT count(id_produs) from wishlist where id_produs= '$id'";
+		$result= $this->query($query);
+		return $result;
+	}
 	public function getAllComments($name){
 		$query = 'SELECT c.nume_utilizator, c.comentariu FROM `produse` p inner join `comentarii` c on c.id_produs = p.id WHERE p.nume="'. $name .'"' ;
 		$result = $this->queryAll($query);
 		return $result;
 	}
-
+	
+	public function getBasketInfo($id, $quantity){
+		$query = "SELECT id_produs,ml FROM cos_cumparaturi where id_produs='$id'  and ml='$quantity'";
+		$result = $this->query($query);
+		return $result;
+	}
 
 	public function addComentariu($idProdus, $name, $comentariu){
 			
 		$query= "INSERT INTO comentarii(id_produs,nume_utilizator,comentariu) values ('$idProdus', '$name','$comentariu')";
 		$result= $this->queryInsert($query);
 		return $result;
+	}
+	
 
+	public function updateQuantity($idProdus, $pret){
+		$query =" UPDATE `cos_cumparaturi` SET `cantitate`=`cantitate` + 1 where id_produs='$idProdus'";
+		$query1 =" UPDATE `cos_cumparaturi` SET `subtotal`=`subtotal` + '$pret' where id_produs='$idProdus'";
+		$result = $this->execute($query);
+		$result = $this->execute($query1);
+		return $result;
 	}
 }
 ?>
