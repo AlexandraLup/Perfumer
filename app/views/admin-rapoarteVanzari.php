@@ -46,43 +46,68 @@
      <br>
 
 
-<?php
+<?php 
+    if(isset($CategorieSet))
+    {
+      $output = '';
+      $output = '  
 
-if(isset($categorieSetata)){
-     echo '<div class="bodyRaport">
-     	<div style="height:40px;">
-     	<form method="post" action=""> 
-     		
-     		<div class="format">
-           	 	 <button style="color: white; "class="ButonRaport" type="submit" value="afiseaza" name="afiseaza">CSV</button>
+      <div class="bodyRaport">
+      <div style="height:40px;">
+      <form method="post" action=""> 
+        
+        <div class="format">
+               <button style="color: white; "class="ButonRaport" type="submit" value="csv" name="csv" >CSV</button>
             </div> 
             <div class="format">
-           	 	 <button style="color: white; "class="ButonRaport" type="submit" value="afiseaza" name="afiseaza">PDF</button>
+               <button style="color: white; "class="ButonRaport" type="submit" value="pdf" name="pdf">PDF</button>
             </div>
             <div class="format">
-           	 	 <button style="color: white; "class="ButonRaport" type="submit" value="afiseaza" name="afiseaza">HTML</button>
+               <button style="color: white; "class="ButonRaport" type="submit" value="afiseaza" name="afiseaza">HTML</button>
             </div> 
         </form> 
-    	</div>
-		
+      </div>
+    
         <div class="listaRaport">
-        	<table class="table table-bordered">  
+          <table style="width:100%;">  
                           <tr>  
-                               <th width="5%">ID</th>  
+                               <th width="8%">ID</th>  
                                <th width="25%">Name</th>  
-                               <th width="35%">Address</th>  
-                               <th width="10%">Gender</th>  
-                               <th width="20%">Designation</th>  
-                               <th width="5%">Age</th>  
-                          </tr> 
-                        
+                               <th width="25%">Esenta</th>  
+                               <th width="14%">Stoc 30</th>  
+                               <th width="14%">Stoc 50</th>  
+                               <th width="14%">Stoc 100</th>  
+                          </tr>  ';
+        echo $output;
+        $output = '';
+        if($totalRaport[0] > 0)
+        { 
+          for ($i=0; $i<$totalRaport[0];$i++) 
+          {
+            $output .= '
+            <tr>  
+                 <th width="8%">'.$CategorieSet[$i]['id'].' </th>  
+                 <th width="25%">'.$CategorieSet[$i]['nume'].'</th>  
+                 <th width="25%">'.$CategorieSet[$i]['esenta'].'</th>  
+                 <th width="14%">'.$CategorieSet[$i]['stoc_30'].' </th>  
+                 <th width="14%">'.$CategorieSet[$i]['stoc_50'].' </th>  
+                 <th width="14%">'.$CategorieSet[$i]['stoc_100'].'</th>  
+            </tr> ';
+          }
 
-                     
-            </table>  
+          
+        }
+
+        $output.= '
+        </table>  
         </div>
-    </div>';
-  }
-    ?>
+        </div>';
+       echo $output;
+        
+    }
+
+
+?>
 </div>  
 
 
