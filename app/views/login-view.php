@@ -14,7 +14,8 @@
         <input type="text" placeholder="Enter E-mail" id="email" name="email" required>
         <label for="psw"><b>Parolă</b></label>
         <input type="password" placeholder="Enter Password"  id="psw" name="psw" required>
-        <button type="submit" value="login" name="login">Login</button>
+    
+        <button type="submit" value="login" name="login">Login</button> 
         <span class="psw"> <a href="#">Ti-ai uitat parola?</a></span>
         <br>
         <?php 
@@ -24,6 +25,9 @@
             if(isset($login))
               {echo '<p style="color:red;"> Înregistrează-te mai întâi! </p>';
               }
+            if(isset($inIndex))
+            { header("location:http://localhost/perfumer"); 
+            }
         ?>
        
       

@@ -38,7 +38,7 @@ class Login extends Controller {
 					 
 					$_SESSION['email'] = $email;
 					$_SESSION['id']=$infoId["id"];
-				    $this->redirect('index');	
+				    $template->set('inIndex','ok');
 				}
 				else{
 					$template->set('parolaGresita','ok');
