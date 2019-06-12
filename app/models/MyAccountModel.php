@@ -11,11 +11,16 @@ class MyAccountModel extends Model{
 
    public function getOrders($idUser){
             
-       $query= "select * from comenzi where id_utilizator='$id'";
-       $result= $this->query($query);
+       $query= "select * from comenzi where id_utilizator='$idUser'";
+       $result= $this->queryAll($query);
        return $result;
     }
-
+   
+    public function getOrder($idUser){
+      $query= "select * from comenzi where id_utilizator='$idUser'";
+       $result= $this->queryAll($query);
+       return $result;
+    }
 
     public function getPersonalData($idUser){
             
@@ -23,10 +28,6 @@ class MyAccountModel extends Model{
         $result= $this->query($query);
         return $result;
      }
-
-
-
-
 
    public function getDetailsWish($id)
   {   

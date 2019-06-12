@@ -6,6 +6,38 @@ include "header.php";
     
 <section >
 <h2 class="title"> COȘ DE CUMPĂRĂTURI </h2>
+
+
+<table >
+
+<tr>
+<th> Produs </th>
+<th> Subtotal </th>
+<th> Cantitate </th>
+</tr>
+        
+<tr> 
+  <td> 
+      <div class="produs-cos" >
+       <p> egfdfgdf </p>
+       <img src="<?php echo BASE_URL .'assets/images/prada.png' ?>" style="width:120px;height:140px;" >
+      </div>
+      </div>
+   
+ </td>
+
+ <td >
+   2334
+</td>
+ 
+<td> 
+  
+</td>
+<tr>
+
+
+</table>
+<!--
 <div id="box2">
 <div class="bascket">
   <div class="bascket-tags">
@@ -85,7 +117,7 @@ include "header.php";
           </form>
         </div>
       </aside>
-</div>
+</div>   -->
 </section>
 
 <?php  include 'footer.php'   ?>
