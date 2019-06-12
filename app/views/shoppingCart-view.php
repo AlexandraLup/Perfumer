@@ -5,6 +5,13 @@ $valoare = 0;
 foreach($basket as $product){
  $valoare = $valoare + intval($product['subtotal']);
 }
+if($empty == true) {
+  echo '<section>';
+  echo '<p> Cosul dumneavoastra este gol </p>' ;
+  echo '</section>';
+}
+else {
+
 
 ?>
 
@@ -56,7 +63,11 @@ foreach($basket as $product){
         echo '</form>';
         echo '</td>' ; 
         echo '<td>';
-        echo '<div class="delete-button">+</div>';
+        echo '<form method="post" action="#">';
+        echo ' <input type="hidden" name="id" value="' . $productID . '">';
+        echo ' <input type="hidden" name="ml" value="' . $productML . '">';
+        echo '<button type="submit" name="delete" class="delete-produs"> Sterge </button>';
+        echo '</form>';
         echo '</td>';
         echo '</tr>';
      }
@@ -97,6 +108,11 @@ foreach($basket as $product){
 				</div>
 			</div>
 </section>
+
+<?php 
+}
+
+?>
 
 <?php  include 'footer.php'   ?>
 <?php
