@@ -13,9 +13,6 @@ public function search($numeProdus){
 		$template = $this->loadView('produs-view');
 
 		$proVars = str_replace('%20',' ',$numeProdus);
-
-
-
 		$info = $model->getDetails($proVars);
 		$result = $model -> getAllComments($proVars);
 		$template->set('produs', $info) ;
