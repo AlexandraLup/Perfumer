@@ -50,7 +50,7 @@ border-color:#FBF8EF;
 
 padding:16px; 
 margin-bottom:10px;
-height:280px;
+height:330px;
 overflow:hidden;
 border: solid 5px white ;
 transition: border-width 0.6s linear;
@@ -60,6 +60,9 @@ transition: border-width 0.6s linear;
 border-width: 10px;
 border-color:#FBF8EF;
  }
+
+
+
 
 
 
@@ -148,6 +151,52 @@ border-color:#FBF8EF;
   background-color:#751F1F; 
   border-radius: 10%;
 }
+
+
+.containerRemoveButon{
+  display: block;
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  cursor: pointer;
+  font-size: 15px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color:#751F1F; 
+  border-radius: 14%;
+}
+
+.imagineWish{
+	height: 140px;
+	
+}
+.imagineWish2{
+	height: 140px;
+	;
+}
+.textWish{
+	padding-top: 2px;
+	height: 70px;
+	font-size: 14px;
+	
+}
+.pretWish{
+	height: 25px;
+	color:#2E2E2E;
+	
+}
+.eliminaWish{
+	height: 30px;
+	
+}
+
 
 /*--filter--*/
 
