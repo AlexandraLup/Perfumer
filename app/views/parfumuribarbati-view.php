@@ -54,7 +54,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $produsAsc[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produsAsc[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produsAsc[$i]['nume']. ' " >'. $produsAsc[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsAsc[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
@@ -72,7 +72,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $produsDesc[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produsDesc[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produsDesc[$i]['nume']. ' " >'. $produsDesc[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsDesc[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
@@ -90,7 +90,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $produseNoi[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produseNoi[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produseNoi[$i]['nume']. ' " >'. $produseNoi[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produseNoi[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
@@ -110,7 +110,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $produsVandut[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produsVandut[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produsVandut[$i]['nume']. ' " >'. $produsVandut[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsVandut[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
@@ -129,7 +129,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $produs[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produs[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produs[$i]['nume']. ' " >'. $produs[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produs[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>

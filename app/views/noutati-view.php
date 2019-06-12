@@ -44,7 +44,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $femei[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $femei[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$femei[$i]['nume']. ' " >'. $femei[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $femei[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
@@ -62,7 +62,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $barbati[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $barbati[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$barbati[$i]['nume']. ' " >'. $barbati[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $barbati[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
@@ -81,7 +81,7 @@
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $produs[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produs[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produs[$i]['nume']. ' " >'. $produs[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produs[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
