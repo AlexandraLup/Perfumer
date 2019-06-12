@@ -22,7 +22,7 @@
 		</div>
     </header>
     <div class="navbar">
-  <a \href="rapoarte"><i class="fas fa-file"></i> Rapoarte</a> 
+  <a href="rapoarteVanzari"><i class="fas fa-file"></i> Rapoarte</a> 
   <a href="add"><i class="fas fa-plus"></i> Adaug&#259; produs</a> 
   <a class="active" href="#"><i class="fas fa-trash-alt"></i> &#350;terge produs</a> 
 </div>
