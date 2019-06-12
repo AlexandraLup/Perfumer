@@ -30,7 +30,7 @@
 
 			<div id="Div2">
 				<div>
-					<h1 class="h1"><a href="index.php">Perfumer</a></h1>
+					<h1 class="h1"><a href="http://localhost/perfumer/">Perfumer</a></h1>
 				</div>
 			</div>
 
@@ -38,14 +38,29 @@
 				<div>
 				<?php 
 					if(isset($_SESSION["email"]))
-
 						echo '<p style="color: white;"> Bună, ' . $_SESSION['email'] .
-					" <form method='post'  >
-					<input type='submit' name='logout' value='logout'>  
-					</form> </p>
-					";
+							" <form method='post'  >
+							<input type='submit' name='logout' value='Logout'>  
+							</form> </p>
+							";
 					else
-						echo '<p style="color: white;"> Încă nu ești logat!</p>';
+						echo '<p style="color: white;"> Încă nu ești logat!'."
+							<form method='post'  >
+							<input type='submit' name='login' value='Login'>  
+							</form></p>";
+
+
+					if(isset($_POST['login'])){
+						header("location:http://localhost/perfumer/login");	
+					}
+
+					if(isset($_POST['logout'])){
+						session_unset();
+						session_destroy();
+
+						header("location:http://localhost/perfumer/");
+						exit();
+					}
 				 ?> 
 
 				</div>
@@ -57,9 +72,9 @@
 
 	<nav>
 		<ul>
-			<li class="FemeiBarbati"><a href='parfumurifemei'>PARFUMURI FEMEI</a></li>
-			<li class="FemeiBarbati"><a href='parfumuribarbati'>PARFUMURI BĂRBAȚI</a></li>
-			<li class="FemeiBarbati"><a href='noutati'>NOUTĂȚI</a></li>
+			<li class="FemeiBarbati"><a href='http://localhost/perfumer/parfumurifemei'>PARFUMURI FEMEI</a></li>
+			<li class="FemeiBarbati"><a href='http://localhost/perfumer/parfumuribarbati'>PARFUMURI BĂRBAȚI</a></li>
+			<li class="FemeiBarbati"><a href='http://localhost/perfumer/noutati'>NOUTĂȚI</a></li>
 		</ul>
 
 		<ul>
