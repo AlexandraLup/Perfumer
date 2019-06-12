@@ -32,6 +32,9 @@ foreach($basket as $product){
      foreach($basket as $product){
        $cantitate = $product['cantitate'] ;
        $subtotal = $product['subtotal'];
+       $productID = $product['id_produs'];
+       $productML = $product['ml'];
+       
         echo '<tr>' ; 
         echo '<td>' ; 
         echo '<div class="produs-cos" >';
@@ -47,7 +50,9 @@ foreach($basket as $product){
         echo '</td>' ; 
         echo '<td>' ; 
         echo '<form method="post" action="#">';
-        echo ' <input  name="qty" stype="number" min="1" max="20" value="' .$cantitate .'"> ';
+        echo ' <input type="hidden" name="produs" value="' . $productID . '">';
+        echo ' <input type="hidden" name="ml" value="' . $productML . '">';
+        echo ' <input  name="qty" type="number" min="1" max="20" value="' .$cantitate .'"> ';
         echo '</form>';
         echo '</td>' ; 
         echo '<td>';
@@ -74,7 +79,7 @@ foreach($basket as $product){
 
       <tr>
           <th>Total <th>
-          <td> <?php echo( $valoare + 16) ; ?> </td>
+          <td> <?php echo( $valoare + 16) . ' LEI' ; ?> </td>
       </tr>
      
 </table>
@@ -82,7 +87,36 @@ foreach($basket as $product){
     </div>
     </div>
     </div>
-
+    <div class="stoc-alert">
+				<div class="modal-contents">
+			
+					<div class="sclose">+</div>
+			
+				<strong>Cantitatea dorit&#259; nu este 	&#238;n stoc! </strong>
+			
+				</div>
+			</div>
 </section>
 
 <?php  include 'footer.php'   ?>
+<?php
+ if(isset($success)){
+
+  if($success==false) {
+
+    echo "
+				
+    <script type=\"text/javascript\">
+    
+     document.querySelector('.stoc-alert').style.display = \"block\";
+     document.querySelector('.sclose').addEventListener(\"click\", function() {
+     document.querySelector('.stoc-alert').style.display = \"none\";
+     });	
+ </script>
+    
+    ";
+  }
+ }
+
+
+?>
