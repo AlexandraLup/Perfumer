@@ -25,6 +25,22 @@ class AdminModel extends Model {
         return $result ;
     }
 
+    public function getRaport($categorie){
+
+        $query = "select p.id, p.nume, p.esenta, s.stoc_30, s.stoc_50, s.stoc_100 from produse p join stocuri s on p.id=s.id_produs where p.categorie='$categorie'";
+        
+        $result = $this->queryAll($query);
+        
+        return $result ;
+    }
+
+     public function getTotalRaport($categorie){
+        $query = "select count(p.id) from produse p join stocuri s on p.id=s.id_produs where p.categorie='$categorie'";
+        
+        $result = $this->query($query);
+        return $result ;
+    }
+
 }
 
 
