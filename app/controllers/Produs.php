@@ -66,5 +66,11 @@ class Produs extends Controller {
 		
 	 $template->render();
 }
+
+
+
+
 }
+
+
 ?>
