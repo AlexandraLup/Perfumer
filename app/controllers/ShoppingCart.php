@@ -9,6 +9,9 @@ class ShoppingCart extends Controller {
 		$userID = $_SESSION['id'];
 		$result = $model->getBasket($userID);
 		$template->set('basket', $result);
+		if(isset($_POST['qty'])){
+			echo $_POST['qty'];
+		}
 		$template->render();
 	}
 }
