@@ -16,43 +16,26 @@
 <h3> Comenzi </h3>
 <p> Vizualizați toate comenzile actuale și precedente aici.</p>
 </div>
+<br>
 <div class="history">
-	<div class="order">
-  <div class="order-info">
-    <p><b>NUMĂR COMANDĂ 33456125456</b></p>
-  <p class="order-date">2019-05-13</p>
-    </div>
-    <div class="order-status">
-        <p >Expediată</p>
-			</div>
-    </div>
-			<div class="order">
-    <div class="order-info">
-      <p ><b>NUMĂR COMANDĂ 33456125456</b></p>
-    <p class="order-date">2019-05-13</p>
-      </div>
-    <div class="order-status">
-        <p  style="color:green;">Livrată</p>
-    </div>
-</div>
-	<div class="order">
-      <div class="order-info">
-        <p ><b>NUMĂR COMANDĂ 33456125456</b></p>
-      <p class="order-date">2019-05-13</p>
-        </div>
-        <div class="order-status">
-            <p  style="color:green;">Livrată</p>
-        </div>
-			</div>
-				<div class="order">
-        <div class="order-info">
-          <p ><b>NUMĂR COMANDĂ 33456125456</b></p>
-        <p class="order-date">2019-05-13</p>
-          </div>
-          <div class="order-status">
-              <p  style="color:red;">Anulată</p>
-          </div>
-				</div>
+  <?php 
+        foreach($details as $array){
+             echo '	<div class="order">';
+             echo ' <div class="order-info">';
+             echo ' <p style="width:100%; padding:5px;"><b>NUMĂR COMANDĂ : ' . $array['id'] . '</b></p>';
+             echo ' <p style="font-size:10px;"> <b> '. $array['data'] . ' </b></p>';
+             echo '</div>';
+             echo'<div class="order-status" style="padding:10px;">';
+             if(strcmp($array['status'],'expediata')==0){
+                 echo '<p  ><b>Expediată</b></p>';
+             }else{
+                 echo ' <p  style="color:green;"><b>Livrată</b></p>';
+             }
+             echo '</div>';
+             echo '</div>';
+        }
+  ?>
+
 </div>
 </section>
 
