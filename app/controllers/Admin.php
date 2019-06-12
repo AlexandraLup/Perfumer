@@ -51,22 +51,22 @@ class Admin extends Controller {
 		if(isset($_POST['afiseaza']))
 		{
 			$_SESSION['cat']=$_POST['categorie'];
-			$raport = $model->getRaport($_POST['categorie']);
-			$totalRaport= $model->getTotalRaport($_POST['categorie']);
+			$raport = $model->getRaportVanzari($_POST['categorie']);
+			$totalRaport= $model->getTotalRaportVanzari($_POST['categorie']);
 			$template->set('CategorieSet', $raport);
 			$template->set('totalRaport', $totalRaport);
 		}
 
 		if(isset($_POST['csv'])){
 		$categ=$_SESSION['cat'];
-		$detalii= $model->getRaport($categ);
+		$detalii= $model->getRaportVanzari($categ);
       	$fichier = 'file.csv';
  		header( "Content-Type: text/csv;charset=utf-8" );
  		header( "Content-Disposition: attachment;filename=\"$fichier\"" );
  		header("Pragma: no-cache");
  		header("Expires: 0");     
       	$fp= fopen('php://output', 'w');      
-     	$header = array('Id','Nume','Esenta','Stoc30','Stoc50','Stoc100') ; 
+     	$header = array('Id','Nume','Cantitate') ; 
       	fputcsv($fp, $header);
 
       foreach($detalii as $line)
