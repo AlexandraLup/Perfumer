@@ -6,6 +6,7 @@ class Model {
 		global $config;
 		
 		$this->connection = new mysqli($config['db_host'], $config['db_username'], $config['db_password'],$config['db_name']) or die('MySQL Error: '. mysql_error());
+	    mysqli_set_charset($this->connection, "utf8");
 	}
 	public function escapeString($string)
 	{
@@ -17,25 +18,6 @@ class Model {
 		return $array;
 	}
 	
-	public function to_bool($val)
-	{
-	    return !!$val;
-	}
-	
-	public function to_date($val)
-	{
-	    return date('Y-m-d', $val);
-	}
-	
-	public function to_time($val)
-	{
-	    return date('H:i:s', $val);
-	}
-	
-	public function to_datetime($val)
-	{
-	    return date('Y-m-d H:i:s', $val);
-	}
 	
 	public function query($qry)
 	{
