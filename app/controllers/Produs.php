@@ -16,8 +16,10 @@ class Produs extends Controller {
 			if(isset($_SESSION['email'])){
 				$result = $model -> getId($_SESSION['email']);
 				$id = $result['id'];
-				$result = $model ->addToWishlist($id,$info['id']);
-				
+				$count= $model->getProductCount($info['id']);
+				if(intval($count[0])!=1){ 
+			     	$result = $model ->addToWishlist($id,$info['id']);
+				}		
 			}
 			else {
 				echo 'Nu esti logat';
@@ -29,11 +31,19 @@ class Produs extends Controller {
 			$result = $model -> getId($_SESSION['email']);
 			$id = $result['id'];	
 		    if(isset($_POST['quantity'])){
-		    	$stoc = 'stoc_' . $_POST['quantity'];
+				$stoc = 'stoc_' . $_POST['quantity'];
+				$quantity= $_POST['quantity'];
 			   if($info[$stoc] > 0) {
 				   $price = 'pret_' . $_POST['quantity'];
-				   $result = $model ->addToBasket($info['id'],$id,$info[$price]);
-				   $template -> set('success', true);
+				   $produsDetails = $model->getBasketInfo($info['id'], $quantity); 
+				   if(strcmp(trim($produsDetails['ml']),trim($quantity))==0) {
+					   $result= $model ->updateQuantity($info['id'],$info[$price]);
+					   $template -> set('success', true);
+                    } else{
+					$result = $model ->addToBasket($info['id'],$id,$info[$price],$quantity);
+					$template -> set('success', true);
+				   }
+				 
 
 			   }
 			   else{
