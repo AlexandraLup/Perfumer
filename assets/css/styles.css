@@ -28,6 +28,23 @@ border-width: 10px;
 border-color:#FBF8EF;
  }
 
+ .btnn-1N {
+
+padding-left: 50px;
+padding-top:30px;
+padding-right:50px;
+margin-bottom:16px;
+height:300px;
+overflow:hidden;
+border: solid 5px white ;
+transition: border-width 0.6s linear;
+}
+
+.btnn-1N:hover { 
+border-width: 10px;
+border-color:#FBF8EF;
+ }
+
 
  .btnn-1Wish {
 
@@ -731,6 +748,16 @@ section{
 	margin-left: 10px;
 	margin-bottom: 10px;
 	margin-right: 10px;
+}
+
+.fotoNoutatiN{
+	background-color: white;
+	width: 20%;
+	height: 30%;
+
+	
+	
+	
 }
 
 .fotoNoutatiWish{
