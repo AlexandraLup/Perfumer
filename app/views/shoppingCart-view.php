@@ -5,6 +5,7 @@ $valoare = 0;
 foreach($basket as $product){
  $valoare = $valoare + intval($product['subtotal']);
 }
+
 ?>
 
     
@@ -29,6 +30,8 @@ foreach($basket as $product){
   <?php 
      
      foreach($basket as $product){
+       $cantitate = $product['cantitate'] ;
+       $subtotal = $product['subtotal'];
         echo '<tr>' ; 
         echo '<td>' ; 
         echo '<div class="produs-cos" >';
@@ -44,7 +47,7 @@ foreach($basket as $product){
         echo '</td>' ; 
         echo '<td>' ; 
         echo '<form method="post" action="#">';
-        echo ' <input  type="number" min="1" max="20" value="' . $product['cantitate'] . ' "> ';
+        echo ' <input  name="qty" stype="number" min="1" max="20" value="' .$cantitate .'"> ';
         echo '</form>';
         echo '</td>' ; 
         echo '<td>';
