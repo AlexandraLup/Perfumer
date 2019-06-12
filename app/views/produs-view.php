@@ -133,7 +133,7 @@
 					<div class="close">+</div>
 			
 					<form action="">
-						<a href="login" id="button-model">Intr&#259; &#238;n cont </a>
+						<a href="http://localhost/perfumer/login" id="button-model">Intr&#259; &#238;n cont </a>
 					</form>
 			
 				</div>
