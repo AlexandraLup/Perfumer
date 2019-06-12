@@ -53,50 +53,36 @@
   <div class="columnPF parfumuriLeft">
       <div class="filtreParfum"> Filtru </div>
 
-      <form action="" method="GET">
-        
-        <label class="containerParf">Pret crescator
-        <input type="radio"  name="radio">
+        <form action="" method="POST">
+          <label class="containerParf">Pret crescator
+        <input type="radio"  name="radio" value="asc">
         <span class="checkmarkParf"></span>
         </label>
 
         <label class="containerParf">Pret descrescator
-        <input type="radio" name="radio">
+        <input type="radio" name="radio" value="desc">
         <span class="checkmarkParf"></span>
         </label>
 
-        <button style="color: white; "class="containerParfButon" type="submit" value="filtreaza" name="filtreaza">Filtreaza</button>
-      </form>
+        <button style="color: white; "class="containerParfButon" type="submit" value="filtreaza" name="filtru">Filtreaza</button>
+        </form><br>
 
-      <div class="filtru"> <a href="#"> Cele mai noi </a></div>
-      <div class="filtru"> <a href="#"> Cele mai vândute </a></div>
-	  
-	  
-	   <div class="wrapper">
-		<fieldset class="filter-price">
-	  
-		<div class="price-field">
-		<input type="range" min="0" max="5000" value="0" id="lower">
-		<input type="range" min="0" max="5000" value="5000" id="upper">
-		</div>
-	
-		<div class="price-wrap">
-			
-			<div class="price-container">
-				<div class="price-wrap-1">
-				  <label for="one">$</label>
-				  <input id="one">
-				</div>
-				<div class="price-wrap_line">-</div>
-				<div class="price-wrap-2">
-				  <label for="two">$</label>
-				  <input id="two">
-				</div>
-			</div>
-		</div>
-	
-		  </fieldset>
-		</div>
+        <form action="" method="POST">
+          <label class="containerParf">Cele mai noi
+        <input type="radio"  name="radio" value="celeMaiNoi">
+        <span class="checkmarkParf"></span>
+        </label>
+
+        <label class="containerParf">Cele mai vandute
+        <input type="radio" name="radio" value="celeMaiVandute">
+        <span class="checkmarkParf"></span>
+        </label>
+
+        <button style="color: white; "class="containerParfButon" type="submit" value="filtreaza" name="filtru2">Filtreaza</button>
+        </form>
+      
+      
+
 
   </div>
 

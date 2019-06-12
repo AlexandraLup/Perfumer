@@ -17,7 +17,7 @@ body{
 
 padding:16px; 
 margin-bottom:16px;
-height:330px;
+height:300px;
 overflow:hidden;
 border: solid 5px white ;
 transition: border-width 0.6s linear;
@@ -25,7 +25,23 @@ transition: border-width 0.6s linear;
 
 .btnn-1:hover { 
 border-width: 10px;
-border-color:#fbfbff;
+border-color:#FBF8EF;
+ }
+
+
+ .btnn-1Wish {
+
+padding:16px; 
+margin-bottom:10px;
+height:280px;
+overflow:hidden;
+border: solid 5px white ;
+transition: border-width 0.6s linear;
+}
+
+.btnn-1Wish:hover { 
+border-width: 10px;
+border-color:#FBF8EF;
  }
 
 
@@ -690,6 +706,8 @@ section{
 	background-color: white;
 	margin-top: 60px;
 	margin-bottom: 100px;
+	
+	
 }
 
 #topNoutatiFoto{
@@ -712,6 +730,15 @@ section{
 	height: 30%;
 	margin-left: 10px;
 	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.fotoNoutatiWish{
+	background-color: white;
+	width: 15%;
+	height: 16%;
+	margin-left: 10px;
+	margin-bottom: 5px;
 	margin-right: 10px;
 }
 
@@ -765,6 +792,18 @@ section{
 
 /* Pagina ParfumuriFemei */
 
+#columnWish {
+	
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-right: 4%;
+	padding-left: 4%;
+	
+
+
+}
 
 
 .columnPF {
@@ -785,11 +824,11 @@ section{
 }
 
 .titluPF{
-	font: bold 30px "Bitter";
+	font: bold 34px "Bitter";
 	padding-left: 10px;
 	padding-top: 5px;
-	padding-bottom: 10px;
-
+	padding-bottom: 40px;
+	text-align: center;
 	background-color: white;
 }
 

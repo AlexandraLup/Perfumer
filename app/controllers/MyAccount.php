@@ -10,6 +10,7 @@ class MyAccount extends Controller {
 			$info = $model->getDetailsWish($_SESSION["id"]);
 			$info2= $model->getRowWish($_SESSION["id"]);
 			$count= (int)$info2[0];
+		
 
 			$template->set('produsWish', $info);
 			$template->set('rowWish', $count);
