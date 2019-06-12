@@ -46,7 +46,7 @@ public function search($numeProdus){
 			   if($info[$stoc] > 0) {
 				   $price = 'pret_' . $_POST['quantity'];
 				   $produsDetails = $model->getBasketInfo($info['id'], $quantity,$id); 
-				   if(strcmp(trim($produsDetails['ml']),trim($quantity))==0) {
+				   if(intval($produsDetails) == 1) {
 					   $result= $model ->updateQuantity($info['id'],$info[$price],$id);
 					   $template -> set('success', true);
                     } else{
