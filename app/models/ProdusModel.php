@@ -36,8 +36,8 @@ class ProdusModel extends Model {
 		return $result;
 	}
 
-	public function getProductCount($id){
-		$query="SELECT count(id_produs) from wishlist where id_produs= '$id'";
+	public function getProductCount($idProdus, $idUser){
+		$query="SELECT count(id_produs) from wishlist where id_produs= '$idProdus' and id_utilizator='$idUser'";
 		$result= $this->query($query);
 		return $result;
 	}
@@ -47,8 +47,8 @@ class ProdusModel extends Model {
 		return $result;
 	}
 	
-	public function getBasketInfo($id, $quantity){
-		$query = "SELECT id_produs,ml FROM cos_cumparaturi where id_produs='$id'  and ml='$quantity'";
+	public function getBasketInfo($id, $quantity,$idUser){
+		$query = "SELECT id_produs,ml FROM cos_cumparaturi where id_produs='$id' and id_utilizator='$idUser' and ml='$quantity'";
 		$result = $this->query($query);
 		return $result;
 	}
@@ -61,9 +61,9 @@ class ProdusModel extends Model {
 	}
 	
 
-	public function updateQuantity($idProdus, $pret){
-		$query =" UPDATE `cos_cumparaturi` SET `cantitate`=`cantitate` + 1 where id_produs='$idProdus'";
-		$query1 =" UPDATE `cos_cumparaturi` SET `subtotal`=`subtotal` + '$pret' where id_produs='$idProdus'";
+	public function updateQuantity($idProdus, $pret, $idUser){
+		$query =" UPDATE `cos_cumparaturi` SET `cantitate`=`cantitate` + 1 where id_produs='$idProdus' and id_utilizator='$idUser'";
+		$query1 =" UPDATE `cos_cumparaturi` SET `subtotal`=`subtotal` + '$pret' where id_produs='$idProdus' and id_utilizator='$idUser'";
 		$result = $this->execute($query);
 		$result = $this->execute($query1);
 		return $result;
