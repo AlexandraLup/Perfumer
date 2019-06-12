@@ -102,25 +102,29 @@
 
 		<div id="adaugacomm" >
 			<form method="post" action="#">
-			        <label for="name" >Nume</label>
-                    <input type="text" id="name" name="name" placeholder="Nume">
-			        <label for="comm" >Comentariu</label>
-					<textarea name="comm" id="" rows="10" class="form-control" placeholder="Comentariu"></textarea>
+			        
+					<div class="form-group">
+					<label for="name" >Nume</label>
+					<input type="text" id="name" name="name" placeholder="Nume">
+                    <label for="comm" >Comentariu</label>
+                    <textarea name="comm" id="" rows="10" class="form-control" placeholder="Comentariu"></textarea>
+                    </div>
 					<button type="submit" value="addcomm" name="addcomm" class="button-model">Adaug&#259; comentariu</button>
 		    </form>
 		</div>
 		<div id = "comentariu" >
 		 <h4> <strong>Comentarii clien&#355;i </strong> </h4>
-    <div id="comments" >
 			 <?php 
 					foreach($comments as $array) {
+						        echo ' <div id="comments" >';
 								 echo '<h6><strong>' . $array['nume_utilizator'] . '</strong></h6>';
 								 echo '<p>' . $array['comentariu'] . '</p>';
 								 echo '<br> <br>';
+								 echo '</div>';
 					}
 
 			?>
-		</div>
+	
 				
 	</div>
 	<div class="bg-modal">
