@@ -55,6 +55,9 @@ class ParfumuriFemei extends Controller {
 		
 		$template->render();
 	}
+
+
+	
 }
 ?>
 

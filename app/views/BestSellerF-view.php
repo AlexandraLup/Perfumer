@@ -9,19 +9,9 @@ include "header.php";
 <section>
 
     <div style="background-color: white;  overflow:hidden;">
-<div class="menu">
-    <div class="lista">
-    <a href="#"><i class="far fa-heart"></i> Produse favorite</a>
-    </div>
-    <div class="lista">
-    <a href="MyAccount/settings"><i class="far fa-clipboard"></i> Date personale</a>
-    </div>
-    <div class="lista">
-    <a href="MyAccount/comenzi"><i class="fas fa-warehouse"></i> Istoricul comenzilor</a>
-    </div>
-</div>
+
 <div class="title2">
-<h3><b>Wishlist</b></h3>
+<h3><b>BESTSELLER FEMEI</b></h3>
 </div>
 
 
