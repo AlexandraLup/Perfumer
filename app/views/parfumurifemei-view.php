@@ -131,12 +131,13 @@
         $output = '';
         if($total_row > 0) {
          for ($i=0; $i<$total_row;$i++) { 
+           
             $output .= '
             <div class="fotoNoutati">
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1">
                 <img src="'. $produs[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produs[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="produs/casa='.$produs[$i]['nume'].'">'. $produs[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produs[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
