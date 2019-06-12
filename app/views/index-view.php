@@ -55,7 +55,7 @@ include "header.php";
 				<div class="bestSellerText">
 					BESTSELLER FEMEI
 				</div>
-				<a href="#">
+				<a href="http://localhost/perfumer/bestsellerf">
 					<div class="bestSellerText2">
 						Descoperă oferta
 					</div>
@@ -66,7 +66,7 @@ include "header.php";
 				<div class="bestSellerText">
 					BESTSELLER BĂRBAȚI
 				</div>
-				<a href="#">
+				<a href="http://localhost/perfumer/bestsellerb">
 					<div class="bestSellerText2">
 						Descoperă oferta
 					</div>
