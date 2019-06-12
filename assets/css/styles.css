@@ -997,7 +997,7 @@ font-size: 17px;
 }
 
 .login input[type=text], input[type=password]{
-	width: 100%;
+width: 100%;
  padding: 0;
  margin: 8px 0;
  display: inline-block;
@@ -1301,26 +1301,23 @@ font-size: 0.75rem;
 	margin-left:25%;
 	border:1px solid #ccc;
 }
-.order-info p{
- padding:1%;
- margin:0;
- width:50%;
-}
-.order-info .order-date{
-	font-size:10px;
-}
+
+/*
 .order-info{
-	padding: 0;
+	padding: 10px;
 	margin:0;
 	border:none;
+	width: 70%;
 }
 .order-status{
 	text-align: right;
 	padding:15px;
 	margin:0;
-	width:50%;
+	width:30%;
 	border:none;
 }
+
+*/
 .order{
 	display: flex;
 	border:1px solid #ccc;
@@ -1830,11 +1827,7 @@ flex-direction: column;
 .title2{
 	padding:20px;
 }
-.history{
-	width: 100%;
-	padding:0;
-	margin:0;
-}
+
 .title1{
 width: 100%;
 padding:0;
@@ -2045,23 +2038,14 @@ margin:0;
 
 /* --comentarii---*/
 
-.comentariu{
+#comentariu{
 	background-color: purple;
 	width: 100%;
 	
-
 }
 
-.comentariu button{
-	background: black;
-	color:white;
-	height: 50%;
-    width: 40%;
-	margin-top:3%;
-	margin-left: 5%;
-	text-align: center;
-	padding: 10px;
-	cursor: pointer;
+#comments {
+	background-color: blueviolet;
 }
 
 /*-- pop up produs -- */
@@ -2078,7 +2062,7 @@ margin:0;
 
 
 .bg-modal {
-	height: 100px;
+   height: 100px;
 	width: 200px;
 	top : 50%;
 	left : 40%;
@@ -2086,17 +2070,20 @@ margin:0;
 	align-items: center;
 	text-align: center;
 	position: absolute;
-    display: none;
+	display: none;
+    border : 1px black;
 }
 
 .modal-contents {
-	width: 100%;
+   	width: 100%;
 	height: 100%;
 	background-color: white;
 	text-align: center;
 	padding: 20px;
 	position: relative;
 	border-radius: 4px;
+
+
 }
 
 input {
@@ -2201,12 +2188,18 @@ input {
 }
 
 #adaugacomm{
-	width:90%;
-	border: 1px solid green;
+	width:80%;
+	border: 1px solid black;
+	padding:8px;
 }
 
 #adaugacomm form{
 	width : 100%;
+	
+}
+
+#adaugacomm label{
+	font: bold;
 }
 
 
