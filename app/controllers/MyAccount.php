@@ -10,10 +10,14 @@ class MyAccount extends Controller {
 			$info = $model->getDetailsWish($_SESSION["id"]);
 			$info2= $model->getRowWish($_SESSION["id"]);
 			$count= (int)$info2[0];
-		
-
 			$template->set('produsWish', $info);
 			$template->set('rowWish', $count);
+
+		
+			if(isset($_POST['elimina'])){
+				$model->deleteWish($_POST['elimina']);
+				echo "<meta http-equiv='refresh' content='0'>";
+			}
 
 		}else{
 			$count= 0;
