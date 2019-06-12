@@ -2391,3 +2391,24 @@ input {
 .total-com th{
 	float: left;
 }
+
+.info-order{
+	border:1px #ccc;
+	width:100%;
+	border-radius:7px;
+	display: flex;
+	flex-direction: row;
+}
+.info-order p{
+	padding:5px;
+}
+.status-order{
+	width: 50%;
+	padding:10px;
+}
+
+.date-comanda{
+	display: flex;
+	flex-direction: row;
+
+}
