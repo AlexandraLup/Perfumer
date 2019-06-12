@@ -32,6 +32,7 @@ class ShoppingCartModel extends Model {
       return $result[$cantitate];
    }
 
+
    public function deleteProduct($idProdus, $idUser, $ml){
 
       $query= "DELETE FROM `cos_cumparaturi` WHERE id_produs='$idProdus' and id_utilizator='$idUser' and ml='$ml'";
