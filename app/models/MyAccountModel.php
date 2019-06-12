@@ -29,9 +29,17 @@ class MyAccountModel extends Model{
         return $result;
      }
 
+    public function update($id, $address, $cod , $town, $county, $phone){
+
+    $query ="UPDATE `utilizatori` SET `adresa`= '$address',`oras`='$town',`judet`='$county',`cod_postal`='$cod',`telefon`='$phone' WHERE id='$id'";
+    $result = $this->execute($query);
+    return $result;
+  }
+
+
    public function getDetailsWish($id)
   {   
-        $query = "select p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id join wishlist w on w.id_produs=p.id where w.id_utilizator='$id'";
+        $query = "select p.id, p.imagine, p.nume, s.pret_30 from produse p join stocuri s on s.id_produs=p.id join wishlist w on w.id_produs=p.id where w.id_utilizator='$id'";
 
     $result= $this->queryAll($query);
     return $result;
@@ -45,9 +53,10 @@ class MyAccountModel extends Model{
     return $result;
   }
 
-  public function update($id, $address, $cod , $town, $county, $phone){
 
-    $query ="UPDATE `utilizatori` SET `adresa`= '$address',`oras`='$town',`judet`='$county',`cod_postal`='$cod',`telefon`='$phone' WHERE id='$id'";
+    public function deleteWish($id){
+
+    $query ="delete from wishlist where id_produs=$id";
     $result = $this->execute($query);
     return $result;
   }
