@@ -48,9 +48,9 @@ class ProdusModel extends Model {
 	}
 	
 	public function getBasketInfo($id, $quantity,$idUser){
-		$query = "SELECT id_produs,ml FROM cos_cumparaturi where id_produs='$id' and id_utilizator='$idUser' and ml='$quantity'";
+		$query = "SELECT count(id_produs) FROM cos_cumparaturi where id_produs='$id' and id_utilizator='$idUser' and ml='$quantity'";
 		$result = $this->query($query);
-		return $result;
+		return $result[0];
 	}
 
 	public function addComentariu($idProdus, $name, $comentariu){
