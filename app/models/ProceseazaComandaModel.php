@@ -26,8 +26,8 @@ class ProceseazaComandaModel extends Model {
         return $result;
     }
 
-    public function addProduct($idOrder, $idProdus, $subtotal, $cantitate){
-        $query="INSERT INTO lista_produse(id_comanda,id_produs,subtotal, cantitate) values ('$idOrder', '$idProdus','$subtotal','$cantitate')";
+    public function addProduct($idOrder, $idProdus, $subtotal, $cantitate, $ml){
+        $query="INSERT INTO lista_produse(id_comanda,id_produs,subtotal, cantitate,marime) values ('$idOrder', '$idProdus','$subtotal','$cantitate' , '$ml')";
         $result = $this->execute($query);
         return $result;
     }
