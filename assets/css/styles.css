@@ -1079,147 +1079,6 @@ span.psw {
 	width:10%;
 }
 
-/*---shoppingcart---*/
-.title{
-	text-align: center;
-  /*	font-weight: 50%; */
-	font-size: 35px;
-}
-strong{
-	font-weight: bold;
-
-}
-.bascket{
-	padding:20px;
-	width: 70%;
-}
-.bascket-tags{
-
-	border-top: 2px solid #ccc;
-	border-bottom:2px solid #ccc;
-	margin:0;
-	padding:0;
-}
-.bascket ul{
-	display: flex;
-}
-.bascket li{
-	padding-left:60px;
-	padding-right:60px;
-	margin :0;
-	border:none;
-}
-
-.bascket-products{
-	display:flex;
-		border-bottom:2px solid #ccc;
-
-}
-.product-details h1{
-	float:left;
-	text-align: left;
-	font-size:10px;
-}
-.item{
-	padding-left:60px;
-	text-align: center;
-}
-.price {
-	float:right;
-	border:none;
-	padding-top:50px;
-	padding-left:50px;
-}
-.price:after{
-	content: ' LEI';
-}
-.subtotal:after{
-	content: ' LEI';
-}
-.quantity{
-	float:right;
-	border:none;
-	padding-top:50px;
-	padding-left:150px;
-}
-.subtotal{
-	float:right;
-	border:none;
-	padding-top:50px;
-	padding-left:160px;
-}
-.remove{
-	float:right;
-	border:none;
-	padding-top:50px;
-	padding-left:70px;
-
-}
-.remove button{
-	 background-color: black;
-	 color:white;
-	 border-radius:30px;
-	 font-size:14px;
-}
-.remove button:hover{
-	color:#ccc;
-}
-.quantity input{
-	width:50px;
-	border-radius:30px;
-
-}
-.product-details p{
-	font-size:10px;
-}
-#box2{
-	display: flex;
-}
-aside{
-background: 	#DCDCDC;
-float:right;
-width: 20%;
-padding:20px;
-margin-top:10%;
-height: 270px;
-font-size: 0.75rem;
-}
-.summary h4{
-	text-align: center;
-	border-bottom:2px solid #ccc;
-	padding: 3px;
-}
-#basket-subtotal, #basket-total{
-	float:right;
-	text-align: right;
-	padding: 0;
-	border:0;
-	margin:0;
-}
-.final-value{
-	float:right;
-}
-.summary-checkout button{
-	text-align: center;
-}
-.summary-subtotal,
-.summary-promo,
-.summary-total,
-.box3{
-	border-bottom:2px solid #ccc;
-	padding:1%;
-}
-.checkout-cta {
-  display: block;
-	background: black;
-	color:white;
-  float: none;
-  font-size: 0.75rem;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0.625rem 0;
-  width: 100%;
-}
 /*----myaccount----*/
 .menu{
 	display:flex;
@@ -2156,7 +2015,8 @@ input {
 	align-items: center;
 	text-align: center;
 	position: absolute;
-    display: none;
+	display: none;
+	border : 1px black;
 }
 
 .qclose {
@@ -2183,7 +2043,8 @@ input {
 	align-items: center;
 	text-align: center;
 	position: absolute;
-    display: none;
+	display: none;
+	border : 1px black;
 }
 
 .sclose {
@@ -2209,7 +2070,8 @@ input {
 	align-items: center;
 	text-align: center;
 	position: absolute;
-    display: none;
+	display: none;
+	border : 1px black;
 }
 
 .pclose {
@@ -2257,3 +2119,93 @@ input {
 .edit{
 	text-align: center;
 }
+
+
+/* --cos de cumparaturi -- */
+
+
+.cos {
+	border: 1px solid black;
+	padding: 10px;
+	margin : 10px;
+	border-radius : 7px;
+	width : 60%;
+  }
+
+
+.cos tr{
+	border: 1px solid black;
+}
+
+.cos .nume-produs{
+	
+	width: 40%;
+}
+
+.cos .marime-produs{
+   
+	width: 15%;
+}
+
+
+.cos .cantitate{
+   
+	width: 20%;
+}
+
+.cos .subtotal-produs{
+	width: 20%;
+	
+}
+
+.cod td{
+	border: 1px solid orange;	
+}
+
+.produs-cos{
+	width : 100%;
+	height: 100%;
+
+}
+
+.delete-button {
+	position: relative;
+	top: 55%;
+	right: 10px;
+	font-size: 30px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+	
+}
+.delete-button:hover {
+	color: #666;
+}
+
+
+.cos-details{
+	display: flex;
+    flex-direction:row;
+}
+
+.summary-div{
+	display: flex;
+	flex-direction:column;
+	text-align: center;
+	width :40%;
+}
+
+.summary{
+	width: 80%;
+	padding: 10%;
+	margin:10%;
+	background-color: #ccc;
+	border: 1px solid black;
+	padding:0;
+}
+
+.summary td,tr,th{
+	border-bottom:1px black solid;
+}
+
+
