@@ -37,7 +37,7 @@ include "header.php";
             <div class="col-sm-4 col-lg-3 col-md-3">
               <div class="btnn-1Wish">
                 <img src="'. $produsWish[$i]['imagine'] .'" alt="" class="img-responsive" >
-                <p align="center"><strong><a href="#">'. $produsWish[$i]['nume'] .'</a></strong></p>
+                <p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produsWish[$i]['nume']. ' " >'. $produsWish[$i]['nume'] .'</a></strong></p>
                 <p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsWish[$i]['pret_30'] .' RON</strong>'.'</h4>
                  </div>
               </div>
