@@ -13,6 +13,63 @@ body{
 
 }
 
+/*export*/
+.containerAdmin{
+	background-color: #F2F2F2;
+	overflow:hidden
+	
+}
+.categorie{
+	width: 50%;
+	height: 80px;
+	margin-left: 25%;
+}
+
+.textRaport{
+	width: 48%;
+	float:left;
+}
+
+.afiseazaRaport{
+	width: 20%;
+	height: 40px;
+	margin-left: 5px;
+	margin-top: 12px;
+	float:left;
+
+}
+
+.ButonRaport{
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  background-color:#751F1F; 
+  border-radius: 10%;
+}
+
+.bodyRaport{
+	 margin-left: 20%;
+	 margin-right: 20%;
+	 background-color: #D8D8D8;
+
+}
+
+.format{
+	height: 40px;
+	margin-left: 3px;
+	float:left;
+}
+
+.listaRaport{
+	
+}
+
+
 .btnn-1 {
 
 padding:16px; 
