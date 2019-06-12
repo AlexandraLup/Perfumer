@@ -25,11 +25,18 @@ class ShoppingCartModel extends Model {
 		return $result;
    }
 
-   public function verifyStoc($idProdus, $ml){
+   public function verifyStock($idProdus, $ml){
       $query = "SELECT stoc_30,stoc_50,stoc_100  FROM  stocuri  WHERE id_produs='$idProdus'";
       $result = $this->query($query);
       $cantitate='stoc_' . $ml;
       return $result[$cantitate];
+   }
+
+   public function deleteProduct($idProdus, $idUser, $ml){
+
+      $query= "DELETE FROM `cos_cumparaturi` WHERE id_produs='$idProdus' and id_utilizator='$idUser' and ml='$ml'";
+      $result = $this->execute($query);
+      return $result;
    }
 }
 ?>
