@@ -71,12 +71,10 @@
         <div class="listaRaport">
           <table style="width:100%;">  
                           <tr>  
-                               <th width="8%">ID</th>  
-                               <th width="25%">Name</th>  
-                               <th width="25%">Esenta</th>  
-                               <th width="14%">Stoc 30</th>  
-                               <th width="14%">Stoc 50</th>  
-                               <th width="14%">Stoc 100</th>  
+                               <th width="10%">Id</th>  
+                               <th width="45%">Nume</th>  
+                               <th width="45%">Cantitate</th>  
+                                 
                           </tr>  ';
         echo $output;
         $output = '';
@@ -86,12 +84,10 @@
           {
             $output .= '
             <tr>  
-                 <th width="8%">'.$CategorieSet[$i]['id'].' </th>  
-                 <th width="25%">'.$CategorieSet[$i]['nume'].'</th>  
-                 <th width="25%">'.$CategorieSet[$i]['esenta'].'</th>  
-                 <th width="14%">'.$CategorieSet[$i]['stoc_30'].' </th>  
-                 <th width="14%">'.$CategorieSet[$i]['stoc_50'].' </th>  
-                 <th width="14%">'.$CategorieSet[$i]['stoc_100'].'</th>  
+                 <th width="10%">'.$CategorieSet[$i]['id'].' </th>  
+                 <th width="45%">'.$CategorieSet[$i]['nume'].'</th>  
+                 <th width="45%">'.$CategorieSet[$i]['cantitate'].'</th>  
+                 
             </tr> ';
           }
 
