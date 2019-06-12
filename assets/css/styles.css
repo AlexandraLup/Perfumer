@@ -2270,6 +2270,7 @@ input {
 	display: flex;
 	flex-direction:column;
 	text-align: center;
+	
 	width :40%;
 }
 
@@ -2282,8 +2283,62 @@ input {
 	padding:0;
 }
 
-.summary td,tr,th{
-	border-bottom:1px black solid;
+.summary th{
+	float: left;
+}
+.delete-produs{
+	background-color: #000;
+	color: white;
+	border: 7px ;
+	width: 100%;
 }
 
+.comanda{
+	display: flex;
+	flex-direction: row;
+	border-top: 2px purple;
+	width: 100%;
+	
+}
 
+.row-comanda {
+	
+	width:50%;
+	display: flex;
+	flex-direction: column;
+	margin:10px;
+}
+
+.total-comanda{
+	width:40%;
+	border-left: 1px#ccc;
+	margin:20px;
+	padding : 30px;
+	text-align: center;
+
+}
+
+.plati {
+	border:1px solid #ccc;
+	border-radius : 5px;
+	margin:10px;
+	padding:4px;
+	
+}
+
+.livrare {
+	border:1px solid #ccc;
+	border-radius : 5px;
+	margin:10px;
+	padding:4px;
+}
+
+.total-com{
+	border: 1px solid #ccc;
+	padding: 10px;
+	width: 90%;
+}
+
+.total-com th{
+	float: left;
+}
