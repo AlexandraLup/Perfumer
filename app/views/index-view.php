@@ -8,34 +8,32 @@ include "header.php";
 <section>	
 <?php
 if(isset($afiseazaPreferinte)){
-echo '<div id="topNoutati">
-		<div id="titleTOP">
-			<h2 style="font-family: Bitter "><b>Preferințele tale</b></h2>
-		</div>
-
-		<div id="topNoutatiFoto">';
+	echo '<div id="topNoutati">
+			<div id="titleTOP">
+				<h2 style="font-family: Bitter "><b>Preferințele tale</b></h2>
+			</div>
+		 <div id="topNoutatiFoto">';
 			  
-				$output = '';
-				if($total_rowP > 0) {
-					for ($i=0; $i<$total_rowP;$i++) { 
-						$output .= '
-						<div class="fotoNoutatiN">
-						<div class="col-sm-4 col-lg-3 col-md-3">
-						<div class="btnn-1N">
-						<img src="'. $produsP[$i]['imagine'] .'" alt="" class="img-responsive" >
-						<p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produsP[$i]['nume']. ' " >'. $produsP[$i]['nume'] .'</a></strong></p>
-						<p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsP[$i]['pret_30'] .' RON</strong>'.'</h4>
-						</div>
-						</div>
-						</div>';
-					}
-				}else{
-					 $output = '<h3>No Data Found</h3>'; 
-					}
+	$output = '';
+	if($total_rowP > 0) {
+		for ($i=0; $i<$total_rowP;$i++) { 
+			$output .= '
+			<div class="fotoNoutatiN">
+			<div class="col-sm-4 col-lg-3 col-md-3">
+			<div class="btnn-1N">
+			<img src="'. $produsP[$i]['imagine'] .'" alt="" class="img-responsive" >
+			<p align="center"><strong><a href="http://localhost/perfumer/produs/search/'.$produsP[$i]['nume']. ' " >'. $produsP[$i]['nume'] .'</a></strong></p>
+			<p style="text-align:center;" class="text-danger" >'.'<strong>De la '. $produsP[$i]['pret_30'] .' RON</strong>'.'</h4>
+			</div>
+			</div>
+			</div>';
+		}
+	}else{
+		 $output = '<h3>No Data Found</h3>'; 
+		}
 
-				echo $output;
-			
-		echo '</div></div>';
+	echo $output;		
+	echo '</div></div>';
 	}
 
 ?>
