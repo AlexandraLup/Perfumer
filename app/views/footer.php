@@ -1,18 +1,7 @@
 
 	<footer class="ct-footer">
   <div class="container">
-    <form name="contentForm" >
-      <div class="ct-footer-pre">
-        <div class="inner">
-          <span>Abonare Newsletter</span>
-        </div>
-        <div class="inner">
-          <div class="form-group">
-            <input name="formfields[nl_email]" id="nl_email" class="validate[required]" placeholder="AdresÄƒ email" type="text" value=""> <label for="nl_email" class="sr-only">Email Address</label> <button type="submit" class="btn btn-motive">JOIN</button>
-          </div>
-        </div>
-      </div>
-    </form>
+    
     <ul class="ct-footer-list ">
       <li>
         <h2 class="ct-footer-list-header">Informații generale</h2>
