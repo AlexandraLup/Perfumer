@@ -520,14 +520,14 @@ header{
 }
 
 #Div2{
-	width: 60%;
+	width: 80%;
 	display: flex;
 	justify-content: flex-start;
-	padding-left: 27%;
+	padding-left: 42%;
 }
 
 #Div3{
-	width: 25%;
+	width: 20%;
 }
 
 #search-button{
