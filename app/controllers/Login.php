@@ -27,7 +27,7 @@ class Login extends Controller {
 				$template->set('login', 'inexistent');
 			}
 			else{
-				//tre' sa fac o sesiune de login
+				//trebuie sa fac o sesiune de login
 				$parolaDB= $model->getPassword($email);
 				$hash = $parolaDB['parola'];
 			
