@@ -31,9 +31,6 @@ public function search($numeProdus){
 	}	
 	echo "<meta http-equiv='refresh' content='0'>";
 			}
-			else {
-				echo 'Nu esti logat';
-			}
 	
 		
 		if(isset($_POST['basket'])){
