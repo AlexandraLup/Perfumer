@@ -1,4 +1,4 @@
-<?php include "header.php" ; var_dump($products); ?>
+<?php include "header.php" ; ?>
 <section>
 <div class="info-order">
 <div class="status-order">
