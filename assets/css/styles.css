@@ -2163,6 +2163,8 @@ input {
 	height: 400%;
 	position: absolute;
 	top: 0;
+	padding: 0;
+	margin:0;
 	display: none;
 	justify-content: center;
 	align-items: center;
@@ -2202,6 +2204,8 @@ input {
 	position: absolute;
 	top: 0;
 	display: none;
+	padding: 0;
+	margin:0;
 	justify-content: center;
 	align-items: center;
 }
@@ -2238,6 +2242,8 @@ input {
 	position: absolute;
 	top: 0;
 	display: none;
+	padding: 0;
+	margin:0;
 	justify-content: center;
 	align-items: center;
 }
