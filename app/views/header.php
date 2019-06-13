@@ -20,13 +20,7 @@
 
 	<header>
 		<div id="Div" >
-			<div id="Div1">
-				<form id="search-button" method="post" action="#">
-					<input type="search" name="search" id="search" placeholder="Caută..">
-				</form>
-				<div id="back_result"> 
-                </div>  
-			</div>
+			
 
 			<div id="Div2">
 				<div>
