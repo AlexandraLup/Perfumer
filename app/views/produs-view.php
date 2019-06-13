@@ -131,13 +131,9 @@
 				<div class="modal-contents">
 			
 					<div class="close">+</div>
-			
-					<form action="">
-						<a href="http://localhost/perfumer/login" id="button-model">Intr&#259; &#238;n cont </a>
-					</form>
-			
+					<strong>Trebuie s&#259; te autentifici! </strong>
 				</div>
-			</div>
+	</div>
 
 			<div class="quantity-alert">
 				<div class="modal-contents">
