@@ -12,12 +12,13 @@
       <form class="login" action="" method="POST">
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter E-mail" id="email" name="email" required>
+
         <label for="psw"><b>Parolă</b></label>
         <input type="password" placeholder="Enter Password"  id="psw" name="psw" required>
+
     
         <button type="submit" value="login" name="login">Login</button> 
-        <span class="psw"> <a href="#">Ti-ai uitat parola?</a></span>
-        <br>
+
         <?php 
             if(isset($parolaGresita))
               echo '<p style="color:red;"> Ați greșit parola! </p>';
@@ -29,6 +30,9 @@
             { header("location:http://localhost/perfumer"); 
             }
         ?>
+        
+        <br>
+        
        
       
   
