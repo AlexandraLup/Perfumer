@@ -26,12 +26,15 @@ public function search($numeProdus){
 				$count= $model->getProductCount($info['id'],$id);
 				if(intval($count[0])!=1){ 
 			     	$result = $model ->addToWishlist($id,$info['id']);
-				}		
+				}	
+				
+	}	
+	echo "<meta http-equiv='refresh' content='0'>";
 			}
 			else {
 				echo 'Nu esti logat';
 			}
-		}
+	
 		
 		if(isset($_POST['basket'])){
 		if(isset($_SESSION['email'])){
@@ -45,11 +48,12 @@ public function search($numeProdus){
 				   $produsDetails = $model->getBasketInfo($info['id'], $quantity,$id); 
 				   if(intval($produsDetails) == 1) {
 					   $result= $model ->updateQuantity($info['id'],$info[$price],$id);
-					   $template -> set('success', true);
+					   $this->redirect('shoppingcart');
+					  
                     } else{
 					$result = $model ->addToBasket($info['id'],$id,$info[$price],$quantity);
-					$template -> set('success', true);
-				   }
+					$this->redirect('shoppingcart');
+					}
 				 
 
 			   }
@@ -67,8 +71,7 @@ public function search($numeProdus){
 		$comentariu = $_POST['comm'];
 		$idProdus= $info['id'];
 		$return = $model -> addComentariu($idProdus,$name,$comentariu);
-		$this->redirect('produs');
-		unset($_POST);
+		echo "<meta http-equiv='refresh' content='0'>";
 	}
 		
 	 $template->render();
