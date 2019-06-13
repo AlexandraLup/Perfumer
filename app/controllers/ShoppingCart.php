@@ -37,8 +37,6 @@ class ShoppingCart extends Controller {
 
 			$productID = $_POST['id'];
 			$productML= $_POST['ml'];
-			var_dump($productID);
-			var_dump($productML);
 			$result= $model->deleteProduct($productID,$userID,$ml);
 			$result = $model->getBasket($userID);
 			if(empty($result)){
