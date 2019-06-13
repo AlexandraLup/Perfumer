@@ -63,9 +63,7 @@
             <div class="format">
                <button style="color: white; "class="ButonRaport" type="submit" value="pdf" name="pdf">PDF</button>
             </div>
-            <div class="format">
-               <button style="color: white; "class="ButonRaport" type="submit" value="afiseaza" name="afiseaza">HTML</button>
-            </div> 
+             
         </form> 
       </div>
     
