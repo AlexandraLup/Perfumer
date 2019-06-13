@@ -2,11 +2,11 @@
 <section>
 <div class="info-order">
 <div class="status-order">
-<p>  <?php  echo $order['status'] ?> </p>
+<p> <b> <?php  echo $order['status'] ?> </b></p>
 <p> #<?php  echo $order['id'] ?> </p>
 </div>
 <div class="status-order">
-<p> <?php  echo (strtoupper($order['data'] ));?>  </p>
+<p><b><?php echo $order['data'] ;?> </b> </p>
 <p> <?php  echo $order['valoare'] . ' LEI' ?> </p>
 </div>
 </div>
