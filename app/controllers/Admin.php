@@ -1,4 +1,5 @@
 <?php
+
 class Admin extends Controller {
 	
 	function index()
@@ -32,16 +33,50 @@ class Admin extends Controller {
      	$header = array('Id','Nume','Esenta','Stoc30','Stoc50','Stoc100') ; 
       	fputcsv($fp, $header);
 
-      foreach($detalii as $line)
-      { fputcsv($fp, $line);}    
-           
-          
-      fclose($fp); 
-       exit();
+      foreach($detalii as $line) { 
+      	fputcsv($fp, $line);}  
+
+        fclose($fp); 
+        exit();
+	}else if(isset($_POST['pdf'])){
+		require('fpdf181/fpdf.php');
+		$pdf = new FPDF();
+		$pdf->AddPage();
+		$pdf->SetTitle("Stocuri");
+		$pdf->SetFont('Arial','B',12);
+		$header = array('Id','Nume','Esenta','Stoc30','Stoc50','Stoc100') ;
+
+
+		foreach($header as $heading) {
+			
+			if($heading == 'Nume'){
+				$pdf->SetFont('Arial','B',10);
+				$pdf->Cell(40,12,$heading,1,0,'C');
+			}else{
+				$pdf->SetFont('Arial','B',12);
+				$pdf->Cell(30,12,$heading,1,0,'C');
+			}
 		}
 
+		$categ=$_SESSION['cat'];
+		$detalii= $model->getRaport($categ);
+		foreach($detalii as $row) {
+				
+			$pdf->Ln();
+			$pdf->SetFont('Arial','',10);
+			$pdf->Cell(30,12,$row['id'],1,0,"C");
+			$pdf->SetFont('Arial','',8);
+			$pdf->Cell(40,12,$row['nume'],1,0,"C");
+			$pdf->SetFont('Arial','',10);
+			$pdf->Cell(30,12,$row['esenta'],1,0,"C");
+			$pdf->Cell(30,12,$row['stoc_30'],1,0,"C");
+			$pdf->Cell(30,12,$row['stoc_50'],1,0,"C");
+			$pdf->Cell(30,12,$row['stoc_100'],1,0,"C");
+			}
+		$pdf->Output();
+	}
 
-		$template->render();
+	$template->render();
 	}
 
 	function rapoarteVanzari(){
@@ -75,7 +110,41 @@ class Admin extends Controller {
           
       fclose($fp); 
        exit();
+
+}else if(isset($_POST['pdf'])){
+		require('fpdf181/fpdf.php');
+		$pdf = new FPDF();
+		$pdf->AddPage();
+		$pdf->SetTitle("Stocuri");
+		$pdf->SetFont('Arial','B',12);
+		$header = array('Id','Nume','Cantitate') ;
+
+
+		foreach($header as $heading) {
+			
+			if($heading == 'Nume'){
+				$pdf->SetFont('Arial','B',10);
+				$pdf->Cell(40,12,$heading,1,0,'C');
+			}else{
+				$pdf->SetFont('Arial','B',12);
+				$pdf->Cell(30,12,$heading,1,0,'C');
+			}
 		}
+
+		$categ=$_SESSION['cat'];
+		$detalii= $model->getRaportVanzari($categ);
+		foreach($detalii as $row) {
+				
+			$pdf->Ln();
+			$pdf->SetFont('Arial','',10);
+			$pdf->Cell(30,12,$row['id'],1,0,"C");
+			$pdf->SetFont('Arial','',8);
+			$pdf->Cell(40,12,$row['nume'],1,0,"C");
+			$pdf->SetFont('Arial','',10);
+			$pdf->Cell(30,12,$row['cantitate'],1,0,"C");
+			}
+		$pdf->Output();
+	}
 
 
 		$template->render();
