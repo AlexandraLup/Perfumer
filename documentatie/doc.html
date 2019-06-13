@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Perfumer</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <h1>Perfumer</h1>
+    </header>
+    
+    <div role="contentinfo">
+        <dl>
+          <dt>Membrii echipei</dt>
+          <dd>
+             Foca Diana-Gabriela, Lupuleasa Alexandra-Gabriela
+          </dd>
+          <dt>Profesor indrumator</dt>
+          <dd>
+            <a href="https://teaching.alexcoman.com/">Alexandru Coman</a>
+          </dd>
+        </dl>
+      </div>
+      <section typeof="sa:Descriere" id="Descriere" role="doc-descriere">
+        <h2>Descrierea proiectului</h2>
+        <p>
+            Este  o aplicatie Web de management al resurselor dintr-o parfumerie care ofera utilizatorilor diverse (tipuri de) parfumuri, 
+            in functie de profilul unei persoane si vizand o anumita ocazie, un anotimp etc. 
+            Fiecare produs contine proprietati specifice, inclusiv ingrediente, pret, comentarii. De asemenea, se va simula expedierea 
+            parfumurilor achizitionate la o adresa stabilita. Administratorul sistemului va avea posibilitatea sa consulte rapoarte – 
+            generate in formatele HTML, CSV si PDF – privind stocurile existente si situatia vanzarilor in functie de categoria de 
+            parfumuri, profilul utilizatorilor, o anumita perioada de timp etc. 
+        </p>
+      </section>
+    
+      <section id="DescierePagini">
+      <h2>Descrierea paginilor</h2>
+      <p>
+        In urmatoarele randuri avem descrisa functionalitatea fiecarei pagini din cadrul aplicatiei.
+      </p>
+      <section id="home">
+        <h3>Pagina Acasa </h3>
+        <p>
+            Informatii despre reduceri, top noutati, cele mai vandute produse, top branduri.  
+          <br>
+          <br>  
+            Utilizatorul va putea accesa pagina de login sau va putea accesa paginele in care se gasesc produsele.
+        </p>
+      </section>
+      <section id="login">
+        <h3>Pagina Login</h3>
+        <p>
+          Ofera utilizatorilor posibilitatea de login si de register care este necesar pentru a putea accesa facilitatile site-ului.
+        </p>
+      </section>
+      
+      <section id="parfumuri">
+        <h3>Pagina Parfumuri Femei</h3>
+        <p>
+        Utilizatorul va putea vizualiza produsele din stocul magazinul. De asemenea, utilizatorul va putea filtra produsele in functie
+        de pret, noutati si cele mai vandute produse.
+          </p>
+        </section>
+      <section id="parfumuri">
+        <h3>Pagina Parfumuri Barbati</h3>
+        <p>
+          In aceasta pagina sunt afistre doar produsule pentru barbati. 
+         <br>
+         <br>
+         Utilizatorul va putea vizualiza produsele din stocul magazinul. De asemenea, utilizatorul va putea filtra produsele in functie
+          de pret, noutati si cele mai vandute produse.
+          </p>
+        </section>
+         <section id="parfumuri">
+        <h3>Pagina Noutati</h3>
+        <p>
+        In aceasta pagina sunt afisate doar produsule adaugate recent. Vor fi afisate atat produsele de barbati cat si cele de femei.
+	  <br>
+	  <br>  
+	   Utilizatorul va putea filtra produsele in functie de categorie : barbati sau femei.
+        </p>
+    </section>
+    <section id="produs">
+        <h3>Pagina Produs</h3>
+        <p>
+        In aceasta pagina vor fi afisate toate detaliile despre un produs specific.
+	  <br>
+	  <br>  
+	   Utilizatorul va putea adauga produsul in cos sau in wishlist, va putea adauga comentariu si vizualiza comentariile adaugare de ceilalti clienti.
+        </p>
+    </section>
+    <section id="cont">
+        <h3>Pagina Cont</h3>
+        <p>
+           Utilizatorul va putea vizualiza istoricul comenzilor, datele personale si produsele preferate.  
+         <br>
+         <br>
+           De asemenea, acesta va putea sa elimine produsele din wishlist si sa editeze datele personale .
+          </p>
+        </section>
+        <section id="comanda">
+            <h3>Pagina Comanda </h3>
+            <p>
+               Utilizatorul va putea vizualiza detaliile unei comenzi inregistrate de acesta. 
+             <br>
+             <br>
+              Va putea vizualiza statusul, data in care a fost inregistrata, produsele cumparate, si valoarea acesteia, precum si datele de livrare.
+              </p>
+            </section>
+            <section id="coscumparaturi">
+                <h3>Pagina Cos de cumparaturi </h3>
+                <p>
+                   Utilizatorul isi va putea vizualiza produsele din cosul de cumparaturi  .
+                 <br>
+                 <br>
+                   Acesta va putea sterge produsele din cos si actualiza cantitatea.
+                   <br>
+                 <br>
+                  De asemenea, va putea continua cu procesarea comenzii.
+                  </p>
+                </section>
+                <section id="procesareacomenzii">
+                    <h3>Pagina Procesarea comenzii</h3>
+                    <p>
+                       Utilizatorul isi va putea verifica datele de livrare, continutul cosului de cumparaturi.
+                     <br>
+                     <br>
+                       Acesta va putea sa se intoarca la cosul de cumparaturi.
+                       <br>
+                     <br>
+                      De asemenea, va putea procesa comanda. Dupa procesare, va primi un mesaj de confirmare.
+                      </p>
+                    </section>
+    </section>
+    <section id="tehnologii">
+    <h3>Tehnologii utilizate</h3>
+        <p><ul>
+          <li> 	Folosim pachetul XAMP care contine servul Apache </li>
+          <li> 	PHP </li>
+          <li> 	MySql </li>
+          <li> 	HTML si CSS pentru partea de front-end </li>
+           <li> JavaScript </li>
+          </ul> <p>
+        </section>
+
+ 	<section id="tehnologii">
+        <h3>Impartirea task-urilor</h3>
+       <section id="etape">
+       	<h3>Lupuleasa Alexandra-Gabriela</h3>
+       	<ul>
+       		<li>Gestionarea bazei de date</li>
+            <li>Pagina de login</li>
+            <li>Pagina de register</li>
+            <li>Pagina parfumuri femei</li>
+            <li>Pagina wishlist</li>
+            <li>Pagina noutati</li>
+            <li>Pagina parfumuri barbati</li>
+            <li>Pagina principala</li>
+            <li>Pagina rapoarte</li>
+       </section> 
+        <section id="etape">
+            <h3> Foca Diana-Gabriela</h3>
+        <ul>
+        	<li>Pagina cos de cumparaturi </li>
+        	<li>Pagina produs</li>
+            <li>Pagina procesare comanda</li>
+            <li>Pagina istoric comenzi</li>
+            <li>Pagina vizualizare Comanda</li>
+            <li>Pagina date personale</li>
+            <li>Pagina edit date personale</li>
+            <li>Pagina cos de cumparaturi </li>
+            <li>Pagina adauga produs </li>
+            <li>Pagina sterge produs </li>
+
+        </ul>
+      </section>
+      </section>
+
+  </body>
+</html>
