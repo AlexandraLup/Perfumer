@@ -159,18 +159,6 @@
 				</div>
 			</div>
 
-			<div class="produs-alert">
-				<div class="modal-contents">
-			
-					<div class="pclose">+</div>
-			            <strong > Produsul a fost ad&#259;ugat &#238;n co&#351;! </strong>
-					<form action="">
-						<a href="shoppingcart" class="button"> Vezi co&#351; </a>
-					</form>
-			
-				</div>
-			</div>
-				
   </section>
 	 <?php 
         if(!isset($_SESSION["email"])){
@@ -237,21 +225,6 @@
 		}
 	}
 
-	if(isset($success)){
-		if($success==true){
-				echo "
-				
-				<script type=\"text/javascript\">
-				
-				 document.querySelector('.produs-alert').style.display = \"block\";
-				 document.querySelector('.pclose').addEventListener(\"click\", function() {
-				 document.querySelector('.produs-alert').style.display = \"none\";
-				 });	
-		 </script>
-				
-				";
-		}
-	}
 		 
 	 ?>
 	<?php include 'footer.php'; ?>
