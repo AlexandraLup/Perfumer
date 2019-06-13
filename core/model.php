@@ -6,7 +6,7 @@ class Model {
 		global $config;
 		
 		$this->connection = new mysqli($config['db_host'], $config['db_username'], $config['db_password'],$config['db_name']) or die('MySQL Error: '. mysql_error());
-	    mysqli_set_charset($this->connection, "utf8");
+	   mysqli_set_charset($this->connection, "utf8");
 	}
 	public function escapeString($string)
 	{
