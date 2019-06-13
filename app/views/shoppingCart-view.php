@@ -5,10 +5,13 @@ $valoare = 0;
 foreach($basket as $product){
  $valoare = $valoare + intval($product['subtotal']);
 }
+if(isset($empty)){
+
 if($empty == true) {
   echo '<section>';
   echo '<p> Cosul dumneavoastra este gol </p>' ;
   echo '</section>';
+}
 }
 else {
 
