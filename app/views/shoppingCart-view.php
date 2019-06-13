@@ -5,7 +5,6 @@ $valoare = 0;
 foreach($basket as $product){
  $valoare = $valoare + $product['subtotal'] ;
 }
-var_dump($valoare);
 if(isset($empty)){
 
 if($empty == true) {
