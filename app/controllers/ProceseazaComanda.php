@@ -27,7 +27,7 @@ class ProceseazaComanda extends Controller {
                 $subtotal =$product['subtotal'];
                 $idProdus = $product['id_produs'];
                 $model->addProduct($random,$idProdus,$subtotal, $cantitate,$product['ml']);
-                //$model->updateStock($idProdus,$product['ml'], $cantitate);
+                $model->updateStock($idProdus,$product['ml'], $cantitate);
             }
           $model->deleteBasket($userID);
            $this->redirect('comandaprocesata');
