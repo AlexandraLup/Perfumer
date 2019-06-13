@@ -3,7 +3,6 @@ include "header.php";
 $valoare = 0;
   
 foreach($basket as $product){
-  var_dump($product);
  $valoare = $valoare + $product['subtotal'] ;
 }
 var_dump($valoare);
