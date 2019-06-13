@@ -41,8 +41,6 @@ class ProceseazaComandaModel extends Model {
 
     public function updateStock($idProdus, $ml, $cantitate){
         $stoc= $this->verifyStock($idProdus,$ml);
-        $var= 'stoc_' . $ml ;
-        $newStoc= intval($stoc) - intval($cantitate);
         $query="UPDATE stocuri set '$var' = '$newStoc' where id_produs='$idProdus'" ;
         $result = $this->execute($query);
         return $result;
